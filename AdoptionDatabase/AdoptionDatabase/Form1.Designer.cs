@@ -41,8 +41,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.FilterLabel = new System.Windows.Forms.Label();
-            this.PetCardContainer = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CardHolder = new System.Windows.Forms.FlowLayoutPanel();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -170,7 +169,7 @@
             // ButtonWhite
             // 
             this.ButtonWhite.BackColor = System.Drawing.Color.White;
-            this.ButtonWhite.Controls.Add(this.PetCardContainer);
+            this.ButtonWhite.Controls.Add(this.CardHolder);
             this.ButtonWhite.Controls.Add(this.panel2);
             this.ButtonWhite.Location = new System.Drawing.Point(1, 334);
             this.ButtonWhite.Margin = new System.Windows.Forms.Padding(4);
@@ -210,23 +209,13 @@
             this.FilterLabel.Text = "Filter";
             this.FilterLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // PetCardContainer
+            // CardHolder
             // 
-            this.PetCardContainer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.PetCardContainer.GridLines = true;
-            this.PetCardContainer.HideSelection = false;
-            this.PetCardContainer.Location = new System.Drawing.Point(367, 18);
-            this.PetCardContainer.Name = "PetCardContainer";
-            this.PetCardContainer.Size = new System.Drawing.Size(1041, 479);
-            this.PetCardContainer.TabIndex = 1;
-            this.PetCardContainer.TileSize = new System.Drawing.Size(500, 200);
-            this.PetCardContainer.UseCompatibleStateImageBehavior = false;
-            this.PetCardContainer.View = System.Windows.Forms.View.Tile;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Pets";
+            this.CardHolder.AutoScroll = true;
+            this.CardHolder.Location = new System.Drawing.Point(367, 17);
+            this.CardHolder.Name = "CardHolder";
+            this.CardHolder.Size = new System.Drawing.Size(1041, 483);
+            this.CardHolder.TabIndex = 1;
             // 
             // MainPage
             // 
@@ -242,6 +231,7 @@
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Michigan\'s Premier Adoption Event";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.TitleBorder.ResumeLayout(false);
             this.DarkBlueTitle.ResumeLayout(false);
             this.DarkBlueTitle.PerformLayout();
@@ -269,8 +259,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label FilterLabel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListView PetCardContainer;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.FlowLayoutPanel CardHolder;
     }
 }
 

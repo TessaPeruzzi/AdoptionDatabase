@@ -17,15 +17,22 @@ namespace AdoptionDatabase
         public MainPage()
         {
             InitializeComponent();
-            
-            string[][] petArray = new string[10][];
-            petArray[0] = new string[] { "Name", "Agency", "paw.png", "Info \nblah\nblah" };
-            petArray[1] = new string[] { "Name1", "Agency1", "paw.png", "Info1 \nblah\nblah" };
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            createPetCards();
 
-            PetCardContainer.Items.Add("hi");
-            PetCardContainer.Items.Add("hiii");
-            PetCardContainer.Items.Add("bye"); 
+        }
+
+        private void createPetCards()
+        {
+            PetCard[] petCards = new PetCard[20];
+
+            for (int i = 0; i < petCards.Length; i++) { 
+                petCards[i] = new PetCard();
+                CardHolder.Controls.Add(petCards[i]);
+            }
         }
 
 
