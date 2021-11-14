@@ -9,3 +9,14 @@ C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\Adoption
 C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.exe
 C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.pdb
 C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.MainPage.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\bin\Debug\AdoptionDatabase.exe.config
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\bin\Debug\AdoptionDatabase.exe
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\bin\Debug\AdoptionDatabase.pdb
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.AssemblyReference.cache
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.SuggestedBindingRedirects.cache
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.MainPage.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.Properties.Resources.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.GenerateResource.cache
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.exe
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.pdb
