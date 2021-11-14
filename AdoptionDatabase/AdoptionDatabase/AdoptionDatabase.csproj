@@ -82,9 +82,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PawPrint.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\paw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

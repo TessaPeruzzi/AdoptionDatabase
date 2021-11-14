@@ -38,10 +38,11 @@
             this.AgencyButton = new System.Windows.Forms.Button();
             this.PetButton = new System.Windows.Forms.Button();
             this.ButtonWhite = new System.Windows.Forms.Panel();
-            this.CardContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.FilterLabel = new System.Windows.Forms.Label();
+            this.PetCardContainer = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +56,7 @@
             this.TitleBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(189)))));
             this.TitleBorder.Controls.Add(this.DarkBlueTitle);
             this.TitleBorder.Location = new System.Drawing.Point(1, 28);
-            this.TitleBorder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TitleBorder.Margin = new System.Windows.Forms.Padding(4);
             this.TitleBorder.Name = "TitleBorder";
             this.TitleBorder.Size = new System.Drawing.Size(1443, 165);
             this.TitleBorder.TabIndex = 0;
@@ -67,7 +68,7 @@
             this.DarkBlueTitle.Controls.Add(this.pictureBox1);
             this.DarkBlueTitle.Controls.Add(this.MainTitle);
             this.DarkBlueTitle.Location = new System.Drawing.Point(15, 12);
-            this.DarkBlueTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DarkBlueTitle.Margin = new System.Windows.Forms.Padding(4);
             this.DarkBlueTitle.Name = "DarkBlueTitle";
             this.DarkBlueTitle.Size = new System.Drawing.Size(1389, 138);
             this.DarkBlueTitle.TabIndex = 1;
@@ -76,7 +77,7 @@
             // 
             this.pictureBox1.Image = global::AdoptionDatabase.Properties.Resources.paw;
             this.pictureBox1.Location = new System.Drawing.Point(13, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(155, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,7 +106,7 @@
             this.panel1.Controls.Add(this.AgencyButton);
             this.panel1.Controls.Add(this.PetButton);
             this.panel1.Location = new System.Drawing.Point(1, 219);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1443, 89);
             this.panel1.TabIndex = 1;
@@ -117,7 +118,7 @@
             this.ShopButton.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShopButton.ForeColor = System.Drawing.Color.White;
             this.ShopButton.Location = new System.Drawing.Point(1065, 10);
-            this.ShopButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShopButton.Margin = new System.Windows.Forms.Padding(4);
             this.ShopButton.Name = "ShopButton";
             this.ShopButton.Size = new System.Drawing.Size(339, 68);
             this.ShopButton.TabIndex = 5;
@@ -131,7 +132,7 @@
             this.VetButton.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VetButton.ForeColor = System.Drawing.Color.White;
             this.VetButton.Location = new System.Drawing.Point(716, 10);
-            this.VetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VetButton.Margin = new System.Windows.Forms.Padding(4);
             this.VetButton.Name = "VetButton";
             this.VetButton.Size = new System.Drawing.Size(339, 68);
             this.VetButton.TabIndex = 4;
@@ -145,7 +146,7 @@
             this.AgencyButton.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgencyButton.ForeColor = System.Drawing.Color.White;
             this.AgencyButton.Location = new System.Drawing.Point(367, 10);
-            this.AgencyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AgencyButton.Margin = new System.Windows.Forms.Padding(4);
             this.AgencyButton.Name = "AgencyButton";
             this.AgencyButton.Size = new System.Drawing.Size(339, 68);
             this.AgencyButton.TabIndex = 3;
@@ -159,7 +160,7 @@
             this.PetButton.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PetButton.ForeColor = System.Drawing.Color.White;
             this.PetButton.Location = new System.Drawing.Point(15, 10);
-            this.PetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PetButton.Margin = new System.Windows.Forms.Padding(4);
             this.PetButton.Name = "PetButton";
             this.PetButton.Size = new System.Drawing.Size(339, 68);
             this.PetButton.TabIndex = 2;
@@ -169,22 +170,13 @@
             // ButtonWhite
             // 
             this.ButtonWhite.BackColor = System.Drawing.Color.White;
-            this.ButtonWhite.Controls.Add(this.CardContainer);
+            this.ButtonWhite.Controls.Add(this.PetCardContainer);
             this.ButtonWhite.Controls.Add(this.panel2);
             this.ButtonWhite.Location = new System.Drawing.Point(1, 334);
-            this.ButtonWhite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonWhite.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonWhite.Name = "ButtonWhite";
             this.ButtonWhite.Size = new System.Drawing.Size(1443, 512);
             this.ButtonWhite.TabIndex = 2;
-            // 
-            // CardContainer
-            // 
-            this.CardContainer.AutoScroll = true;
-            this.CardContainer.Location = new System.Drawing.Point(367, 18);
-            this.CardContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CardContainer.Name = "CardContainer";
-            this.CardContainer.Size = new System.Drawing.Size(1049, 479);
-            this.CardContainer.TabIndex = 1;
             // 
             // panel2
             // 
@@ -192,7 +184,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.FilterLabel);
             this.panel2.Location = new System.Drawing.Point(15, 17);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(339, 480);
             this.panel2.TabIndex = 0;
@@ -201,7 +193,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.panel3.Location = new System.Drawing.Point(8, 58);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(267, 1);
             this.panel3.TabIndex = 1;
@@ -217,6 +209,24 @@
             this.FilterLabel.TabIndex = 0;
             this.FilterLabel.Text = "Filter";
             this.FilterLabel.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // PetCardContainer
+            // 
+            this.PetCardContainer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.PetCardContainer.GridLines = true;
+            this.PetCardContainer.HideSelection = false;
+            this.PetCardContainer.Location = new System.Drawing.Point(367, 18);
+            this.PetCardContainer.Name = "PetCardContainer";
+            this.PetCardContainer.Size = new System.Drawing.Size(1041, 479);
+            this.PetCardContainer.TabIndex = 1;
+            this.PetCardContainer.TileSize = new System.Drawing.Size(500, 200);
+            this.PetCardContainer.UseCompatibleStateImageBehavior = false;
+            this.PetCardContainer.View = System.Windows.Forms.View.Tile;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Pets";
             // 
             // MainPage
             // 
@@ -257,9 +267,10 @@
         private System.Windows.Forms.Button PetButton;
         private System.Windows.Forms.Panel ButtonWhite;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel CardContainer;
         private System.Windows.Forms.Label FilterLabel;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ListView PetCardContainer;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 
