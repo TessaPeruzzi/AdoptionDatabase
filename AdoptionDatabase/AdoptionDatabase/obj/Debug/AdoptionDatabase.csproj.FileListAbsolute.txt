@@ -1,0 +1,11 @@
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\bin\Debug\AdoptionDatabase.exe.config
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\bin\Debug\AdoptionDatabase.exe
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\bin\Debug\AdoptionDatabase.pdb
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.AssemblyReference.cache
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.Properties.Resources.resources
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.GenerateResource.cache
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.CoreCompileInputs.cache
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.exe
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.pdb
+C:\Users\Tessa\source\repos\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.MainPage.resources
