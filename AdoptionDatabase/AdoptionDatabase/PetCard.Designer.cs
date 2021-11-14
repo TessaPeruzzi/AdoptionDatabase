@@ -66,7 +66,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
-            this.panel2.Location = new System.Drawing.Point(531, 193);
+            this.panel2.Location = new System.Drawing.Point(519, 193);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(237, 54);
             this.panel2.TabIndex = 3;
@@ -74,7 +74,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
-            this.panel3.Location = new System.Drawing.Point(783, 193);
+            this.panel3.Location = new System.Drawing.Point(762, 193);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(237, 54);
             this.panel3.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.Controls.Add(this.AppointmentButton);
             this.Controls.Add(this.pictureBox1);
             this.Name = "PetCard";
-            this.Size = new System.Drawing.Size(1033, 260);
+            this.Size = new System.Drawing.Size(1009, 260);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
