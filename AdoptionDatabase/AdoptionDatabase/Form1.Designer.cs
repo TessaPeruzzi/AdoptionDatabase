@@ -41,7 +41,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.FilterLabel = new System.Windows.Forms.Label();
-            this.CardHolder = new System.Windows.Forms.FlowLayoutPanel();
+            this.CardContainer = new System.Windows.Forms.TableLayoutPanel();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -169,7 +169,7 @@
             // ButtonWhite
             // 
             this.ButtonWhite.BackColor = System.Drawing.Color.White;
-            this.ButtonWhite.Controls.Add(this.CardHolder);
+            this.ButtonWhite.Controls.Add(this.CardContainer);
             this.ButtonWhite.Controls.Add(this.panel2);
             this.ButtonWhite.Location = new System.Drawing.Point(1, 334);
             this.ButtonWhite.Margin = new System.Windows.Forms.Padding(4);
@@ -209,13 +209,17 @@
             this.FilterLabel.Text = "Filter";
             this.FilterLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // CardHolder
+            // CardContainer
             // 
-            this.CardHolder.AutoScroll = true;
-            this.CardHolder.Location = new System.Drawing.Point(367, 17);
-            this.CardHolder.Name = "CardHolder";
-            this.CardHolder.Size = new System.Drawing.Size(1041, 483);
-            this.CardHolder.TabIndex = 1;
+            this.CardContainer.ColumnCount = 2;
+            this.CardContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.CardContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.CardContainer.Location = new System.Drawing.Point(374, 19);
+            this.CardContainer.Name = "CardContainer";
+            this.CardContainer.RowCount = 1;
+            this.CardContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.CardContainer.Size = new System.Drawing.Size(1030, 478);
+            this.CardContainer.TabIndex = 1;
             // 
             // MainPage
             // 
@@ -259,7 +263,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label FilterLabel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel CardHolder;
+        private System.Windows.Forms.TableLayoutPanel CardContainer;
     }
 }
 

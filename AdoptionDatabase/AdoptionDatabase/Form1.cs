@@ -21,17 +21,28 @@ namespace AdoptionDatabase
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            noHorizontalScrollBar();
             createPetCards();
 
+        }
+
+        private void noHorizontalScrollBar()
+        {
+            CardContainer.HorizontalScroll.Maximum = 0;
+            CardContainer.AutoScroll = false;
+            CardContainer.VerticalScroll.Visible = false;
+            CardContainer.AutoScroll = true;
         }
 
         private void createPetCards()
         {
             PetCard[] petCards = new PetCard[20];
+            
+            CardContainer.RowStyles.Clear();
 
             for (int i = 0; i < petCards.Length; i++) { 
                 petCards[i] = new PetCard();
-                CardHolder.Controls.Add(petCards[i]);
+                CardContainer.Controls.Add(petCards[i]);
             }
         }
 
