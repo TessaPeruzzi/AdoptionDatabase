@@ -68,7 +68,6 @@
             this.TitleBorder.Name = "TitleBorder";
             this.TitleBorder.Size = new System.Drawing.Size(1443, 165);
             this.TitleBorder.TabIndex = 0;
-            this.TitleBorder.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // DarkBlueTitle
             // 
@@ -104,7 +103,6 @@
             this.MainTitle.TabIndex = 0;
             this.MainTitle.Text = "MICHIGAN\'S PREMIER\r\nADOPTION EVENT\r\n";
             this.MainTitle.UseCompatibleTextRendering = true;
-            this.MainTitle.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -300,7 +298,6 @@
             this.FilterLabel.Size = new System.Drawing.Size(93, 43);
             this.FilterLabel.TabIndex = 0;
             this.FilterLabel.Text = "Filter";
-            this.FilterLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // AgeLabel
             // 
