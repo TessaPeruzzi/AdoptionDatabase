@@ -123,6 +123,7 @@
             this.ShopButton.TabIndex = 5;
             this.ShopButton.Text = "SHOPS";
             this.ShopButton.UseVisualStyleBackColor = false;
+            this.ShopButton.Click += new System.EventHandler(this.shopBtnClick);
             // 
             // VetButton
             // 
@@ -137,6 +138,7 @@
             this.VetButton.TabIndex = 4;
             this.VetButton.Text = "VETS";
             this.VetButton.UseVisualStyleBackColor = false;
+            this.VetButton.Click += new System.EventHandler(this.vetBtnClick);
             // 
             // AgencyButton
             // 
@@ -151,6 +153,7 @@
             this.AgencyButton.TabIndex = 3;
             this.AgencyButton.Text = "AGENCIES";
             this.AgencyButton.UseVisualStyleBackColor = false;
+            this.AgencyButton.Click += new System.EventHandler(this.agencyBtnClick);
             // 
             // PetButton
             // 
@@ -165,6 +168,7 @@
             this.PetButton.TabIndex = 2;
             this.PetButton.Text = "PETS";
             this.PetButton.UseVisualStyleBackColor = false;
+            this.PetButton.Click += new System.EventHandler(this.petBtnClick);
             // 
             // ButtonWhite
             // 

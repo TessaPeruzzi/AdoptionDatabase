@@ -46,8 +46,64 @@ namespace AdoptionDatabase
             }
         }
 
+        private void petBtnClick(object sender, EventArgs e)
+        {
+            PetCard[] petCards = new PetCard[20];
 
-       
+            CardContainer.Controls.Clear();
+            CardContainer.RowStyles.Clear();
+
+            for (int i = 0; i < petCards.Length; i++)
+            {
+                petCards[i] = new PetCard();
+                CardContainer.Controls.Add(petCards[i]);
+            }
+        }
+
+        private void agencyBtnClick(object sender, EventArgs e)
+        {
+            AgencyCard[] agencyCards = new AgencyCard[20];
+            
+            CardContainer.Controls.Clear();
+            CardContainer.RowStyles.Clear();
+
+            for (int i = 0; i < agencyCards.Length; i++)
+            {
+                agencyCards[i] = new AgencyCard();
+                CardContainer.Controls.Add(agencyCards[i]);
+            }
+        }
+
+        private void vetBtnClick(object sender, EventArgs e)
+        {
+            VetCard[] vetCards = new VetCard[20];
+
+            CardContainer.Controls.Clear();
+            CardContainer.RowStyles.Clear();
+
+            for (int i = 0; i < vetCards.Length; i++)
+            {
+                vetCards[i] = new VetCard();
+                CardContainer.Controls.Add(vetCards[i]);
+            }
+        }
+
+        private void shopBtnClick(object sender, EventArgs e)
+        {
+            ShopCard[] shopCards = new ShopCard[20];
+
+            CardContainer.Controls.Clear();
+            CardContainer.RowStyles.Clear();
+
+            for (int i = 0; i < shopCards.Length; i++)
+            {
+                shopCards[i] = new ShopCard();
+                CardContainer.Controls.Add(shopCards[i]);
+            }
+        }
+
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

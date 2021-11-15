@@ -20,3 +20,6 @@ D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.exe
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.pdb
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.PetCard.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.AgencyCard.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.VetCard.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.ShopCard.resources
