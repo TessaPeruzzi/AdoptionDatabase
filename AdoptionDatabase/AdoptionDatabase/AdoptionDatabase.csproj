@@ -64,6 +64,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PetCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PetCard.resx">
       <DependentUpon>PetCard.cs</DependentUpon>
@@ -137,6 +146,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\paw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outlook-g17d530a5b_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hamburger_icon_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\768px-Hamburger_icon_white.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

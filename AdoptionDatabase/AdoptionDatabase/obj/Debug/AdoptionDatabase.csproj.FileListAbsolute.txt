@@ -26,3 +26,4 @@ D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.PetTypeCheckBox.resources
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.AssemblyReference.cache
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.Appointment_Form.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.LogInForm.resources

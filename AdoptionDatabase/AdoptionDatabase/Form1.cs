@@ -191,6 +191,21 @@ namespace AdoptionDatabase
             ageSelectionBox.Visible = false;
             ageComboBox.Visible = false;
         }
-    
+
+        private void hamburgerBtnClick(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+        }
+
+        private void adminlogBtnClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            LogInForm logIn = new LogInForm();
+            logIn.ShowDialog();
+            this.Close();
+        }
+
     }
+
+
 }

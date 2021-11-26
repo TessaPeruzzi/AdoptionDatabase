@@ -61,12 +61,42 @@ namespace AdoptionDatabase.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _768px_Hamburger_icon_white_svg {
+            get {
+                object obj = ResourceManager.GetObject("768px-Hamburger_icon_white.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hamburger_icon_white {
+            get {
+                object obj = ResourceManager.GetObject("Hamburger_icon_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] LuckiestGuy_Regular {
             get {
                 object obj = ResourceManager.GetObject("LuckiestGuy_Regular", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outlook_g17d530a5b_1920 {
+            get {
+                object obj = ResourceManager.GetObject("outlook-g17d530a5b_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
