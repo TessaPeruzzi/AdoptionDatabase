@@ -31,8 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AppointmentButton = new System.Windows.Forms.Button();
             this.AgencyPanel = new System.Windows.Forms.Panel();
-            this.NameLabel = new System.Windows.Forms.Label();
             this.AgencyLabel = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
             this.InfoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.AgencyPanel.SuspendLayout();
@@ -57,6 +57,7 @@
             this.AppointmentButton.TabIndex = 1;
             this.AppointmentButton.Text = "APPOINTMENTS";
             this.AppointmentButton.UseVisualStyleBackColor = false;
+            this.AppointmentButton.Click += new System.EventHandler(this.appointmentBtnClick);
             // 
             // AgencyPanel
             // 
@@ -66,16 +67,6 @@
             this.AgencyPanel.Name = "AgencyPanel";
             this.AgencyPanel.Size = new System.Drawing.Size(441, 41);
             this.AgencyPanel.TabIndex = 3;
-            // 
-            // NameLabel
-            // 
-            this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(267, 15);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(113, 42);
-            this.NameLabel.TabIndex = 4;
-            this.NameLabel.Text = "Name";
             // 
             // AgencyLabel
             // 
@@ -87,6 +78,16 @@
             this.AgencyLabel.Size = new System.Drawing.Size(253, 33);
             this.AgencyLabel.TabIndex = 0;
             this.AgencyLabel.Text = "AGENCY GOES HERE";
+            // 
+            // NameLabel
+            // 
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.Location = new System.Drawing.Point(267, 15);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(113, 42);
+            this.NameLabel.TabIndex = 4;
+            this.NameLabel.Text = "Name";
             // 
             // InfoLabel
             // 

@@ -16,5 +16,15 @@ namespace AdoptionDatabase
         {
             InitializeComponent();
         }
+
+        private void appointmentBtnClick(object sender, EventArgs e)
+        {
+            Appointment_Form apptForm = new Appointment_Form();
+            apptForm.ShowDialog();
+
+        }
+
     }
+
+
 }

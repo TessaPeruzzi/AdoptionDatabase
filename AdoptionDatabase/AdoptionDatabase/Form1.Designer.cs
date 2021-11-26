@@ -40,6 +40,10 @@
             this.ButtonWhite = new System.Windows.Forms.Panel();
             this.CardContainer = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btwnComboBox = new System.Windows.Forms.ComboBox();
+            this.ageComboBox = new System.Windows.Forms.ComboBox();
+            this.ageSelectionBox = new System.Windows.Forms.ComboBox();
+            this.AgeLabel = new System.Windows.Forms.Label();
             this.CheckBoxFemale = new System.Windows.Forms.CheckBox();
             this.MaleCheckBox = new System.Windows.Forms.CheckBox();
             this.SexCheckBox = new System.Windows.Forms.Label();
@@ -47,10 +51,6 @@
             this.CheckBoxContainer = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.FilterLabel = new System.Windows.Forms.Label();
-            this.AgeLabel = new System.Windows.Forms.Label();
-            this.ageSelectionBox = new System.Windows.Forms.ComboBox();
-            this.ageComboBox = new System.Windows.Forms.ComboBox();
-            this.btwnComboBox = new System.Windows.Forms.ComboBox();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -220,108 +220,126 @@
             this.panel2.Size = new System.Drawing.Size(339, 480);
             this.panel2.TabIndex = 0;
             // 
-            // CheckBoxFemale
+            // btwnComboBox
             // 
-            this.CheckBoxFemale.AutoSize = true;
-            this.CheckBoxFemale.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckBoxFemale.Location = new System.Drawing.Point(170, 335);
-            this.CheckBoxFemale.Name = "CheckBoxFemale";
-            this.CheckBoxFemale.Size = new System.Drawing.Size(64, 20);
-            this.CheckBoxFemale.TabIndex = 6;
-            this.CheckBoxFemale.Text = "Female";
-            this.CheckBoxFemale.UseVisualStyleBackColor = true;
-            // 
-            // MaleCheckBox
-            // 
-            this.MaleCheckBox.AutoSize = true;
-            this.MaleCheckBox.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaleCheckBox.Location = new System.Drawing.Point(20, 335);
-            this.MaleCheckBox.Name = "MaleCheckBox";
-            this.MaleCheckBox.Size = new System.Drawing.Size(52, 20);
-            this.MaleCheckBox.TabIndex = 5;
-            this.MaleCheckBox.Text = "Male";
-            this.MaleCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // SexCheckBox
-            // 
-            this.SexCheckBox.AutoSize = true;
-            this.SexCheckBox.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SexCheckBox.Location = new System.Drawing.Point(9, 306);
-            this.SexCheckBox.Name = "SexCheckBox";
-            this.SexCheckBox.Size = new System.Drawing.Size(35, 22);
-            this.SexCheckBox.TabIndex = 4;
-            this.SexCheckBox.Text = "Sex";
-            // 
-            // PetTypeTitle
-            // 
-            this.PetTypeTitle.AutoSize = true;
-            this.PetTypeTitle.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PetTypeTitle.Location = new System.Drawing.Point(9, 63);
-            this.PetTypeTitle.Name = "PetTypeTitle";
-            this.PetTypeTitle.Size = new System.Drawing.Size(71, 22);
-            this.PetTypeTitle.TabIndex = 3;
-            this.PetTypeTitle.Text = "Pet Type";
-            // 
-            // CheckBoxContainer
-            // 
-            this.CheckBoxContainer.ColumnCount = 2;
-            this.CheckBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.CheckBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.CheckBoxContainer.Location = new System.Drawing.Point(13, 90);
-            this.CheckBoxContainer.Name = "CheckBoxContainer";
-            this.CheckBoxContainer.RowCount = 6;
-            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.CheckBoxContainer.Size = new System.Drawing.Size(303, 213);
-            this.CheckBoxContainer.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
-            this.panel3.Location = new System.Drawing.Point(8, 58);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(267, 1);
-            this.panel3.TabIndex = 1;
-            // 
-            // FilterLabel
-            // 
-            this.FilterLabel.AutoSize = true;
-            this.FilterLabel.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterLabel.Location = new System.Drawing.Point(0, 14);
-            this.FilterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.FilterLabel.Name = "FilterLabel";
-            this.FilterLabel.Size = new System.Drawing.Size(93, 43);
-            this.FilterLabel.TabIndex = 0;
-            this.FilterLabel.Text = "Filter";
-            // 
-            // AgeLabel
-            // 
-            this.AgeLabel.AutoSize = true;
-            this.AgeLabel.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeLabel.Location = new System.Drawing.Point(9, 358);
-            this.AgeLabel.Name = "AgeLabel";
-            this.AgeLabel.Size = new System.Drawing.Size(38, 22);
-            this.AgeLabel.TabIndex = 7;
-            this.AgeLabel.Text = "Age";
-            // 
-            // ageSelectionBox
-            // 
-            this.ageSelectionBox.FormattingEnabled = true;
-            this.ageSelectionBox.Items.AddRange(new object[] {
-            "Equal to",
-            "Less than",
-            "Greater than",
-            "Between"});
-            this.ageSelectionBox.Location = new System.Drawing.Point(20, 404);
-            this.ageSelectionBox.Name = "ageSelectionBox";
-            this.ageSelectionBox.Size = new System.Drawing.Size(121, 24);
-            this.ageSelectionBox.TabIndex = 8;
-            this.ageSelectionBox.SelectedIndexChanged += new System.EventHandler(this.showBtwnBox);
+            this.btwnComboBox.FormattingEnabled = true;
+            this.btwnComboBox.Items.AddRange(new object[] {
+            "1 m",
+            "2 m",
+            "3 m",
+            "4 m",
+            "5 m",
+            "6 m",
+            "7 m",
+            "8 m",
+            "9 m",
+            "10 m",
+            "11 m",
+            "1 yr ",
+            "2 yr",
+            "3 yr",
+            "4 yr",
+            "5 yr",
+            "6 yr",
+            "7 yr",
+            "8 yr",
+            "9 yr",
+            "10 yr",
+            "11 yr",
+            "12 yr",
+            "13 yr",
+            "14 yr",
+            "15 yr",
+            "16 yr",
+            "17 yr",
+            "18 yr",
+            "19 yr",
+            "20 yr",
+            "21 yr",
+            "22 yr",
+            "23 yr",
+            "24 yr",
+            "25 yr",
+            "26 yr",
+            "27 yr",
+            "28 yr",
+            "29 yr",
+            "30 yr",
+            "31 yr",
+            "32 yr",
+            "33 yr",
+            "34 yr",
+            "35 yr",
+            "36 yr",
+            "37 yr",
+            "38 yr",
+            "39 yr",
+            "40 yr",
+            "41 yr",
+            "42 yr",
+            "43 yr",
+            "44 yr",
+            "45 yr",
+            "46 yr",
+            "47 yr",
+            "48 yr",
+            "49 yr",
+            "50 yr",
+            "51 yr ",
+            "52 yr",
+            "53 yr",
+            "54 yr",
+            "55 yr",
+            "56 yr",
+            "57 yr",
+            "58 yr",
+            "59 yr",
+            "60 yr",
+            "61 yr",
+            "62 yr",
+            "63 yr",
+            "64 yr",
+            "65 yr",
+            "66 yr",
+            "67 yr",
+            "68 yr",
+            "69 yr",
+            "70 yr",
+            "71 yr",
+            "72 yr",
+            "73 yr",
+            "74 yr",
+            "75 yr",
+            "76 yr",
+            "77 yr",
+            "78 yr",
+            "79 yr",
+            "80 yr",
+            "81 yr",
+            "82 yr",
+            "83 yr",
+            "84 yr",
+            "85 yr",
+            "86 yr",
+            "87 yr",
+            "88 yr",
+            "89 yr",
+            "90 yr",
+            "91 yr",
+            "92 yr",
+            "93 yr",
+            "94 yr",
+            "95 yr",
+            "96 yr",
+            "97 yr",
+            "98 yr",
+            "99 yr",
+            "100 yr"});
+            this.btwnComboBox.Location = new System.Drawing.Point(170, 447);
+            this.btwnComboBox.Name = "btwnComboBox";
+            this.btwnComboBox.Size = new System.Drawing.Size(121, 24);
+            this.btwnComboBox.TabIndex = 10;
+            this.btwnComboBox.Visible = false;
             // 
             // ageComboBox
             // 
@@ -443,126 +461,108 @@
             this.ageComboBox.Size = new System.Drawing.Size(121, 24);
             this.ageComboBox.TabIndex = 9;
             // 
-            // btwnComboBox
+            // ageSelectionBox
             // 
-            this.btwnComboBox.FormattingEnabled = true;
-            this.btwnComboBox.Items.AddRange(new object[] {
-            "1 m",
-            "2 m",
-            "3 m",
-            "4 m",
-            "5 m",
-            "6 m",
-            "7 m",
-            "8 m",
-            "9 m",
-            "10 m",
-            "11 m",
-            "1 yr ",
-            "2 yr",
-            "3 yr",
-            "4 yr",
-            "5 yr",
-            "6 yr",
-            "7 yr",
-            "8 yr",
-            "9 yr",
-            "10 yr",
-            "11 yr",
-            "12 yr",
-            "13 yr",
-            "14 yr",
-            "15 yr",
-            "16 yr",
-            "17 yr",
-            "18 yr",
-            "19 yr",
-            "20 yr",
-            "21 yr",
-            "22 yr",
-            "23 yr",
-            "24 yr",
-            "25 yr",
-            "26 yr",
-            "27 yr",
-            "28 yr",
-            "29 yr",
-            "30 yr",
-            "31 yr",
-            "32 yr",
-            "33 yr",
-            "34 yr",
-            "35 yr",
-            "36 yr",
-            "37 yr",
-            "38 yr",
-            "39 yr",
-            "40 yr",
-            "41 yr",
-            "42 yr",
-            "43 yr",
-            "44 yr",
-            "45 yr",
-            "46 yr",
-            "47 yr",
-            "48 yr",
-            "49 yr",
-            "50 yr",
-            "51 yr ",
-            "52 yr",
-            "53 yr",
-            "54 yr",
-            "55 yr",
-            "56 yr",
-            "57 yr",
-            "58 yr",
-            "59 yr",
-            "60 yr",
-            "61 yr",
-            "62 yr",
-            "63 yr",
-            "64 yr",
-            "65 yr",
-            "66 yr",
-            "67 yr",
-            "68 yr",
-            "69 yr",
-            "70 yr",
-            "71 yr",
-            "72 yr",
-            "73 yr",
-            "74 yr",
-            "75 yr",
-            "76 yr",
-            "77 yr",
-            "78 yr",
-            "79 yr",
-            "80 yr",
-            "81 yr",
-            "82 yr",
-            "83 yr",
-            "84 yr",
-            "85 yr",
-            "86 yr",
-            "87 yr",
-            "88 yr",
-            "89 yr",
-            "90 yr",
-            "91 yr",
-            "92 yr",
-            "93 yr",
-            "94 yr",
-            "95 yr",
-            "96 yr",
-            "97 yr",
-            "98 yr",
-            "99 yr",
-            "100 yr"});
-            this.btwnComboBox.Location = new System.Drawing.Point(170, 447);
-            this.btwnComboBox.Name = "btwnComboBox";
-            this.btwnComboBox.Size = new System.Drawing.Size(121, 24);
-            this.btwnComboBox.TabIndex = 10;
-            this.btwnComboBox.Visible = false;
+            this.ageSelectionBox.FormattingEnabled = true;
+            this.ageSelectionBox.Items.AddRange(new object[] {
+            "Equal to",
+            "Less than",
+            "Greater than",
+            "Between"});
+            this.ageSelectionBox.Location = new System.Drawing.Point(20, 404);
+            this.ageSelectionBox.Name = "ageSelectionBox";
+            this.ageSelectionBox.Size = new System.Drawing.Size(121, 24);
+            this.ageSelectionBox.TabIndex = 8;
+            this.ageSelectionBox.SelectedIndexChanged += new System.EventHandler(this.showBtwnBox);
+            // 
+            // AgeLabel
+            // 
+            this.AgeLabel.AutoSize = true;
+            this.AgeLabel.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgeLabel.Location = new System.Drawing.Point(9, 358);
+            this.AgeLabel.Name = "AgeLabel";
+            this.AgeLabel.Size = new System.Drawing.Size(38, 22);
+            this.AgeLabel.TabIndex = 7;
+            this.AgeLabel.Text = "Age";
+            // 
+            // CheckBoxFemale
+            // 
+            this.CheckBoxFemale.AutoSize = true;
+            this.CheckBoxFemale.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckBoxFemale.Location = new System.Drawing.Point(170, 335);
+            this.CheckBoxFemale.Name = "CheckBoxFemale";
+            this.CheckBoxFemale.Size = new System.Drawing.Size(64, 20);
+            this.CheckBoxFemale.TabIndex = 6;
+            this.CheckBoxFemale.Text = "Female";
+            this.CheckBoxFemale.UseVisualStyleBackColor = true;
+            // 
+            // MaleCheckBox
+            // 
+            this.MaleCheckBox.AutoSize = true;
+            this.MaleCheckBox.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaleCheckBox.Location = new System.Drawing.Point(20, 335);
+            this.MaleCheckBox.Name = "MaleCheckBox";
+            this.MaleCheckBox.Size = new System.Drawing.Size(52, 20);
+            this.MaleCheckBox.TabIndex = 5;
+            this.MaleCheckBox.Text = "Male";
+            this.MaleCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SexCheckBox
+            // 
+            this.SexCheckBox.AutoSize = true;
+            this.SexCheckBox.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SexCheckBox.Location = new System.Drawing.Point(9, 306);
+            this.SexCheckBox.Name = "SexCheckBox";
+            this.SexCheckBox.Size = new System.Drawing.Size(35, 22);
+            this.SexCheckBox.TabIndex = 4;
+            this.SexCheckBox.Text = "Sex";
+            // 
+            // PetTypeTitle
+            // 
+            this.PetTypeTitle.AutoSize = true;
+            this.PetTypeTitle.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PetTypeTitle.Location = new System.Drawing.Point(9, 63);
+            this.PetTypeTitle.Name = "PetTypeTitle";
+            this.PetTypeTitle.Size = new System.Drawing.Size(71, 22);
+            this.PetTypeTitle.TabIndex = 3;
+            this.PetTypeTitle.Text = "Pet Type";
+            // 
+            // CheckBoxContainer
+            // 
+            this.CheckBoxContainer.ColumnCount = 2;
+            this.CheckBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.CheckBoxContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.CheckBoxContainer.Location = new System.Drawing.Point(13, 90);
+            this.CheckBoxContainer.Name = "CheckBoxContainer";
+            this.CheckBoxContainer.RowCount = 6;
+            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CheckBoxContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CheckBoxContainer.Size = new System.Drawing.Size(303, 213);
+            this.CheckBoxContainer.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
+            this.panel3.Location = new System.Drawing.Point(8, 58);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(267, 1);
+            this.panel3.TabIndex = 1;
+            // 
+            // FilterLabel
+            // 
+            this.FilterLabel.AutoSize = true;
+            this.FilterLabel.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterLabel.Location = new System.Drawing.Point(0, 14);
+            this.FilterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FilterLabel.Name = "FilterLabel";
+            this.FilterLabel.Size = new System.Drawing.Size(93, 43);
+            this.FilterLabel.TabIndex = 0;
+            this.FilterLabel.Text = "Filter";
             // 
             // MainPage
             // 
