@@ -35,12 +35,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.passwordText = new System.Windows.Forms.TextBox();
             this.adminLoginBtn = new System.Windows.Forms.Button();
+            this.passwordText = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,7 +111,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(351, 83);
+            this.panel2.Location = new System.Drawing.Point(391, 83);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(634, 444);
             this.panel2.TabIndex = 0;
@@ -133,50 +133,6 @@
             this.panel3.Size = new System.Drawing.Size(628, 438);
             this.panel3.TabIndex = 1;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AdoptionDatabase.Properties.Resources.outlook_g17d530a5b_1920;
-            this.pictureBox2.Location = new System.Drawing.Point(102, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(426, 192);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(244, 253);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(98, 250);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(105, 23);
-            this.usernameLabel.TabIndex = 2;
-            this.usernameLabel.Text = "Username:";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(98, 310);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(104, 23);
-            this.passwordLabel.TabIndex = 3;
-            this.passwordLabel.Text = "Password:";
-            // 
-            // passwordText
-            // 
-            this.passwordText.Location = new System.Drawing.Point(244, 310);
-            this.passwordText.Name = "passwordText";
-            this.passwordText.Size = new System.Drawing.Size(284, 22);
-            this.passwordText.TabIndex = 4;
-            // 
             // adminLoginBtn
             // 
             this.adminLoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
@@ -189,6 +145,51 @@
             this.adminLoginBtn.TabIndex = 5;
             this.adminLoginBtn.Text = "LOGIN";
             this.adminLoginBtn.UseVisualStyleBackColor = false;
+            this.adminLoginBtn.Click += new System.EventHandler(this.logInBtn);
+            // 
+            // passwordText
+            // 
+            this.passwordText.Location = new System.Drawing.Point(244, 310);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.Size = new System.Drawing.Size(284, 22);
+            this.passwordText.TabIndex = 4;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(98, 310);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(104, 23);
+            this.passwordLabel.TabIndex = 3;
+            this.passwordLabel.Text = "Password:";
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(98, 250);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(105, 23);
+            this.usernameLabel.TabIndex = 2;
+            this.usernameLabel.Text = "Username:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(244, 253);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(284, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AdoptionDatabase.Properties.Resources.outlook_g17d530a5b_1920;
+            this.pictureBox2.Location = new System.Drawing.Point(102, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(426, 192);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // LogInForm
             // 
@@ -199,6 +200,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TitleBorder);
             this.Name = "LogInForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
             this.TitleBorder.ResumeLayout(false);
             this.DarkBlueTitle.ResumeLayout(false);

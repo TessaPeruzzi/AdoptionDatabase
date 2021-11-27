@@ -24,6 +24,6 @@ D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.VetCard.resources
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.ShopCard.resources
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.PetTypeCheckBox.resources
-D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.AssemblyReference.cache
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.Appointment_Form.resources
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.LogInForm.resources
+D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.AdminPortal.resources

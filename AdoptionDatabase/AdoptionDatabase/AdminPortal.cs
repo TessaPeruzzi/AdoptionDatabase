@@ -10,20 +10,25 @@ using System.Windows.Forms;
 
 namespace AdoptionDatabase
 {
-    public partial class LogInForm : Form
+    public partial class AdminPortal : Form
     {
-        public LogInForm()
+        public AdminPortal()
         {
             InitializeComponent();
         }
 
-        private void logInBtn(object sender, EventArgs e)
+        private void adminHamburgerBtnClick(object sender, EventArgs e)
         {
-            //need if else statement first to check if credentials correct
+            panel4.Visible = true;
+        }
+        private void logOutBtnClick(object sender, EventArgs e)
+        {
             this.Hide();
-            AdminPortal adminport = new AdminPortal();
-            adminport.ShowDialog();
+            MainPage userpage = new MainPage();
+            userpage.ShowDialog();
             this.Close();
+            
+                        
         }
     }
 }

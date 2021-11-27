@@ -30,6 +30,10 @@
         {
             this.TitleBorder = new System.Windows.Forms.Panel();
             this.DarkBlueTitle = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.hamburgerLogBtn = new System.Windows.Forms.Button();
+            this.hamburgerMenu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MainTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ShopButton = new System.Windows.Forms.Button();
@@ -50,18 +54,14 @@
             this.CheckBoxContainer = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.FilterLabel = new System.Windows.Forms.Label();
-            this.hamburgerMenu = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.hamburgerLogBtn = new System.Windows.Forms.Button();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hamburgerMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.ButtonWhite.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hamburgerMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleBorder
@@ -86,6 +86,50 @@
             this.DarkBlueTitle.Name = "DarkBlueTitle";
             this.DarkBlueTitle.Size = new System.Drawing.Size(1389, 138);
             this.DarkBlueTitle.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.hamburgerLogBtn);
+            this.panel4.Location = new System.Drawing.Point(1173, 99);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 55);
+            this.panel4.TabIndex = 3;
+            this.panel4.Visible = false;
+            // 
+            // hamburgerLogBtn
+            // 
+            this.hamburgerLogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hamburgerLogBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hamburgerLogBtn.Location = new System.Drawing.Point(0, 0);
+            this.hamburgerLogBtn.Name = "hamburgerLogBtn";
+            this.hamburgerLogBtn.Size = new System.Drawing.Size(200, 47);
+            this.hamburgerLogBtn.TabIndex = 0;
+            this.hamburgerLogBtn.Text = "Worker Login";
+            this.hamburgerLogBtn.UseVisualStyleBackColor = true;
+            this.hamburgerLogBtn.Click += new System.EventHandler(this.adminlogBtnClick);
+            // 
+            // hamburgerMenu
+            // 
+            this.hamburgerMenu.Image = global::AdoptionDatabase.Properties.Resources._768px_Hamburger_icon_white_svg;
+            this.hamburgerMenu.Location = new System.Drawing.Point(1274, 12);
+            this.hamburgerMenu.Name = "hamburgerMenu";
+            this.hamburgerMenu.Size = new System.Drawing.Size(99, 111);
+            this.hamburgerMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hamburgerMenu.TabIndex = 2;
+            this.hamburgerMenu.TabStop = false;
+            this.hamburgerMenu.Click += new System.EventHandler(this.hamburgerBtnClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AdoptionDatabase.Properties.Resources.paw;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // MainTitle
             // 
@@ -560,50 +604,6 @@
             this.FilterLabel.TabIndex = 0;
             this.FilterLabel.Text = "Filter";
             // 
-            // hamburgerMenu
-            // 
-            this.hamburgerMenu.Image = global::AdoptionDatabase.Properties.Resources._768px_Hamburger_icon_white_svg;
-            this.hamburgerMenu.Location = new System.Drawing.Point(1274, 12);
-            this.hamburgerMenu.Name = "hamburgerMenu";
-            this.hamburgerMenu.Size = new System.Drawing.Size(99, 111);
-            this.hamburgerMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hamburgerMenu.TabIndex = 2;
-            this.hamburgerMenu.TabStop = false;
-            this.hamburgerMenu.Click += new System.EventHandler(this.hamburgerBtnClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AdoptionDatabase.Properties.Resources.paw;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 108);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.hamburgerLogBtn);
-            this.panel4.Location = new System.Drawing.Point(1173, 99);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 55);
-            this.panel4.TabIndex = 3;
-            this.panel4.Visible = false;
-            // 
-            // hamburgerLogBtn
-            // 
-            this.hamburgerLogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hamburgerLogBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hamburgerLogBtn.Location = new System.Drawing.Point(0, 0);
-            this.hamburgerLogBtn.Name = "hamburgerLogBtn";
-            this.hamburgerLogBtn.Size = new System.Drawing.Size(200, 47);
-            this.hamburgerLogBtn.TabIndex = 0;
-            this.hamburgerLogBtn.Text = "Worker Login";
-            this.hamburgerLogBtn.UseVisualStyleBackColor = true;
-            this.hamburgerLogBtn.Click += new System.EventHandler(this.adminlogBtnClick);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -622,13 +622,13 @@
             this.TitleBorder.ResumeLayout(false);
             this.DarkBlueTitle.ResumeLayout(false);
             this.DarkBlueTitle.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hamburgerMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ButtonWhite.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hamburgerMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -648,7 +648,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label FilterLabel;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TableLayoutPanel CardContainer;
         private System.Windows.Forms.TableLayoutPanel CheckBoxContainer;
         private System.Windows.Forms.Label PetTypeTitle;
         private System.Windows.Forms.Label SexCheckBox;
@@ -661,6 +660,7 @@
         private System.Windows.Forms.PictureBox hamburgerMenu;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button hamburgerLogBtn;
+        public System.Windows.Forms.TableLayoutPanel CardContainer;
     }
 }
 
