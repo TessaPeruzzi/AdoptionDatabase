@@ -5,10 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Reflection;
+using System.Resources;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdoptionDatabase.Properties;
+using MySql.Data.MySqlClient;
 
 namespace AdoptionDatabase
 {
@@ -39,17 +43,48 @@ namespace AdoptionDatabase
         {
             PetCard[] petCards = new PetCard[20];
             petFilter();
-            
+
             CardContainer.RowStyles.Clear();
 
-            for (int i = 0; i < petCards.Length; i++) { 
-                petCards[i] = new PetCard();
-                CardContainer.Controls.Add(petCards[i]);
+            string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
+            using (var con = new MySqlConnection(cs))
+            {
+                con.Open();
+                using (var cmd = new MySqlCommand("SELECT * FROM PET", con))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string name = reader.GetString(1);
+                            string age = reader.GetString(2);
+                            string type = reader.GetString(3);
+                            string price = reader.GetString(4);
+                            string sex = reader.GetString(5);
+                            string picture = reader.GetString(6);
+                            string agency = reader.GetString(7);
+                            string shop = reader.GetString(8);
+                            string vet = reader.GetString(9);
+
+                            PetCard petTile = new PetCard();
+                            petTile.NameLabel.Text = name;
+                            petTile.InfoLabel.Text = "Age: " + age + "\nType: " + type + "\nAdoption Fee: $" + price + "\nSex: " + sex + "\nShop: " + shop;
+                            petTile.AgencyLabel.Text = agency;
+                            System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
+                            petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
+                            CardContainer.Controls.Add(petTile);
+                        }
+                    }
+                }
+
             }
         }
 
         private void petBtnClick(object sender, EventArgs e)
         {
+           
+
+            
             PetCard[] petCards = new PetCard[20];
             petFilter();
 

@@ -28,24 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AppointmentButton = new System.Windows.Forms.Button();
             this.AgencyPanel = new System.Windows.Forms.Panel();
             this.AgencyLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
             this.InfoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AgencyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 172);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // AppointmentButton
             // 
@@ -98,6 +89,16 @@
             this.InfoLabel.TabIndex = 5;
             this.InfoLabel.Text = "Info";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(245, 172);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // PetCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -110,21 +111,20 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "PetCard";
             this.Size = new System.Drawing.Size(472, 290);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AgencyPanel.ResumeLayout(false);
             this.AgencyPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button AppointmentButton;
         private System.Windows.Forms.Panel AgencyPanel;
-        private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.Label AgencyLabel;
-        private System.Windows.Forms.Label InfoLabel;
+        public System.Windows.Forms.Label NameLabel;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label AgencyLabel;
+        public System.Windows.Forms.Label InfoLabel;
     }
 }
