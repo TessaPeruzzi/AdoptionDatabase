@@ -209,6 +209,11 @@ namespace AdoptionDatabase
             label8.Visible = false;
             label9.Visible = false;
             label10.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            label5.Visible = true;
         }
 
         private void petBtnClick(object sender, EventArgs e)
@@ -227,6 +232,7 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = true;
             updateRadioBtn.Visible = true;
             deleteRadioBtn.Visible = true;
+            label2.Text = "Name:";
             label3.Text = "Age:";
             label4.Text = "Sex:";
             label5.Text = "Type";
@@ -246,6 +252,236 @@ namespace AdoptionDatabase
             label8.Visible = true;
             label9.Visible = true;
             label10.Visible = true;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            label5.Visible = true;
+        }
+
+        private void vetBtnClick(object sender, EventArgs e)
+        {
+            petDataContainer.Columns[0].HeaderCell.Value = "Vet ID";
+            petDataContainer.Columns[1].HeaderCell.Value = "Vet Name";
+            petDataContainer.Columns[2].HeaderCell.Value = "Vet Location";
+            petDataContainer.Columns[3].HeaderCell.Value = "Vet Phone";
+            petDataContainer.Columns[4].HeaderCell.Value = "Vet Logo";
+            petDataContainer.Columns[5].HeaderCell.Value = "";
+            petDataContainer.Columns[6].HeaderCell.Value = "";
+            petDataContainer.Columns[7].HeaderCell.Value = "";
+            petDataContainer.Columns[8].HeaderCell.Value = "";
+            petDataContainer.Columns[9].HeaderCell.Value = "";
+            petDataContainer.Columns[10].HeaderCell.Value = "";
+            addRadioBtn.Visible = false;
+            updateRadioBtn.Visible = false;
+            deleteRadioBtn.Visible = false;
+            label2.Text = "Name:";
+            label3.Text = "Location:";
+            label4.Text = "Phone:";
+            label5.Text = "Logo:";
+            comboBox1.Visible = false;
+            textBox3.Visible = true;
+            comboBox2.Visible = false;
+            textBox4.Visible = true;
+            comboBox3.Visible = false;
+            textBox5.Visible = true;
+            textBox2.Visible = false;
+            comboBox4.Visible = false;
+            comboBox5.Visible = false;
+            comboBox6.Visible = false;
+            comboBox7.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            label5.Visible = true;
+        }
+
+        private void shopBtnClick(object sender, EventArgs e)
+        {
+            petDataContainer.Columns[0].HeaderCell.Value = "Shop ID";
+            petDataContainer.Columns[1].HeaderCell.Value = "Shop Name";
+            petDataContainer.Columns[2].HeaderCell.Value = "Shop Location";
+            petDataContainer.Columns[3].HeaderCell.Value = "Shop Phone";
+            petDataContainer.Columns[4].HeaderCell.Value = "Shop Logo";
+            petDataContainer.Columns[5].HeaderCell.Value = "";
+            petDataContainer.Columns[6].HeaderCell.Value = "";
+            petDataContainer.Columns[7].HeaderCell.Value = "";
+            petDataContainer.Columns[8].HeaderCell.Value = "";
+            petDataContainer.Columns[9].HeaderCell.Value = "";
+            petDataContainer.Columns[10].HeaderCell.Value = "";
+            addRadioBtn.Visible = false;
+            updateRadioBtn.Visible = false;
+            deleteRadioBtn.Visible = false;
+            label2.Text = "Name:";
+            label3.Text = "Location:";
+            label4.Text = "Phone:";
+            label5.Text = "Logo:";
+            comboBox1.Visible = false;
+            textBox3.Visible = true;
+            comboBox2.Visible = false;
+            textBox4.Visible = true;
+            comboBox3.Visible = false;
+            textBox5.Visible = true;
+            textBox2.Visible = false;
+            comboBox4.Visible = false;
+            comboBox5.Visible = false;
+            comboBox6.Visible = false;
+            comboBox7.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            label5.Visible = true;
+        }
+
+        private void adopterBtnClick(object sender, EventArgs e)
+        {
+            petDataContainer.Columns[0].HeaderCell.Value = "Adopter ID";
+            petDataContainer.Columns[1].HeaderCell.Value = "F_Name";
+            petDataContainer.Columns[2].HeaderCell.Value = "L_Name";
+            petDataContainer.Columns[3].HeaderCell.Value = "Phone";
+            petDataContainer.Columns[4].HeaderCell.Value = "Address";
+            petDataContainer.Columns[5].HeaderCell.Value = "City";
+            petDataContainer.Columns[6].HeaderCell.Value = "State";
+            petDataContainer.Columns[7].HeaderCell.Value = "Zip";
+            petDataContainer.Columns[8].HeaderCell.Value = "Pet ID";
+            petDataContainer.Columns[9].HeaderCell.Value = "Adoption Time";
+            petDataContainer.Columns[10].HeaderCell.Value = "";
+            addRadioBtn.Visible = false;
+            updateRadioBtn.Visible = false;
+            deleteRadioBtn.Visible = false;
+            label2.Text = "F_Name:";
+            label3.Text = "L_Name:";
+            label4.Text = "Phone:";
+            label5.Text = "Address:";
+            comboBox1.Visible = false;
+            textBox3.Visible = true;
+            comboBox2.Visible = false;
+            textBox4.Visible = true;
+            comboBox3.Visible = false;
+            textBox5.Visible = true;
+            textBox2.Visible = true;
+            comboBox4.Visible = false;
+            comboBox5.Visible = false;
+            comboBox6.Visible = false;
+            comboBox7.Visible = false;
+            label6.Visible = true;
+            label6.Text = "City:";
+            label7.Visible = true;
+            label7.Text = "State:";
+            label8.Visible = true;
+            label8.Text = "Zip:";
+            label9.Visible = true;
+            label9.Text = "Pet ID:";
+            label10.Visible = true;
+            label10.Text = "Time:";
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+            textBox8.Visible = true;
+            textBox9.Visible = true;
+            label5.Visible = true;
+
+        }
+
+        private void volunteerBtnClick(object sender, EventArgs e)
+        {
+            petDataContainer.Columns[0].HeaderCell.Value = "Volunteer ID";
+            petDataContainer.Columns[1].HeaderCell.Value = "F_Name";
+            petDataContainer.Columns[2].HeaderCell.Value = "L_Name";
+            petDataContainer.Columns[3].HeaderCell.Value = "Is Admin?";
+            petDataContainer.Columns[4].HeaderCell.Value = "";
+            petDataContainer.Columns[5].HeaderCell.Value = "";
+            petDataContainer.Columns[6].HeaderCell.Value = "";
+            petDataContainer.Columns[7].HeaderCell.Value = "";
+            petDataContainer.Columns[8].HeaderCell.Value = "";
+            petDataContainer.Columns[9].HeaderCell.Value = "";
+            petDataContainer.Columns[10].HeaderCell.Value = "";
+            addRadioBtn.Visible = false;
+            updateRadioBtn.Visible = false;
+            deleteRadioBtn.Visible = false;
+            label2.Text = "F_Name:";
+            label3.Text = "L_Name:";
+            label4.Text = "Is_Admin:";
+            label5.Text = "Logo:";
+            comboBox1.Visible = false;
+            textBox3.Visible = true;
+            comboBox2.Visible = false;
+            textBox4.Visible = true;
+            comboBox3.Visible = false;
+            textBox5.Visible = false;
+            textBox2.Visible = false;
+            comboBox4.Visible = false;
+            comboBox5.Visible = false;
+            comboBox6.Visible = false;
+            comboBox7.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            label5.Visible = false; 
+
+        }
+
+        private void apptBtnClick(object sender, EventArgs e)
+        {
+            petDataContainer.Columns[0].HeaderCell.Value = "Appointment ID";
+            petDataContainer.Columns[1].HeaderCell.Value = "Start Time";
+            petDataContainer.Columns[2].HeaderCell.Value = "End Time";
+            petDataContainer.Columns[3].HeaderCell.Value = "Volunteer ID";
+            petDataContainer.Columns[4].HeaderCell.Value = "Adopter ID";
+            petDataContainer.Columns[5].HeaderCell.Value = "Pet ID";
+            petDataContainer.Columns[6].HeaderCell.Value = "";
+            petDataContainer.Columns[7].HeaderCell.Value = "";
+            petDataContainer.Columns[8].HeaderCell.Value = "";
+            petDataContainer.Columns[9].HeaderCell.Value = "";
+            petDataContainer.Columns[10].HeaderCell.Value = "";
+            addRadioBtn.Visible = false;
+            updateRadioBtn.Visible = true;
+            deleteRadioBtn.Visible = false;
+            label2.Text = "Appt ID:";
+            label3.Text = "Start:";
+            label4.Text = "End:";
+            label5.Text = "Vol ID:";
+            comboBox1.Visible = false;
+            textBox3.Visible = true;
+            comboBox2.Visible = false;
+            textBox4.Visible = true;
+            comboBox3.Visible = false;
+            textBox5.Visible = true;
+            textBox2.Visible = true;
+            comboBox4.Visible = false;
+            comboBox5.Visible = false;
+            comboBox6.Visible = false;
+            comboBox7.Visible = false;
+            label6.Visible = true;
+            label6.Text = "Adopter ID:";
+            label7.Visible = true;
+            label7.Text = "Pet ID:";
+            label8.Visible = true;
+            label8.Text = "Pet ID:";
+            label9.Visible = false;
+            label10.Visible = false;
+            textBox6.Visible = true;
+            textBox7.Visible = true;
+            textBox8.Visible = false;
+            textBox9.Visible = false;
+            label5.Visible = true;
         }
     }
 }

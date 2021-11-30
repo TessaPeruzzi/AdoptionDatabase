@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleBorder = new System.Windows.Forms.Panel();
             this.DarkBlueTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,8 +47,22 @@
             this.PetButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.petDataContainer = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -72,20 +87,10 @@
             this.deleteRadioBtn = new System.Windows.Forms.RadioButton();
             this.searchRadioBtn = new System.Windows.Forms.RadioButton();
             this.addRadioBtn = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -211,7 +216,7 @@
             // 
             this.apptBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.apptBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.apptBtn.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apptBtn.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apptBtn.ForeColor = System.Drawing.Color.White;
             this.apptBtn.Location = new System.Drawing.Point(1215, 10);
             this.apptBtn.Margin = new System.Windows.Forms.Padding(4);
@@ -220,12 +225,13 @@
             this.apptBtn.TabIndex = 8;
             this.apptBtn.Text = "APPOINTMENTS";
             this.apptBtn.UseVisualStyleBackColor = false;
+            this.apptBtn.Click += new System.EventHandler(this.apptBtnClick);
             // 
             // voluteerBtn
             // 
             this.voluteerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.voluteerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.voluteerBtn.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voluteerBtn.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voluteerBtn.ForeColor = System.Drawing.Color.White;
             this.voluteerBtn.Location = new System.Drawing.Point(1015, 10);
             this.voluteerBtn.Margin = new System.Windows.Forms.Padding(4);
@@ -234,12 +240,13 @@
             this.voluteerBtn.TabIndex = 7;
             this.voluteerBtn.Text = "VOLUNTEERS";
             this.voluteerBtn.UseVisualStyleBackColor = false;
+            this.voluteerBtn.Click += new System.EventHandler(this.volunteerBtnClick);
             // 
             // adopterBtn
             // 
             this.adopterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.adopterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adopterBtn.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adopterBtn.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adopterBtn.ForeColor = System.Drawing.Color.White;
             this.adopterBtn.Location = new System.Drawing.Point(815, 10);
             this.adopterBtn.Margin = new System.Windows.Forms.Padding(4);
@@ -248,12 +255,13 @@
             this.adopterBtn.TabIndex = 6;
             this.adopterBtn.Text = "ADOPTERS";
             this.adopterBtn.UseVisualStyleBackColor = false;
+            this.adopterBtn.Click += new System.EventHandler(this.adopterBtnClick);
             // 
             // ShopButton
             // 
             this.ShopButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.ShopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ShopButton.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShopButton.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShopButton.ForeColor = System.Drawing.Color.White;
             this.ShopButton.Location = new System.Drawing.Point(615, 10);
             this.ShopButton.Margin = new System.Windows.Forms.Padding(4);
@@ -262,12 +270,13 @@
             this.ShopButton.TabIndex = 5;
             this.ShopButton.Text = "SHOPS";
             this.ShopButton.UseVisualStyleBackColor = false;
+            this.ShopButton.Click += new System.EventHandler(this.shopBtnClick);
             // 
             // VetButton
             // 
             this.VetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.VetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VetButton.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VetButton.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VetButton.ForeColor = System.Drawing.Color.White;
             this.VetButton.Location = new System.Drawing.Point(415, 10);
             this.VetButton.Margin = new System.Windows.Forms.Padding(4);
@@ -276,12 +285,13 @@
             this.VetButton.TabIndex = 4;
             this.VetButton.Text = "VETS";
             this.VetButton.UseVisualStyleBackColor = false;
+            this.VetButton.Click += new System.EventHandler(this.vetBtnClick);
             // 
             // AgencyButton
             // 
             this.AgencyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.AgencyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AgencyButton.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgencyButton.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgencyButton.ForeColor = System.Drawing.Color.White;
             this.AgencyButton.Location = new System.Drawing.Point(215, 10);
             this.AgencyButton.Margin = new System.Windows.Forms.Padding(4);
@@ -296,7 +306,7 @@
             // 
             this.PetButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.PetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PetButton.Font = new System.Drawing.Font("Bernard MT Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PetButton.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PetButton.ForeColor = System.Drawing.Color.White;
             this.PetButton.Location = new System.Drawing.Point(15, 10);
             this.PetButton.Margin = new System.Windows.Forms.Padding(4);
@@ -337,11 +347,91 @@
             this.petDataContainer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.petDataContainer.Location = new System.Drawing.Point(3, 206);
             this.petDataContainer.Name = "petDataContainer";
+            this.petDataContainer.ReadOnly = true;
             this.petDataContainer.RowHeadersWidth = 51;
-            this.petDataContainer.RowTemplate.Height = 24;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.petDataContainer.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.petDataContainer.RowTemplate.Height = 35;
             this.petDataContainer.Size = new System.Drawing.Size(1413, 320);
             this.petDataContainer.TabIndex = 18;
             this.petDataContainer.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.getPetRowInfo);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Pet ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Age";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Sex";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.MinimumWidth = 6;
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Fee";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Agency";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Vet";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Pet Shop";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Image";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Adopted?";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // panel3
             // 
@@ -355,6 +445,10 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.panel5.Controls.Add(this.textBox9);
+            this.panel5.Controls.Add(this.textBox8);
+            this.panel5.Controls.Add(this.textBox7);
+            this.panel5.Controls.Add(this.textBox6);
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Controls.Add(this.textBox4);
             this.panel5.Controls.Add(this.textBox3);
@@ -382,6 +476,30 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1410, 185);
             this.panel5.TabIndex = 0;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(109, 153);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(312, 22);
+            this.textBox5.TabIndex = 22;
+            this.textBox5.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(109, 119);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(312, 22);
+            this.textBox4.TabIndex = 21;
+            this.textBox4.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(109, 83);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(312, 22);
+            this.textBox3.TabIndex = 20;
+            this.textBox3.Visible = false;
             // 
             // label10
             // 
@@ -785,95 +903,37 @@
             this.addRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addRadioBtn.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // textBox6
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 83);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(312, 22);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.Visible = false;
+            this.textBox6.Location = new System.Drawing.Point(609, 83);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(312, 22);
+            this.textBox6.TabIndex = 23;
+            this.textBox6.Visible = false;
             // 
-            // textBox4
+            // textBox7
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 119);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(312, 22);
-            this.textBox4.TabIndex = 21;
-            this.textBox4.Visible = false;
+            this.textBox7.Location = new System.Drawing.Point(609, 117);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(312, 22);
+            this.textBox7.TabIndex = 24;
+            this.textBox7.Visible = false;
             // 
-            // textBox5
+            // textBox8
             // 
-            this.textBox5.Location = new System.Drawing.Point(109, 153);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(312, 22);
-            this.textBox5.TabIndex = 22;
-            this.textBox5.Visible = false;
+            this.textBox8.Location = new System.Drawing.Point(609, 150);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(312, 22);
+            this.textBox8.TabIndex = 25;
+            this.textBox8.Visible = false;
             // 
-            // Column1
+            // textBox9
             // 
-            this.Column1.HeaderText = "Pet ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Age";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Sex";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Fee";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Agency";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Vet";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Pet Shop";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Image";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Adopted?";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
+            this.textBox9.Location = new System.Drawing.Point(1058, 50);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(312, 22);
+            this.textBox9.TabIndex = 26;
+            this.textBox9.Visible = false;
             // 
             // AdminPortal
             // 
@@ -966,5 +1026,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }
