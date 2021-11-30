@@ -71,7 +71,7 @@ namespace AdoptionDatabase
                     string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
                     MySqlConnection con = new MySqlConnection(cs);
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO PET VALUES(4,@name,@age,@type,@price,@sex,@picture,@agency,@shop,@vet)", con);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO PET VALUES(5,@name,@age,@type,@price,@sex,@picture,@agency,@shop,@vet)", con);
                     cmd.Parameters.AddWithValue("@name", textBox1.Text);
                     cmd.Parameters.AddWithValue("@age", comboBox1.SelectedItem);
                     cmd.Parameters.AddWithValue("@type", comboBox3.SelectedItem);
@@ -121,6 +121,21 @@ namespace AdoptionDatabase
                     con.Close();
                     petDataContainer.Rows.Clear();
                     displayPetData();
+                }
+                if (searchRadioBtn.Checked == true)
+                {
+                    string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
+                    MySqlConnection con = new MySqlConnection(cs);
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand("SELECT * FROM PET WHERE CONCAT(`PET_NAME`,`PET_AGE`,`PET_TYPE`) LIKE '%" + textBox10.Text + "%'", con);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable searchTable = new DataTable();
+                    adapter.Fill(searchTable);
+                    petDataContainer.DataSource = searchTable;
+                    con.Close();
+
+
+
                 }
             }
            

@@ -46,13 +46,11 @@ namespace AdoptionDatabase
             CardContainer.RowStyles.Clear();
 
             string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
-            using (var con = new MySqlConnection(cs))
-            {
-                con.Open();
-                using (var cmd = new MySqlCommand("SELECT * FROM PET", con))
-                {
-                    using (var reader = cmd.ExecuteReader())
-                    {
+            MySqlConnection con = new MySqlConnection(cs);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM PET", con);
+            MySqlDataReader reader = cmd.ExecuteReader();
+                    
                         while (reader.Read())
                         {
                             string name = reader.GetString(1);
@@ -73,10 +71,7 @@ namespace AdoptionDatabase
                             petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
                             CardContainer.Controls.Add(petTile);
                         }
-                    }
-                }
-
-            }
+    
         }
 
         private void petBtnClick(object sender, EventArgs e)

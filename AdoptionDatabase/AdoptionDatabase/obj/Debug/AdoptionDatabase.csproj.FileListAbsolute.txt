@@ -91,4 +91,3 @@ D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\bin\Debug
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\bin\Debug\System.Numerics.Vectors.xml
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.CopyComplete
-D:\Documents\GitHub\AdoptionDatabase\AdoptionDatabase\AdoptionDatabase\obj\Debug\AdoptionDatabase.csproj.AssemblyReference.cache
