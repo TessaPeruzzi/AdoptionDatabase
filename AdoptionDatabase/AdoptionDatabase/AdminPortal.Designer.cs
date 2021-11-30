@@ -72,6 +72,9 @@
             this.deleteRadioBtn = new System.Windows.Forms.RadioButton();
             this.searchRadioBtn = new System.Windows.Forms.RadioButton();
             this.addRadioBtn = new System.Windows.Forms.RadioButton();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -287,6 +290,7 @@
             this.AgencyButton.TabIndex = 3;
             this.AgencyButton.Text = "AGENCIES";
             this.AgencyButton.UseVisualStyleBackColor = false;
+            this.AgencyButton.Click += new System.EventHandler(this.agencyBtnClick);
             // 
             // PetButton
             // 
@@ -301,6 +305,7 @@
             this.PetButton.TabIndex = 2;
             this.PetButton.Text = "PETS";
             this.PetButton.UseVisualStyleBackColor = false;
+            this.PetButton.Click += new System.EventHandler(this.petBtnClick);
             // 
             // panel2
             // 
@@ -350,6 +355,9 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.textBox3);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.comboBox7);
             this.panel5.Controls.Add(this.button1);
@@ -650,7 +658,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 154);
+            this.label5.Location = new System.Drawing.Point(21, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 19);
             this.label5.TabIndex = 5;
@@ -660,7 +668,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 122);
+            this.label4.Location = new System.Drawing.Point(21, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 19);
             this.label4.TabIndex = 4;
@@ -670,7 +678,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 86);
+            this.label3.Location = new System.Drawing.Point(21, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 19);
             this.label3.TabIndex = 3;
@@ -680,7 +688,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 49);
+            this.label2.Location = new System.Drawing.Point(21, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 19);
             this.label2.TabIndex = 2;
@@ -777,9 +785,33 @@
             this.addRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addRadioBtn.UseVisualStyleBackColor = false;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(109, 83);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(312, 22);
+            this.textBox3.TabIndex = 20;
+            this.textBox3.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(109, 119);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(312, 22);
+            this.textBox4.TabIndex = 21;
+            this.textBox4.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(109, 153);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(312, 22);
+            this.textBox5.TabIndex = 22;
+            this.textBox5.Visible = false;
+            // 
             // Column1
             // 
-            this.Column1.HeaderText = "ID";
+            this.Column1.HeaderText = "Pet ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
@@ -920,6 +952,9 @@
         private System.Windows.Forms.RadioButton updateRadioBtn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
