@@ -63,9 +63,29 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _07CAT_STRIPES_mediumSquareAt3X_v2 {
+            get {
+                object obj = ResourceManager.GetObject("07CAT-STRIPES-mediumSquareAt3X-v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _768px_Hamburger_icon_white_svg {
             get {
                 object obj = ResourceManager.GetObject("768px-Hamburger_icon_white.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap default_pet_pic {
+            get {
+                object obj = ResourceManager.GetObject("default pet pic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

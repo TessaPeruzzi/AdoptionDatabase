@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
-	<LangVersion>8.0</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -223,6 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07CAT-STRIPES-mediumSquareAt3X-v2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default pet pic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

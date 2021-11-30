@@ -121,22 +121,28 @@
   <data name="768px-Hamburger_icon_white.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\768px-Hamburger_icon_white.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hamburger_icon_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hamburger_icon_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="outlook-g17d530a5b_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outlook-g17d530a5b_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IMG_3232 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_3232 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="07CAT-STRIPES-mediumSquareAt3X-v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\07CAT-STRIPES-mediumSquareAt3X-v2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LuckiestGuy_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LuckiestGuy-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Hamburger_icon_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hamburger_icon_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paw" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default pet pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default pet pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

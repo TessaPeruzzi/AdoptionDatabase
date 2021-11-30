@@ -41,7 +41,6 @@ namespace AdoptionDatabase
 
         private void createPetCards()
         {
-            PetCard[] petCards = new PetCard[20];
             petFilter();
 
             CardContainer.RowStyles.Clear();
