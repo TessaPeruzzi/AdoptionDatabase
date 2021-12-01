@@ -45,7 +45,7 @@ namespace AdoptionDatabase
 
             CardContainer.RowStyles.Clear();
 
-            string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
+            string cs = @"Server=localhost; Port=3306; Database=test; Uid=root; Pwd=Adoption1@;";
             MySqlConnection con = new MySqlConnection(cs);
             con.Open();
             MySqlCommand cmd = new MySqlCommand("SELECT * FROM PET", con);
@@ -53,19 +53,23 @@ namespace AdoptionDatabase
                     
                         while (reader.Read())
                         {
-                            string name = reader.GetString(1);
-                            string age = reader.GetString(2);
-                            string type = reader.GetString(3);
-                            string price = reader.GetString(4);
-                            string sex = reader.GetString(5);
+                            string id = reader.GetString(0);
+                            string petshop = reader.GetString(1);
+                            string agency = reader.GetString(2);
+                            string vet = reader.GetString(3);
+                            string name = reader.GetString(4);
+                            string type = reader.GetString(5);
                             string picture = reader.GetString(6);
-                            string agency = reader.GetString(7);
-                            string shop = reader.GetString(8);
-                            string vet = reader.GetString(9);
+                            string gender = reader.GetString(7);
+                            string age = reader.GetString(8);
+                            string price = reader.GetString(10);
+
+
+
 
                             PetCard petTile = new PetCard();
                             petTile.NameLabel.Text = name;
-                            petTile.InfoLabel.Text = "Age: " + age + "\nType: " + type + "\nAdoption Fee: $" + price + "\nSex: " + sex + "\nShop: " + shop;
+                            petTile.InfoLabel.Text = "Age: " + age + "\nType: " + type + "\nAdoption Fee: $" + price + "\nSex: " + gender + "\nShop: " + petshop + "\nVet: " + vet;
                             petTile.AgencyLabel.Text = agency;
                             System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
                             petTile.pictureBox1.Image = (Image)rm.GetObject(picture);

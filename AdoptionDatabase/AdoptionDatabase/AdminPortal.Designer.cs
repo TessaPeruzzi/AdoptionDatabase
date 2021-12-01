@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleBorder = new System.Windows.Forms.Panel();
             this.DarkBlueTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +49,11 @@
             this.petDataContainer = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -73,15 +78,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.radioBtnGroup = new System.Windows.Forms.TableLayoutPanel();
             this.updateRadioBtn = new System.Windows.Forms.RadioButton();
-            this.deleteRadioBtn = new System.Windows.Forms.RadioButton();
-            this.searchRadioBtn = new System.Windows.Forms.RadioButton();
             this.addRadioBtn = new System.Windows.Forms.RadioButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.searchRadioBtn = new System.Windows.Forms.RadioButton();
+            this.deleteRadioBtn = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -344,14 +346,15 @@
             this.Column7,
             this.Column8,
             this.Column9,
+            this.Column11,
             this.Column10});
             this.petDataContainer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.petDataContainer.Location = new System.Drawing.Point(3, 206);
             this.petDataContainer.Name = "petDataContainer";
             this.petDataContainer.ReadOnly = true;
             this.petDataContainer.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.petDataContainer.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.petDataContainer.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.petDataContainer.RowTemplate.Height = 35;
             this.petDataContainer.Size = new System.Drawing.Size(1413, 320);
             this.petDataContainer.TabIndex = 18;
@@ -369,6 +372,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.textBox10);
             this.panel5.Controls.Add(this.textBox9);
             this.panel5.Controls.Add(this.textBox8);
@@ -402,6 +406,46 @@
             this.panel5.Size = new System.Drawing.Size(1410, 185);
             this.panel5.TabIndex = 0;
             // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(478, 8);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(312, 22);
+            this.textBox10.TabIndex = 27;
+            this.textBox10.Text = "SEARCH HERE";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(1058, 79);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(312, 22);
+            this.textBox9.TabIndex = 26;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(609, 150);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(312, 22);
+            this.textBox8.TabIndex = 25;
+            this.textBox8.Visible = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(609, 117);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(312, 22);
+            this.textBox7.TabIndex = 24;
+            this.textBox7.Visible = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(609, 83);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(312, 22);
+            this.textBox6.TabIndex = 23;
+            this.textBox6.Visible = false;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(109, 153);
@@ -432,9 +476,9 @@
             this.label10.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(930, 52);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 19);
+            this.label10.Size = new System.Drawing.Size(59, 19);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Image";
+            this.label10.Text = "Image:";
             // 
             // comboBox7
             // 
@@ -465,7 +509,7 @@
             // 
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
-            "Sample"});
+            "1"});
             this.comboBox6.Location = new System.Drawing.Point(609, 149);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(312, 24);
@@ -475,7 +519,7 @@
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "Sample"});
+            "1"});
             this.comboBox5.Location = new System.Drawing.Point(609, 117);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(312, 24);
@@ -485,7 +529,7 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "Sample"});
+            "1"});
             this.comboBox4.Location = new System.Drawing.Point(609, 81);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(312, 24);
@@ -776,23 +820,22 @@
             this.updateRadioBtn.UseVisualStyleBackColor = false;
             this.updateRadioBtn.Click += new System.EventHandler(this.updatePet);
             // 
-            // deleteRadioBtn
+            // addRadioBtn
             // 
-            this.deleteRadioBtn.AllowDrop = true;
-            this.deleteRadioBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.addRadioBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteRadioBtn.AutoSize = true;
-            this.deleteRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
-            this.deleteRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteRadioBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteRadioBtn.Location = new System.Drawing.Point(228, 4);
-            this.deleteRadioBtn.Name = "deleteRadioBtn";
-            this.deleteRadioBtn.Size = new System.Drawing.Size(105, 23);
-            this.deleteRadioBtn.TabIndex = 2;
-            this.deleteRadioBtn.Text = "Delete";
-            this.deleteRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.deleteRadioBtn.UseVisualStyleBackColor = false;
+            this.addRadioBtn.AutoSize = true;
+            this.addRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
+            this.addRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addRadioBtn.ForeColor = System.Drawing.Color.White;
+            this.addRadioBtn.Location = new System.Drawing.Point(4, 4);
+            this.addRadioBtn.Name = "addRadioBtn";
+            this.addRadioBtn.Size = new System.Drawing.Size(105, 23);
+            this.addRadioBtn.TabIndex = 0;
+            this.addRadioBtn.Text = "Add";
+            this.addRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addRadioBtn.UseVisualStyleBackColor = false;
             // 
             // searchRadioBtn
             // 
@@ -811,136 +854,114 @@
             this.searchRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchRadioBtn.UseVisualStyleBackColor = false;
             // 
-            // addRadioBtn
+            // deleteRadioBtn
             // 
-            this.addRadioBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.deleteRadioBtn.AllowDrop = true;
+            this.deleteRadioBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addRadioBtn.AutoSize = true;
-            this.addRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
-            this.addRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addRadioBtn.ForeColor = System.Drawing.Color.White;
-            this.addRadioBtn.Location = new System.Drawing.Point(4, 4);
-            this.addRadioBtn.Name = "addRadioBtn";
-            this.addRadioBtn.Size = new System.Drawing.Size(105, 23);
-            this.addRadioBtn.TabIndex = 0;
-            this.addRadioBtn.Text = "Add";
-            this.addRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addRadioBtn.UseVisualStyleBackColor = false;
+            this.deleteRadioBtn.AutoSize = true;
+            this.deleteRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
+            this.deleteRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteRadioBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteRadioBtn.Location = new System.Drawing.Point(228, 4);
+            this.deleteRadioBtn.Name = "deleteRadioBtn";
+            this.deleteRadioBtn.Size = new System.Drawing.Size(105, 23);
+            this.deleteRadioBtn.TabIndex = 2;
+            this.deleteRadioBtn.Text = "Delete";
+            this.deleteRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.deleteRadioBtn.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // label11
             // 
-            this.textBox6.Location = new System.Drawing.Point(609, 83);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(312, 22);
-            this.textBox6.TabIndex = 23;
-            this.textBox6.Visible = false;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(609, 117);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(312, 22);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.Visible = false;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(609, 150);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(312, 22);
-            this.textBox8.TabIndex = 25;
-            this.textBox8.Visible = false;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(1058, 50);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(312, 22);
-            this.textBox9.TabIndex = 26;
-            this.textBox9.Visible = false;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(478, 8);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(312, 22);
-            this.textBox10.TabIndex = 27;
-            this.textBox10.Text = "SEARCH HERE";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(930, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 19);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Volunteer:";
             // 
             // Column10
             // 
-            this.Column10.HeaderText = "Adopted?";
+            this.Column10.HeaderText = "ADOPTED?";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "VOLUNTEER_ID";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
             // Column9
             // 
-            this.Column9.HeaderText = "Image";
+            this.Column9.HeaderText = "ADOPTION_PRICE";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
             // Column8
             // 
-            this.Column8.HeaderText = "Pet Shop";
+            this.Column8.HeaderText = "AGE";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Vet";
+            this.Column7.HeaderText = "GENDER";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Agency";
+            this.Column6.HeaderText = "PICTURE";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Fee";
+            this.Column5.HeaderText = "PET_TYPE";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Type
             // 
-            this.Type.HeaderText = "Type";
+            this.Type.HeaderText = "PET_NAME";
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Sex";
+            this.Column4.HeaderText = "VET_ID";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Age";
+            this.Column3.HeaderText = "AGENCY_ID";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Name";
+            this.Column2.HeaderText = "PETSHOP_ID";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Pet ID";
+            this.Column1.HeaderText = "PET_ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -1030,6 +1051,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -1040,6 +1062,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
