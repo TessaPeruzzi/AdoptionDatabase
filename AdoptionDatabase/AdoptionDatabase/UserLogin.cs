@@ -75,6 +75,7 @@ namespace AdoptionDatabase
                             petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
                             CardContainer.Controls.Add(petTile);
                         }
+            con.Close();
     
         }
 

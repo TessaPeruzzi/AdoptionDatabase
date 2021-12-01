@@ -37,28 +37,12 @@ namespace AdoptionDatabase
             string cs = @"Server=localhost; Port=3306; Database=test; Uid=root; Pwd=Adoption1@;";
             MySqlConnection con = new MySqlConnection(cs);
             con.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM PET", con);
-            MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-                        {
-                            string id = reader.GetString(0);
-                            string petshop = reader.GetString(1);
-                            string agency = reader.GetString(2);
-                            string vet = reader.GetString(3);
-                            string name = reader.GetString(4);
-                            string type = reader.GetString(5);
-                            string picture = reader.GetString(6);
-                            string gender = reader.GetString(7);
-                            string age = reader.GetString(8);
-                            string volunteer = reader.GetString(9);
-                            string price = reader.GetString(10);
-                            
-
-                            petDataContainer.Rows.Add(id,petshop, agency, vet, name, type, picture, gender, age, price, volunteer);
-                        }
-                    
-                
-
+            MySqlCommand cmd = new MySqlCommand("SELECT PET_ID, PETSHOP_ID, AGENCY_ID, VET_ID, PET_NAME, PET_TYPE, PICTURE, GENDER, AGE, VOLUNTEER_ID, ADOPTION_PRICE FROM PET", con);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            DataTable fillTable = new DataTable();
+            adapter.Fill(fillTable);
+            petDataContainer.DataSource = fillTable;
+            con.Close();
             
         }
 
@@ -85,7 +69,7 @@ namespace AdoptionDatabase
 
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    petDataContainer.Rows.Clear();
+
                     displayPetData();
                 }
 
@@ -98,7 +82,6 @@ namespace AdoptionDatabase
                     cmd.Parameters.AddWithValue("@petKey", petID);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    petDataContainer.Rows.Clear();
                     displayPetData();
                 }
 
@@ -107,7 +90,7 @@ namespace AdoptionDatabase
                     string cs = @"Server=localhost; Port=3306; Database=test; Uid=root; Pwd=Adoption1@;";
                     MySqlConnection con = new MySqlConnection(cs);
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand("UPDATE PET SET PET_NAME=@name,AGE=@age,PET_TYPE=@type,ADOPTION_PRICE=@price,GENDER=@sex,PICTURE=@picture,AGENCY_ID=@agency,PETSHOP_ID=@shop,VET_ID=@vet, VOLUNTEER_ID=@volunteer WHERE PET_ID = @id", con);
+                    MySqlCommand cmd = new MySqlCommand("UPDATE PET SET PET_NAME=@name,AGE=@age,PET_TYPE=@type,ADOPTION_PRICE=@price,GENDER=@sex,PICTURE=@picture,AGENCY_ID=@agency,PETSHOP_ID=@shop,VET_ID=@vet WHERE PET_ID = @id", con);
                     cmd.Parameters.AddWithValue("@id", petID);
                     cmd.Parameters.AddWithValue("@name", textBox1.Text);
                     cmd.Parameters.AddWithValue("@age", comboBox1.Text);
@@ -121,7 +104,6 @@ namespace AdoptionDatabase
                     cmd.Parameters.AddWithValue("@volunteer", textBox9.Text);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    petDataContainer.Rows.Clear();
                     displayPetData();
                 }
                 if (searchRadioBtn.Checked == true)
