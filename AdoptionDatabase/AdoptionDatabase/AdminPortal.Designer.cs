@@ -80,7 +80,6 @@
             this.radioBtnGroup = new System.Windows.Forms.TableLayoutPanel();
             this.updateRadioBtn = new System.Windows.Forms.RadioButton();
             this.addRadioBtn = new System.Windows.Forms.RadioButton();
-            this.searchRadioBtn = new System.Windows.Forms.RadioButton();
             this.deleteRadioBtn = new System.Windows.Forms.RadioButton();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
@@ -778,13 +777,12 @@
             this.radioBtnGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.radioBtnGroup.Controls.Add(this.updateRadioBtn, 0, 0);
             this.radioBtnGroup.Controls.Add(this.addRadioBtn, 0, 0);
-            this.radioBtnGroup.Controls.Add(this.searchRadioBtn, 3, 0);
             this.radioBtnGroup.Controls.Add(this.deleteRadioBtn, 2, 0);
             this.radioBtnGroup.Location = new System.Drawing.Point(9, 3);
             this.radioBtnGroup.Name = "radioBtnGroup";
             this.radioBtnGroup.RowCount = 1;
             this.radioBtnGroup.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.radioBtnGroup.Size = new System.Drawing.Size(451, 31);
+            this.radioBtnGroup.Size = new System.Drawing.Size(432, 31);
             this.radioBtnGroup.TabIndex = 1;
             // 
             // updateRadioBtn
@@ -797,9 +795,9 @@
             this.updateRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.updateRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateRadioBtn.ForeColor = System.Drawing.Color.White;
-            this.updateRadioBtn.Location = new System.Drawing.Point(116, 4);
+            this.updateRadioBtn.Location = new System.Drawing.Point(111, 4);
             this.updateRadioBtn.Name = "updateRadioBtn";
-            this.updateRadioBtn.Size = new System.Drawing.Size(105, 23);
+            this.updateRadioBtn.Size = new System.Drawing.Size(100, 23);
             this.updateRadioBtn.TabIndex = 3;
             this.updateRadioBtn.Text = "Update";
             this.updateRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -817,28 +815,11 @@
             this.addRadioBtn.ForeColor = System.Drawing.Color.White;
             this.addRadioBtn.Location = new System.Drawing.Point(4, 4);
             this.addRadioBtn.Name = "addRadioBtn";
-            this.addRadioBtn.Size = new System.Drawing.Size(105, 23);
+            this.addRadioBtn.Size = new System.Drawing.Size(100, 23);
             this.addRadioBtn.TabIndex = 0;
             this.addRadioBtn.Text = "Add";
             this.addRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addRadioBtn.UseVisualStyleBackColor = false;
-            // 
-            // searchRadioBtn
-            // 
-            this.searchRadioBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchRadioBtn.AutoSize = true;
-            this.searchRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
-            this.searchRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchRadioBtn.ForeColor = System.Drawing.Color.White;
-            this.searchRadioBtn.Location = new System.Drawing.Point(340, 4);
-            this.searchRadioBtn.Name = "searchRadioBtn";
-            this.searchRadioBtn.Size = new System.Drawing.Size(107, 23);
-            this.searchRadioBtn.TabIndex = 1;
-            this.searchRadioBtn.Text = "Search";
-            this.searchRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.searchRadioBtn.UseVisualStyleBackColor = false;
             // 
             // deleteRadioBtn
             // 
@@ -850,9 +831,9 @@
             this.deleteRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.deleteRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteRadioBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteRadioBtn.Location = new System.Drawing.Point(228, 4);
+            this.deleteRadioBtn.Location = new System.Drawing.Point(218, 4);
             this.deleteRadioBtn.Name = "deleteRadioBtn";
-            this.deleteRadioBtn.Size = new System.Drawing.Size(105, 23);
+            this.deleteRadioBtn.Size = new System.Drawing.Size(100, 23);
             this.deleteRadioBtn.TabIndex = 2;
             this.deleteRadioBtn.Text = "Delete";
             this.deleteRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -913,7 +894,6 @@
         private System.Windows.Forms.TableLayoutPanel radioBtnGroup;
         private System.Windows.Forms.RadioButton addRadioBtn;
         private System.Windows.Forms.RadioButton deleteRadioBtn;
-        private System.Windows.Forms.RadioButton searchRadioBtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

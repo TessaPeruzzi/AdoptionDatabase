@@ -217,6 +217,12 @@ namespace AdoptionDatabase
             return activeInterface.requestTable(selectString, whereString);
         }
 
+        public static void insertIntoDatabase(string query)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            activeInterface.modifyDatabase(query);
+        }
+
     }
 
     

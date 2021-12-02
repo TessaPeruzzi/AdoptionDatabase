@@ -36,26 +36,36 @@ namespace AdoptionDatabase
             commander.Connection = connection;
             commander.CommandType = System.Data.CommandType.Text;
 
-            MySqlDataReader output = commander.ExecuteReader();
+            MySqlDataReader output;
 
+            try
+            {
+                output = commander.ExecuteReader();
+
+                while (output.Read())
+                {
+                    string[] dataOut = new string[numcolumns];
+
+                    for (int i = 0; i < numcolumns; i++)
+                    {
+                        dataOut[i] = output[i].ToString();
+                    }
+
+                    response.insert(new Record(dataOut));
+
+                }
+
+                output.Close();
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine("The action could not be performed");
+            }
 
             
 
 
-            while (output.Read())
-            {
-                string[] dataOut = new string[numcolumns];
-
-                for (int i = 0; i < numcolumns; i++)
-                {
-                    dataOut[i] = output[i].ToString();
-                }
-
-                response.insert(new Record(dataOut));
-
-            }
-
-            output.Close();
+            
             connection.Close();
             connection = null;
 
@@ -66,19 +76,34 @@ namespace AdoptionDatabase
 
         public void modifyDatabase(string insertString)
         {
+            connection = new MySqlConnection();
+            connection.ConnectionString = "server = 127.0.0.1;uid = root;pwd=Adoption1@;database=adoption_db";
+            connection.Open();
+
             MySqlCommand commander = new MySqlCommand();
             commander.Connection = connection;
             commander.CommandType = System.Data.CommandType.Text;
             commander.CommandText = insertString;
 
+            Debug.WriteLine(insertString);
+
             try
             {
-                commander.ExecuteReader().Close();
-            }
-            catch (Exception e)
-            {
+
+                commander.ExecuteNonQuery();
 
             }
+            catch(Exception e)
+            {
+
+                Debug.WriteLine("The action could not be performed");
+
+            }
+            connection.Close();
+                
+                
+            
+            
 
 
         }
