@@ -594,7 +594,7 @@ namespace AdoptionDatabase
             label8.Text = "Zip:";
             label9.Visible = true;
             label9.Text = "Adp_Pet ID:";
-            label10.Visible = true;
+            label10.Visible = false;
             label10.Text = "Time:";
             textBox6.Visible = true;
             textBox7.Visible = true;

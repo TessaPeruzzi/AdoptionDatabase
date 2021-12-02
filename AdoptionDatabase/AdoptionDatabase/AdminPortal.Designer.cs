@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleBorder = new System.Windows.Forms.Panel();
             this.DarkBlueTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +50,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -327,8 +326,8 @@
             this.petDataContainer.Name = "petDataContainer";
             this.petDataContainer.ReadOnly = true;
             this.petDataContainer.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.petDataContainer.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.petDataContainer.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.petDataContainer.RowTemplate.Height = 35;
             this.petDataContainer.Size = new System.Drawing.Size(1413, 320);
             this.petDataContainer.TabIndex = 18;
@@ -348,7 +347,6 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.textBox10);
             this.panel5.Controls.Add(this.textBox9);
             this.panel5.Controls.Add(this.textBox8);
             this.panel5.Controls.Add(this.textBox7);
@@ -390,14 +388,6 @@
             this.label11.Size = new System.Drawing.Size(82, 19);
             this.label11.TabIndex = 28;
             this.label11.Text = "Volunteer:";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(478, 8);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(312, 22);
-            this.textBox10.TabIndex = 27;
-            this.textBox10.Text = "SEARCH HERE";
             // 
             // textBox9
             // 
@@ -853,7 +843,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label11;
     }
 }

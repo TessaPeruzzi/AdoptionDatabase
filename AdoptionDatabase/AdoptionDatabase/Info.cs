@@ -122,7 +122,7 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT P.PET_ID, P.PETSHOP_ID, P.AGENCY_ID, P.VET_ID, P.PET_NAME, P.PET_TYPE, P.PICTURE, P.GENDER, AGE, P.ADOPTION_PRICE, A.ADOPTER_ID FROM PET AS P LEFT OUTER JOIN ADOPTION AS A ON P.PET_ID = A.PET_ID";
+            string selectString = "SELECT P.PET_ID, P.PETSHOP_ID, P.AGENCY_ID, P.VET_ID, P.PET_NAME, P.PET_TYPE, P.PICTURE, P.GENDER, AGE, P.ADOPTION_PRICE, AD.FIRSTNAME FROM PET AS P LEFT OUTER JOIN ADOPTION AS A ON P.PET_ID = A.PET_ID LEFT OUTER JOIN ADOPTER AS AD ON AD.ADOPTER_ID = A.ADOPTER_ID";
 ;
             if (infoBox == null)                   
                 whereString = "";
