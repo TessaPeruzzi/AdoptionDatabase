@@ -44,17 +44,10 @@ namespace AdoptionDatabase
 
         private void fixColumns()
         {
-            petDataContainer.Columns.Insert(0, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(1, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(2, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(3, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(4, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(5, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(6, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(7, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(8, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(9, petDataContainer.Columns[0]);
-            petDataContainer.Columns.Insert(10, petDataContainer.Columns[0]);
+            
+            petDataContainer.DataSource = null;
+            petDataContainer.ColumnCount = 0;
+
         }
         private void submitPetBtnClick(object sender, EventArgs e)
         {
@@ -188,18 +181,12 @@ namespace AdoptionDatabase
         private void agencyBtnClick(object sender, EventArgs e)
         {
             fixColumns();
+            petDataContainer.DataSource = Info.getAgencyTable(null);
 
             petDataContainer.Columns[0].HeaderCell.Value = "AGENCY_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "NAME";
             petDataContainer.Columns[2].HeaderCell.Value = "ADDRESS";
-            petDataContainer.Columns[3].HeaderCell.Value = "PHONE_NUM";
-            petDataContainer.Columns[4].HeaderCell.Value = "";
-            petDataContainer.Columns[5].HeaderCell.Value = "";
-            petDataContainer.Columns[6].HeaderCell.Value = "";
-            petDataContainer.Columns[7].HeaderCell.Value = "";
-            petDataContainer.Columns[8].HeaderCell.Value = "";
-            petDataContainer.Columns[9].HeaderCell.Value = "";
-            petDataContainer.Columns[10].HeaderCell.Value = "";
+            petDataContainer.Columns[3].HeaderCell.Value = "PHONE_NUM";            
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
@@ -230,12 +217,14 @@ namespace AdoptionDatabase
             label11.Visible = false;
             textBox9.Visible = false;
 
-            petDataContainer.DataSource = Info.getAgencyTable(null);
+            
         }
 
         private void petBtnClick(object sender, EventArgs e)
         {
             fixColumns();
+
+            petDataContainer.DataSource = Info.getPetTable(null);
 
             petDataContainer.Columns[0].HeaderCell.Value = "PET_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "PETSHOP_ID";
@@ -278,7 +267,7 @@ namespace AdoptionDatabase
             label5.Visible = true;
             label11.Visible = true;
             textBox9.Visible = true;
-            petDataContainer.DataSource = Info.getPetTable(null);
+            
 
             
         }
@@ -286,18 +275,11 @@ namespace AdoptionDatabase
         private void vetBtnClick(object sender, EventArgs e)
         {
             fixColumns();
-
+            petDataContainer.DataSource = Info.getVetTable(null);
             petDataContainer.Columns[0].HeaderCell.Value = "VET_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "NAME";
             petDataContainer.Columns[2].HeaderCell.Value = "ADDRESS";
             petDataContainer.Columns[3].HeaderCell.Value = "PHONE";
-            petDataContainer.Columns[4].HeaderCell.Value = "LOGO";
-            petDataContainer.Columns[5].HeaderCell.Value = "";
-            petDataContainer.Columns[6].HeaderCell.Value = "";
-            petDataContainer.Columns[7].HeaderCell.Value = "";
-            petDataContainer.Columns[8].HeaderCell.Value = "";
-            petDataContainer.Columns[9].HeaderCell.Value = "";
-            petDataContainer.Columns[10].HeaderCell.Value = "";
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
@@ -328,24 +310,20 @@ namespace AdoptionDatabase
             label5.Visible = true;
             label11.Visible = false;
             textBox9.Visible = false;
-            petDataContainer.DataSource = Info.getVetTable(null);
+            
         }
 
         private void shopBtnClick(object sender, EventArgs e)
         {
             fixColumns();
 
+            petDataContainer.DataSource = Info.getShopTable(null);
+
             petDataContainer.Columns[0].HeaderCell.Value = "PETSHOP_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "NAME";
             petDataContainer.Columns[2].HeaderCell.Value = "ADDRESS";
             petDataContainer.Columns[3].HeaderCell.Value = "PHONE";
-            petDataContainer.Columns[4].HeaderCell.Value = "LOGO";
-            petDataContainer.Columns[5].HeaderCell.Value = "";
-            petDataContainer.Columns[6].HeaderCell.Value = "";
-            petDataContainer.Columns[7].HeaderCell.Value = "";
-            petDataContainer.Columns[8].HeaderCell.Value = "";
-            petDataContainer.Columns[9].HeaderCell.Value = "";
-            petDataContainer.Columns[10].HeaderCell.Value = "";
+            petDataContainer.DataSource = Info.getShopTable(null);
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
@@ -376,13 +354,13 @@ namespace AdoptionDatabase
             label5.Visible = true;
             label11.Visible = false;
             textBox9.Visible = false;
-            petDataContainer.DataSource = Info.getShopTable(null);
+            
         }
 
         private void adopterBtnClick(object sender, EventArgs e)
         {
             fixColumns();
-
+            petDataContainer.DataSource = Info.getAdopterTable(null);
             petDataContainer.Columns[0].HeaderCell.Value = "ADOPTER_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "FIRSTNAME";
             petDataContainer.Columns[2].HeaderCell.Value = "LASTNAME";
@@ -393,7 +371,6 @@ namespace AdoptionDatabase
             petDataContainer.Columns[7].HeaderCell.Value = "ZIP";
             petDataContainer.Columns[8].HeaderCell.Value = "PET_ID";
             petDataContainer.Columns[9].HeaderCell.Value = "TIME";
-            petDataContainer.Columns[10].HeaderCell.Value = "";
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
@@ -430,24 +407,17 @@ namespace AdoptionDatabase
             label11.Visible = false;
             textBox9.Visible = false;
 
-            petDataContainer.DataSource = Info.getAdopterTable(null);
+           
         }
 
         private void volunteerBtnClick(object sender, EventArgs e)
         {
             fixColumns();
-
+            petDataContainer.DataSource = Info.getVolunteerTable(null);
             petDataContainer.Columns[0].HeaderCell.Value = "VOLUNTEER_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "FIRSTNAME";
             petDataContainer.Columns[2].HeaderCell.Value = "LASTNAME";
             petDataContainer.Columns[3].HeaderCell.Value = "IS_ADMIN";
-            petDataContainer.Columns[4].HeaderCell.Value = "";
-            petDataContainer.Columns[5].HeaderCell.Value = "";
-            petDataContainer.Columns[6].HeaderCell.Value = "";
-            petDataContainer.Columns[7].HeaderCell.Value = "";
-            petDataContainer.Columns[8].HeaderCell.Value = "";
-            petDataContainer.Columns[9].HeaderCell.Value = "";
-            petDataContainer.Columns[10].HeaderCell.Value = "";
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
@@ -481,7 +451,7 @@ namespace AdoptionDatabase
 
             
 
-            petDataContainer.DataSource = Info.getVolunteerTable(null);
+            
 
             
         }
@@ -489,18 +459,13 @@ namespace AdoptionDatabase
         private void apptBtnClick(object sender, EventArgs e)
         {
             fixColumns();
-
+            petDataContainer.DataSource = Info.getAppointmentTable(null);
             petDataContainer.Columns[0].HeaderCell.Value = "APPOINTMENT_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "ADOPTER_ID";
             petDataContainer.Columns[2].HeaderCell.Value = "PET_ID";
             petDataContainer.Columns[3].HeaderCell.Value = "VOLUNTEER_ID";
             petDataContainer.Columns[4].HeaderCell.Value = "START_TIME";
             petDataContainer.Columns[5].HeaderCell.Value = "END_TIME";
-            petDataContainer.Columns[6].HeaderCell.Value = "";
-            petDataContainer.Columns[7].HeaderCell.Value = "";
-            petDataContainer.Columns[8].HeaderCell.Value = "";
-            petDataContainer.Columns[9].HeaderCell.Value = "";
-            petDataContainer.Columns[10].HeaderCell.Value = "";
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = true;
             deleteRadioBtn.Visible = false;
@@ -535,7 +500,7 @@ namespace AdoptionDatabase
             label11.Visible = false;
             textBox9.Visible = false;
 
-            petDataContainer.DataSource = Info.getAppointmentTable(null);
+            
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)
