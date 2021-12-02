@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace AdoptionDatabase
 {
@@ -14,9 +15,7 @@ namespace AdoptionDatabase
 
         public DatabaseInterface()
         {
-            connection = new MySqlConnection();
-            connection.ConnectionString = "server = 127.0.0.1;uid = root;pwd=12345;database=Test";
-            connection.Open();
+            
 
 
 
@@ -25,6 +24,10 @@ namespace AdoptionDatabase
 
         public ReturnedDataHolder queryDatabase(string queryString, int numcolumns)
         {
+            connection = new MySqlConnection();
+            connection.ConnectionString = "server = 127.0.0.1;uid = root;pwd=12345;database=Test";
+            connection.Open();
+
             ReturnedDataHolder response = new ReturnedDataHolder();
 
             MySqlCommand commander = new MySqlCommand();
@@ -52,6 +55,9 @@ namespace AdoptionDatabase
             }
 
             output.Close();
+            connection.Close();
+            connection = null;
+
 
             return response;
         }
@@ -98,6 +104,8 @@ namespace AdoptionDatabase
 
             return output;
         }
+
+       
 
 
     }

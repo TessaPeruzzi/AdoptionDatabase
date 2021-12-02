@@ -333,6 +333,7 @@
             this.petDataContainer.RowTemplate.Height = 35;
             this.petDataContainer.Size = new System.Drawing.Size(1413, 320);
             this.petDataContainer.TabIndex = 18;
+            this.petDataContainer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.petDataContainer_CellContentClick);
             this.petDataContainer.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.getPetRowInfo);
             // 
             // panel3

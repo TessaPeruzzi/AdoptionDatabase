@@ -13,11 +13,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdoptionDatabase.Properties;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace AdoptionDatabase
 {
     public partial class MainPage : Form
     {
+        PetTypeCheckBox[] checkboxes;
+
         public MainPage()
         {
             InitializeComponent();
@@ -28,6 +31,10 @@ namespace AdoptionDatabase
             noHorizontalScrollBar();
             fillTypeCheckBox();
             createPetCards();
+
+            MaleCheckBox.CheckedChanged += checkBoxChanged;
+
+         
 
         }
 
@@ -45,12 +52,25 @@ namespace AdoptionDatabase
 
             CardContainer.RowStyles.Clear();
 
-            string cs = @"Server=localhost; Port=3306; Database=test; Uid=root; Pwd=Adoption1@;";
-            MySqlConnection con = new MySqlConnection(cs);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM PET", con);
-            MySqlDataReader reader = cmd.ExecuteReader();
-                    
+            string[] typeOut = new string[12];
+            int activeTypeIndex = 0;
+
+
+            for(int i = 0; i < 12; i++)
+            {
+                if(checkboxes[i].checkBox1.Checked)
+                {
+                    typeOut[activeTypeIndex] = checkboxes[i].checkBox1.Text;
+                }
+                activeTypeIndex++;
+            }
+
+            
+            Info.queryPetsForUser(typeOut, new string[1],new string[1]);
+
+            
+                 
+            /*
                         while (reader.Read())
                         {
                             string id = reader.GetString(0);
@@ -75,7 +95,8 @@ namespace AdoptionDatabase
                             petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
                             CardContainer.Controls.Add(petTile);
                         }
-            con.Close();
+            */
+           
     
         }
 
@@ -144,12 +165,13 @@ namespace AdoptionDatabase
 
         private void fillTypeCheckBox()
         {
-            PetTypeCheckBox[] checkboxes = new PetTypeCheckBox[12];
+            checkboxes = new PetTypeCheckBox[12];
 
             for (int i = 0; i < 12; i++)
             {
                 checkboxes[i] = new PetTypeCheckBox();
                 CheckBoxContainer.Controls.Add(checkboxes[i]);
+                checkboxes[i].checkBox1.CheckedChanged += checkBoxChanged;
             }
 
             checkboxes[0].checkBox1.Text = "Dogs";
@@ -238,7 +260,10 @@ namespace AdoptionDatabase
             logIn.ShowDialog();
             this.Close();
         }
-
+        private void checkBoxChanged(object sender, EventArgs e)
+        {
+            createPetCards();
+        }
     }
 
 
