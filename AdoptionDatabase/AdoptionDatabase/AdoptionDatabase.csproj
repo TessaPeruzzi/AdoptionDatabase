@@ -232,19 +232,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\beth.jpg" />
+    <None Include="Resources\beth1.jpg" />
     <Content Include="Resources\bubbles.jpg" />
+    <None Include="Resources\bubbles1.jpg" />
     <Content Include="Resources\carrots.jpg" />
+    <None Include="Resources\carrots1.jpg" />
     <Content Include="Resources\cottontail.jpg" />
+    <None Include="Resources\cottontail1.jpg" />
     <Content Include="Resources\croakers.jpg" />
+    <None Include="Resources\croakers1.jpg" />
     <Content Include="Resources\doughball.jpg" />
+    <None Include="Resources\doughball1.jpg" />
     <Content Include="Resources\mrwhiskers.jpg" />
+    <None Include="Resources\mrwhiskers1.jpg" />
     <Content Include="Resources\oreo.jpg" />
+    <None Include="Resources\oreo1.jpg" />
     <Content Include="Resources\polly.jpg" />
+    <None Include="Resources\polly1.jpg" />
     <Content Include="Resources\smores.jpg" />
+    <None Include="Resources\smores1.jpg" />
     <Content Include="Resources\snowball.jpg" />
+    <None Include="Resources\snowball1.jpg" />
     <Content Include="Resources\stewart.jpg" />
+    <None Include="Resources\stewart1.jpg" />
     <Content Include="Resources\thumper.jpg" />
+    <None Include="Resources\thumper1.jpg" />
     <Content Include="Resources\twinkie.jpg" />
+    <None Include="Resources\vanilla1.jpg" />
+    <None Include="Resources\twinkie1.jpg" />
     <Content Include="Resources\vanilla.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
