@@ -179,7 +179,57 @@ namespace AdoptionDatabase
 
         }
 
-           
+        if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "APPOINTMENT_ID")
+            {
+                if (addRadioBtn.Checked)
+                {
+                    for (int i = 1; i < 5; i++)
+                    {
+                        if (notPetSource[i].Text == "")
+                            return;
+                    }
+
+                    string queryString = "INSERT INTO APPOINTMENT (ADOPTER_ID, PET_ID, VOLUNTEER_ID, TIMESLOT_ID) VALUES (";
+
+                    for (int i = 1; i < 5; i++)
+                    {
+                        if (i != 1)
+                            queryString += ", ";
+
+                        queryString += notPetSource[i].Text;
+                    }
+
+                    queryString += ");";
+
+                    Debug.WriteLine(queryString);
+
+                    Info.insertIntoDatabase(queryString);
+
+
+                    petDataContainer.DataSource = Info.getAppointmentTable(null);
+
+                }
+
+                else if (updateRadioBtn.Checked)
+                {
+
+                    string queryString = "UPDATE APPOINTMENT SET ADOPTER_ID = " + notPetSource[1].Text + ", PET_ID = " + notPetSource[2].Text + ", VOLUNTEER_ID = " + notPetSource[3].Text + "', TIMESLOT_ID = " + notPetSource[3].Text +";";
+
+                    Info.insertIntoDatabase(queryString);
+
+                    petDataContainer.DataSource = Info.getAdopterTable(null);
+                }
+
+                else
+                {
+
+                    Info.insertIntoDatabase("DELETE FROM ADOPTER WHERE ADOPTER_ID = " + activeID.ToString() + ";");
+
+                    petDataContainer.DataSource = Info.getAppointmentTable(null);
+                }
+            }
+
+
         }
 
         private void updatePet(object sender, EventArgs e)
@@ -247,14 +297,28 @@ namespace AdoptionDatabase
                 petImage = petDataContainer.Rows[e.RowIndex].Cells[6].Value.ToString();
                 petVolunteer = petDataContainer.Rows[e.RowIndex].Cells[10].Value.ToString();
             }
+            
             else
             {
                 activeID = activeID = Convert.ToInt32(petDataContainer.Rows[e.RowIndex].Cells[0].Value.ToString());
+                int start;
 
-                for(int i = 1; i < petDataContainer.ColumnCount; i++)
+                if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "APPOINTMENT_ID")
                 {
-                    notPetSource[i-1].Text = petDataContainer.Rows[e.RowIndex].Cells[i].Value.ToString();
+                    for (int i = 0; i < petDataContainer.ColumnCount; i++)
+                    {
+                        notPetSource[i].Text = petDataContainer.Rows[e.RowIndex].Cells[i].Value.ToString();
+                    }
                 }
+                else
+                {
+                    for (int i = 1; i < petDataContainer.ColumnCount; i++)
+                    {
+                        notPetSource[i-1].Text = petDataContainer.Rows[e.RowIndex].Cells[i].Value.ToString();
+                    }
+                }
+
+
 
             }
 
@@ -559,14 +623,15 @@ namespace AdoptionDatabase
             petDataContainer.Columns[1].HeaderCell.Value = "ADOPTER_ID";
             petDataContainer.Columns[2].HeaderCell.Value = "PET_ID";
             petDataContainer.Columns[3].HeaderCell.Value = "VOLUNTEER_ID";
-            petDataContainer.Columns[4].HeaderCell.Value = "START_TIME";
-            petDataContainer.Columns[5].HeaderCell.Value = "END_TIME";
+            petDataContainer.Columns[4].HeaderCell.Value = "TIMESLOT_ID";
+            petDataContainer.Columns[5].HeaderCell.Value = "START_TIME";
+            petDataContainer.Columns[6].HeaderCell.Value = "END_TIME";
             addRadioBtn.Visible = true;
             updateRadioBtn.Visible = true;
             deleteRadioBtn.Visible = true;
             label2.Text = "Appt ID:";
-            label3.Text = "Start:";
-            label4.Text = "End:";
+            label3.Text = "Adopter:";
+            label4.Text = "Pet ID";
             label5.Text = "Vol ID:";
             comboBox1.Visible = false;
             textBox3.Visible = true;
@@ -580,11 +645,11 @@ namespace AdoptionDatabase
             comboBox6.Visible = false;
             comboBox7.Visible = false;
             label6.Visible = true;
-            label6.Text = "Adopter ID:";
+            label6.Text = "Timeslot ID";
             label7.Visible = true;
-            label7.Text = "Pet ID:";
+            label7.Text = "Start Time:";
             label8.Visible = true;
-            label8.Text = "Pet ID:";
+            label8.Text = "End Time";
             label9.Visible = false;
             label10.Visible = false;
             textBox6.Visible = true;

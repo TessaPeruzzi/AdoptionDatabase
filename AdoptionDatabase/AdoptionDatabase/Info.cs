@@ -206,7 +206,7 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT A.APPOINTMENT_ID, A.ADOPTER_ID, A.PET_ID, A.VOLUNTEER_ID, T.START_TIME, T.END_TIME FROM APPOINTMENT AS A JOIN APPOINTMENT_SLOT AS APS ON((A.VOLUNTEER_ID = APS.VOLUNTEER_ID) AND(A.TIMESLOT_ID = APS.TIMESLOT_ID)) JOIN TIMESLOT AS T ON(APS.TIMESLOT_ID = T.TIMESLOT_ID)";
+            string selectString = "SELECT A.APPOINTMENT_ID, A.ADOPTER_ID, A.PET_ID, A.VOLUNTEER_ID, T.TIMESLOT_ID, T.START_TIME, T.END_TIME FROM APPOINTMENT AS A JOIN APPOINTMENT_SLOT AS APS ON((A.VOLUNTEER_ID = APS.VOLUNTEER_ID) AND(A.TIMESLOT_ID = APS.TIMESLOT_ID)) JOIN TIMESLOT AS T ON(APS.TIMESLOT_ID = T.TIMESLOT_ID)";
             if (infoBox == null)
                 whereString = "";
             else

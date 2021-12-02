@@ -230,5 +230,22 @@
   <ItemGroup>
     <None Include="Resources\default pet pic.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\beth.jpg" />
+    <Content Include="Resources\bubbles.jpg" />
+    <Content Include="Resources\carrots.jpg" />
+    <Content Include="Resources\cottontail.jpg" />
+    <Content Include="Resources\croakers.jpg" />
+    <Content Include="Resources\doughball.jpg" />
+    <Content Include="Resources\mrwhiskers.jpg" />
+    <Content Include="Resources\oreo.jpg" />
+    <Content Include="Resources\polly.jpg" />
+    <Content Include="Resources\smores.jpg" />
+    <Content Include="Resources\snowball.jpg" />
+    <Content Include="Resources\stewart.jpg" />
+    <Content Include="Resources\thumper.jpg" />
+    <Content Include="Resources\twinkie.jpg" />
+    <Content Include="Resources\vanilla.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
