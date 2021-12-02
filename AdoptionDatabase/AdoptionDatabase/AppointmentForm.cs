@@ -12,7 +12,7 @@ namespace AdoptionDatabase
 {
     public partial class Appointment_Form : Form
     {
-        public Appointment_Form()
+        public Appointment_Form(string petname)
         {
             InitializeComponent();
         }

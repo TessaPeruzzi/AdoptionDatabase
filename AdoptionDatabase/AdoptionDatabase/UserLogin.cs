@@ -21,6 +21,8 @@ namespace AdoptionDatabase
     {
         PetTypeCheckBox[] checkboxes;
 
+      
+
         public MainPage()
         {
             InitializeComponent();
@@ -33,8 +35,11 @@ namespace AdoptionDatabase
             createPetCards();
 
             MaleCheckBox.CheckedChanged += checkBoxChanged;
-
-         
+            ageComboBox.Text = "1";
+            ageComboBox.SelectionChangeCommitted += checkBoxChanged;
+            ageSelectionBox.SelectionChangeCommitted += checkBoxChanged;
+            MaleCheckBox.CheckedChanged += checkBoxChanged;
+            CheckBoxFemale.CheckedChanged += checkBoxChanged;
 
         }
 
@@ -51,10 +56,20 @@ namespace AdoptionDatabase
             petFilter();
 
             CardContainer.RowStyles.Clear();
+           
+
+            //Mark
+            while(CardContainer.Controls.Count > 0)
+            {
+                CardContainer.Controls[0].Dispose();
+            }
+
+
 
             string[] typeOut = new string[12];
             int activeTypeIndex = 0;
 
+            
 
             for(int i = 0; i < 12; i++)
             {
@@ -65,13 +80,45 @@ namespace AdoptionDatabase
                 activeTypeIndex++;
             }
 
-            
-            Info.queryPetsForUser(typeOut, new string[1],new string[1]);
+            string petGender;
+
+            if((MaleCheckBox.Checked && CheckBoxFemale.Checked)|| (!MaleCheckBox.Checked && !CheckBoxFemale.Checked))
+            {
+                petGender = null;
+            }
+            else if(MaleCheckBox.Checked)
+            {
+                petGender = "M";
+            }
+            else
+            {
+                petGender = "F";
+            }
+
+            string ageOperator = "";
+
+            if (ageSelectionBox.Text != "")
+            {
+                switch (ageSelectionBox.Text)
+                {
+                    case "Equal to":
+                        ageOperator = "=";
+                        break;
+                    case "Greater than":
+                        ageOperator = ">";
+                        break;
+                    default:
+                        ageOperator = "<";
+                        break;
+                }
+            }
+
+            ReturnedDataHolder reader = Info.queryPetsForUser(typeOut, petGender, ageOperator, ageComboBox.Text);
 
             
                  
-            /*
-                        while (reader.Read())
+            
+            while (reader.next())
                         {
                             string id = reader.GetString(0);
                             string petshop = reader.GetString(1);
@@ -82,7 +129,7 @@ namespace AdoptionDatabase
                             string picture = reader.GetString(6);
                             string gender = reader.GetString(7);
                             string age = reader.GetString(8);
-                            string price = reader.GetString(10);
+                            string price = reader.GetString(9);
 
 
 
@@ -95,7 +142,7 @@ namespace AdoptionDatabase
                             petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
                             CardContainer.Controls.Add(petTile);
                         }
-            */
+            
            
     
         }
@@ -191,13 +238,7 @@ namespace AdoptionDatabase
 
         private void showBtwnBox(object sender, EventArgs e)
         {
-            if (ageSelectionBox.Text == "Between")
-            {
-                btwnComboBox.Visible = true;
-            } else
-            {
-                btwnComboBox.Visible = false;
-            }
+          
         }
 
         private void noFilter()
@@ -263,6 +304,11 @@ namespace AdoptionDatabase
         private void checkBoxChanged(object sender, EventArgs e)
         {
             createPetCards();
+        }
+
+        private void ageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
+using System.Data;
 
 namespace AdoptionDatabase
 {
@@ -25,7 +26,7 @@ namespace AdoptionDatabase
         public ReturnedDataHolder queryDatabase(string queryString, int numcolumns)
         {
             connection = new MySqlConnection();
-            connection.ConnectionString = "server = 127.0.0.1;uid = root;pwd=12345;database=Test";
+            connection.ConnectionString = "server = 127.0.0.1;uid = root;pwd=Adoption1@;database=adoption_db";
             connection.Open();
 
             ReturnedDataHolder response = new ReturnedDataHolder();
@@ -38,7 +39,7 @@ namespace AdoptionDatabase
             MySqlDataReader output = commander.ExecuteReader();
 
 
-            Console.WriteLine("good so far");
+            
 
 
             while (output.Read())
@@ -105,7 +106,26 @@ namespace AdoptionDatabase
             return output;
         }
 
-       
+        public DataTable requestTable(string selectString, string whereString)
+        {
+
+
+            string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
+            MySqlConnection con = new MySqlConnection(cs);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand(selectString + whereString, con);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            DataTable fillTable = new DataTable();
+            adapter.Fill(fillTable);
+            
+            con.Close();
+
+            return fillTable;
+
+        }
+
+
+     
 
 
     }

@@ -9,7 +9,7 @@ namespace AdoptionDatabase
     class ReturnedDataHolder
     {
         private Record firstData;
-
+        private Record activeData;
 
         public ReturnedDataHolder()
         {
@@ -27,6 +27,36 @@ namespace AdoptionDatabase
                 firstData.insert(newData);
             }
 
+        }
+
+        public bool next()
+        {
+            if((activeData == null) && (firstData == null))
+            {
+                return false;
+            }
+            else if(activeData == null)
+            {
+                activeData = firstData;
+                return true;
+            }
+            else if(activeData.getNext() != null)
+            {
+
+                activeData = activeData.getNext();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+
+        public string GetString(int index)
+        {
+            return activeData.getString(index);
         }
 
         public void dumpToConsole()

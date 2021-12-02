@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace AdoptionDatabase
 {
@@ -35,15 +36,20 @@ namespace AdoptionDatabase
             }
         }
 
+        public string getString(int index)
+        {
+            return data[index];
+        }
+
         public void dumpToConsole()
         {
 
             for (int i = 0; i < data.GetLength(0); i++)
             {
-                Console.Write(data[i] + " ");
+                Debug.Write(data[i] + " ");
 
             }
-            Console.Write("\n");
+            Debug.Write("\n");
 
             if (next != null)
                 next.dumpToConsole();

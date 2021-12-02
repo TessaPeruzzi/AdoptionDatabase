@@ -41,6 +41,7 @@
             // AppointmentButton
             // 
             this.AppointmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(189)))));
+            this.AppointmentButton.Enabled = false;
             this.AppointmentButton.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AppointmentButton.Location = new System.Drawing.Point(16, 193);
             this.AppointmentButton.Name = "AppointmentButton";
@@ -48,6 +49,7 @@
             this.AppointmentButton.TabIndex = 1;
             this.AppointmentButton.Text = "APPOINTMENTS";
             this.AppointmentButton.UseVisualStyleBackColor = false;
+            this.AppointmentButton.Visible = false;
             this.AppointmentButton.Click += new System.EventHandler(this.appointmentBtnClick);
             // 
             // AgencyPanel
@@ -85,7 +87,7 @@
             this.InfoLabel.AutoSize = true;
             this.InfoLabel.Location = new System.Drawing.Point(271, 57);
             this.InfoLabel.Name = "InfoLabel";
-            this.InfoLabel.Size = new System.Drawing.Size(28, 16);
+            this.InfoLabel.Size = new System.Drawing.Size(31, 17);
             this.InfoLabel.TabIndex = 5;
             this.InfoLabel.Text = "Info";
             // 

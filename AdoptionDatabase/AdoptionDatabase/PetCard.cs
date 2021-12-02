@@ -19,7 +19,7 @@ namespace AdoptionDatabase
 
         private void appointmentBtnClick(object sender, EventArgs e)
         {
-            Appointment_Form apptForm = new Appointment_Form();
+            Appointment_Form apptForm = new Appointment_Form(NameLabel.Text);
             apptForm.ShowDialog();
 
         }

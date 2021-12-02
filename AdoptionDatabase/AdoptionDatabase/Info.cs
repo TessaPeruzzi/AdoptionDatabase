@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Data;
 
 namespace AdoptionDatabase
 {
@@ -21,17 +22,19 @@ namespace AdoptionDatabase
 
         }
 
-        public static ReturnedDataHolder queryPetsForUser(string[] petTypes, string[] petSexes, string[] petAges)
+        public static ReturnedDataHolder queryPetsForUser(string[] petTypes, string petGender, string ageOperator, string age)
         {
             ReturnedDataHolder pets = new ReturnedDataHolder();
-
-            string query = "SELECT (PET_NAME, PET_TYPE, PICTURE, GENDER, AGE, ADOPTION_PRICE) FROM PET WHERE ";
+            string query = "SELECT PET.PET_ID, PETSHOP.NAME, AGENCY.NAME, VET.NAME, PET.PET_NAME, PET.PET_TYPE, PET.PICTURE, PET.GENDER, PET.AGE, PET.ADOPTION_PRICE FROM (PET JOIN PETSHOP ON(PET.PETSHOP_ID = PETSHOP.PETSHOP_ID) JOIN VET ON VET.VET_ID = PET.VET_ID JOIN AGENCY ON AGENCY.AGENCY_ID = PET.AGENCY_ID)";
 
             bool followingOutside = false;
             bool followingInside = false;
 
             if(hasContents(petTypes))
             {
+                if (followingOutside == false)
+                    query += " WHERE";
+
                 query += "(";
 
                 for (int i = 0; i < petTypes.Length; i++)
@@ -39,9 +42,9 @@ namespace AdoptionDatabase
                     if (petTypes[i] != null)
                     { 
                         if (followingInside)
-                            query += "OR ";
+                            query += " OR";
 
-                        query = query + "(PET_TYPE = " + petTypes[i] + ") ";
+                        query = query + " (PET.PET_TYPE = '" + petTypes[i] + "')";
 
                         followingInside = true;
                     }
@@ -51,12 +54,50 @@ namespace AdoptionDatabase
                 followingInside = false;
                 followingOutside = true;
 
+                query += " )";
             }
 
+            if(petGender != null)
+            {
+                if (followingOutside == false)
+                {
+                    query += " WHERE";
+                }
+                else
+                {
+                    query += " AND";
+                }
 
+                query += " (PET.GENDER = '" + petGender + "')";
+
+                followingOutside = true;
+
+            }
+
+            if(ageOperator != "")
+            {
+                if (followingOutside == false)
+                    query += " WHERE";
+                else
+                {
+                    query += " AND";
+                }
+
+                query += " (PET.AGE " + ageOperator +  " " + age + ")";
+
+                followingOutside = true;
+            }
+
+            query += ";";
 
             Debug.WriteLine(query);
 
+            DatabaseInterface DataLink = new DatabaseInterface();
+
+            pets = DataLink.queryDatabase(query, 10);
+
+            pets.dumpToConsole();
+           
 
 
             return pets;
@@ -77,6 +118,108 @@ namespace AdoptionDatabase
 
         }
 
+        public static DataTable getPetTable(string[] infoBox)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            string whereString;
+            string selectString = "SELECT PET_ID, PETSHOP_ID, AGENCY_ID, VET_ID, PET_NAME, PET_TYPE, PICTURE, GENDER, AGE, VOLUNTEER_ID, ADOPTION_PRICE FROM PET";
+            if (infoBox == null)                   
+                whereString = "";
+            else
+            {
+                whereString = "";
+            }
+
+            return activeInterface.requestTable(selectString, whereString);
+        }
+        public static DataTable getAgencyTable(string[] infoBox)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            string whereString;
+            string selectString = "SELECT AGENCY_ID, NAME, ADDRESS, PHONE_NUM FROM AGENCY";
+            if (infoBox == null)
+                whereString = "";
+            else
+            {
+                whereString = "";
+            }
+
+            return activeInterface.requestTable(selectString, whereString);
+        }
+        public static DataTable getVetTable(string[] infoBox)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            string whereString;
+            string selectString = "SELECT VET_ID, NAME, ADDRESS, PHONE_NUM FROM VET";
+            if (infoBox == null)
+                whereString = "";
+            else
+            {
+                whereString = "";
+            }
+
+            return activeInterface.requestTable(selectString, whereString);
+        }
+        public static DataTable getShopTable(string[] infoBox)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            string whereString;
+            string selectString = "SELECT PETSHOP_ID, NAME, ADDRESS, PHONE_NUM FROM PETSHOP";
+            if (infoBox == null)
+                whereString = "";
+            else
+            {
+                whereString = "";
+            }
+
+            return activeInterface.requestTable(selectString, whereString);
+        }
+        public static DataTable getAdopterTable(string[] infoBox)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            string whereString;
+            string selectString = "SELECT ADOPTER_ID, FIRSTNAME, LASTNAME, PHONE, ADDRESS, CITY, STATE, ZIP FROM ADOPTER";
+            if (infoBox == null)
+                whereString = "";
+            else
+            {
+                whereString = "";
+            }
+
+            return activeInterface.requestTable(selectString, whereString);
+        }
+        public static DataTable getVolunteerTable(string[] infoBox)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            string whereString;
+            string selectString = "SELECT VOLUNTEER_ID, FIRSTNAME, LASTNAME, IS_ADMIN FROM VOLUNTEER";
+            if (infoBox == null)
+                whereString = "";
+            else
+            {
+                whereString = "";
+            }
+
+            return activeInterface.requestTable(selectString, whereString);
+        }
+        public static DataTable getAppointmentTable(string[] infoBox)
+        {
+            DatabaseInterface activeInterface = new DatabaseInterface();
+            string whereString;
+            string selectString = "SELECT PET_ID, PETSHOP_ID, AGENCY_ID, VET_ID, PET_NAME, PET_TYPE, PICTURE, GENDER, AGE, VOLUNTEER_ID, ADOPTION_PRICE FROM PET";
+            if (infoBox == null)
+                whereString = "";
+            else
+            {
+                whereString = "";
+            }
+
+            return activeInterface.requestTable(selectString, whereString);
+        }
 
     }
+
+    
+   
+    
 }

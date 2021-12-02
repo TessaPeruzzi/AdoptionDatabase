@@ -43,7 +43,6 @@
             this.ButtonWhite = new System.Windows.Forms.Panel();
             this.CardContainer = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btwnComboBox = new System.Windows.Forms.ComboBox();
             this.ageComboBox = new System.Windows.Forms.ComboBox();
             this.ageSelectionBox = new System.Windows.Forms.ComboBox();
             this.AgeLabel = new System.Windows.Forms.Label();
@@ -243,7 +242,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
-            this.panel2.Controls.Add(this.btwnComboBox);
             this.panel2.Controls.Add(this.ageComboBox);
             this.panel2.Controls.Add(this.ageSelectionBox);
             this.panel2.Controls.Add(this.AgeLabel);
@@ -260,255 +258,124 @@
             this.panel2.Size = new System.Drawing.Size(339, 480);
             this.panel2.TabIndex = 0;
             // 
-            // btwnComboBox
-            // 
-            this.btwnComboBox.FormattingEnabled = true;
-            this.btwnComboBox.Items.AddRange(new object[] {
-            "1 m",
-            "2 m",
-            "3 m",
-            "4 m",
-            "5 m",
-            "6 m",
-            "7 m",
-            "8 m",
-            "9 m",
-            "10 m",
-            "11 m",
-            "1 yr ",
-            "2 yr",
-            "3 yr",
-            "4 yr",
-            "5 yr",
-            "6 yr",
-            "7 yr",
-            "8 yr",
-            "9 yr",
-            "10 yr",
-            "11 yr",
-            "12 yr",
-            "13 yr",
-            "14 yr",
-            "15 yr",
-            "16 yr",
-            "17 yr",
-            "18 yr",
-            "19 yr",
-            "20 yr",
-            "21 yr",
-            "22 yr",
-            "23 yr",
-            "24 yr",
-            "25 yr",
-            "26 yr",
-            "27 yr",
-            "28 yr",
-            "29 yr",
-            "30 yr",
-            "31 yr",
-            "32 yr",
-            "33 yr",
-            "34 yr",
-            "35 yr",
-            "36 yr",
-            "37 yr",
-            "38 yr",
-            "39 yr",
-            "40 yr",
-            "41 yr",
-            "42 yr",
-            "43 yr",
-            "44 yr",
-            "45 yr",
-            "46 yr",
-            "47 yr",
-            "48 yr",
-            "49 yr",
-            "50 yr",
-            "51 yr ",
-            "52 yr",
-            "53 yr",
-            "54 yr",
-            "55 yr",
-            "56 yr",
-            "57 yr",
-            "58 yr",
-            "59 yr",
-            "60 yr",
-            "61 yr",
-            "62 yr",
-            "63 yr",
-            "64 yr",
-            "65 yr",
-            "66 yr",
-            "67 yr",
-            "68 yr",
-            "69 yr",
-            "70 yr",
-            "71 yr",
-            "72 yr",
-            "73 yr",
-            "74 yr",
-            "75 yr",
-            "76 yr",
-            "77 yr",
-            "78 yr",
-            "79 yr",
-            "80 yr",
-            "81 yr",
-            "82 yr",
-            "83 yr",
-            "84 yr",
-            "85 yr",
-            "86 yr",
-            "87 yr",
-            "88 yr",
-            "89 yr",
-            "90 yr",
-            "91 yr",
-            "92 yr",
-            "93 yr",
-            "94 yr",
-            "95 yr",
-            "96 yr",
-            "97 yr",
-            "98 yr",
-            "99 yr",
-            "100 yr"});
-            this.btwnComboBox.Location = new System.Drawing.Point(170, 447);
-            this.btwnComboBox.Name = "btwnComboBox";
-            this.btwnComboBox.Size = new System.Drawing.Size(121, 24);
-            this.btwnComboBox.TabIndex = 10;
-            this.btwnComboBox.Visible = false;
-            // 
             // ageComboBox
             // 
             this.ageComboBox.FormattingEnabled = true;
             this.ageComboBox.Items.AddRange(new object[] {
-            "1 m",
-            "2 m",
-            "3 m",
-            "4 m",
-            "5 m",
-            "6 m",
-            "7 m",
-            "8 m",
-            "9 m",
-            "10 m",
-            "11 m",
-            "1 yr ",
-            "2 yr",
-            "3 yr",
-            "4 yr",
-            "5 yr",
-            "6 yr",
-            "7 yr",
-            "8 yr",
-            "9 yr",
-            "10 yr",
-            "11 yr",
-            "12 yr",
-            "13 yr",
-            "14 yr",
-            "15 yr",
-            "16 yr",
-            "17 yr",
-            "18 yr",
-            "19 yr",
-            "20 yr",
-            "21 yr",
-            "22 yr",
-            "23 yr",
-            "24 yr",
-            "25 yr",
-            "26 yr",
-            "27 yr",
-            "28 yr",
-            "29 yr",
-            "30 yr",
-            "31 yr",
-            "32 yr",
-            "33 yr",
-            "34 yr",
-            "35 yr",
-            "36 yr",
-            "37 yr",
-            "38 yr",
-            "39 yr",
-            "40 yr",
-            "41 yr",
-            "42 yr",
-            "43 yr",
-            "44 yr",
-            "45 yr",
-            "46 yr",
-            "47 yr",
-            "48 yr",
-            "49 yr",
-            "50 yr",
-            "51 yr ",
-            "52 yr",
-            "53 yr",
-            "54 yr",
-            "55 yr",
-            "56 yr",
-            "57 yr",
-            "58 yr",
-            "59 yr",
-            "60 yr",
-            "61 yr",
-            "62 yr",
-            "63 yr",
-            "64 yr",
-            "65 yr",
-            "66 yr",
-            "67 yr",
-            "68 yr",
-            "69 yr",
-            "70 yr",
-            "71 yr",
-            "72 yr",
-            "73 yr",
-            "74 yr",
-            "75 yr",
-            "76 yr",
-            "77 yr",
-            "78 yr",
-            "79 yr",
-            "80 yr",
-            "81 yr",
-            "82 yr",
-            "83 yr",
-            "84 yr",
-            "85 yr",
-            "86 yr",
-            "87 yr",
-            "88 yr",
-            "89 yr",
-            "90 yr",
-            "91 yr",
-            "92 yr",
-            "93 yr",
-            "94 yr",
-            "95 yr",
-            "96 yr",
-            "97 yr",
-            "98 yr",
-            "99 yr",
-            "100 yr"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99",
+            "100"});
             this.ageComboBox.Location = new System.Drawing.Point(170, 404);
             this.ageComboBox.Name = "ageComboBox";
             this.ageComboBox.Size = new System.Drawing.Size(121, 24);
             this.ageComboBox.TabIndex = 9;
+            this.ageComboBox.SelectedIndexChanged += new System.EventHandler(this.ageComboBox_SelectedIndexChanged);
             // 
             // ageSelectionBox
             // 
             this.ageSelectionBox.FormattingEnabled = true;
             this.ageSelectionBox.Items.AddRange(new object[] {
+            "",
             "Equal to",
             "Less than",
-            "Greater than",
-            "Between"});
+            "Greater than"});
             this.ageSelectionBox.Location = new System.Drawing.Point(20, 404);
             this.ageSelectionBox.Name = "ageSelectionBox";
             this.ageSelectionBox.Size = new System.Drawing.Size(121, 24);
@@ -521,7 +388,7 @@
             this.AgeLabel.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgeLabel.Location = new System.Drawing.Point(9, 358);
             this.AgeLabel.Name = "AgeLabel";
-            this.AgeLabel.Size = new System.Drawing.Size(38, 22);
+            this.AgeLabel.Size = new System.Drawing.Size(40, 23);
             this.AgeLabel.TabIndex = 7;
             this.AgeLabel.Text = "Age";
             // 
@@ -531,7 +398,7 @@
             this.CheckBoxFemale.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckBoxFemale.Location = new System.Drawing.Point(170, 335);
             this.CheckBoxFemale.Name = "CheckBoxFemale";
-            this.CheckBoxFemale.Size = new System.Drawing.Size(64, 20);
+            this.CheckBoxFemale.Size = new System.Drawing.Size(67, 21);
             this.CheckBoxFemale.TabIndex = 6;
             this.CheckBoxFemale.Text = "Female";
             this.CheckBoxFemale.UseVisualStyleBackColor = true;
@@ -542,7 +409,7 @@
             this.MaleCheckBox.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaleCheckBox.Location = new System.Drawing.Point(20, 335);
             this.MaleCheckBox.Name = "MaleCheckBox";
-            this.MaleCheckBox.Size = new System.Drawing.Size(52, 20);
+            this.MaleCheckBox.Size = new System.Drawing.Size(55, 21);
             this.MaleCheckBox.TabIndex = 5;
             this.MaleCheckBox.Text = "Male";
             this.MaleCheckBox.UseVisualStyleBackColor = true;
@@ -553,7 +420,7 @@
             this.SexCheckBox.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SexCheckBox.Location = new System.Drawing.Point(9, 306);
             this.SexCheckBox.Name = "SexCheckBox";
-            this.SexCheckBox.Size = new System.Drawing.Size(35, 22);
+            this.SexCheckBox.Size = new System.Drawing.Size(38, 23);
             this.SexCheckBox.TabIndex = 4;
             this.SexCheckBox.Text = "Sex";
             // 
@@ -563,7 +430,7 @@
             this.PetTypeTitle.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PetTypeTitle.Location = new System.Drawing.Point(9, 63);
             this.PetTypeTitle.Name = "PetTypeTitle";
-            this.PetTypeTitle.Size = new System.Drawing.Size(71, 22);
+            this.PetTypeTitle.Size = new System.Drawing.Size(76, 23);
             this.PetTypeTitle.TabIndex = 3;
             this.PetTypeTitle.Text = "Pet Type";
             // 
@@ -656,7 +523,6 @@
         private System.Windows.Forms.ComboBox ageSelectionBox;
         private System.Windows.Forms.Label AgeLabel;
         private System.Windows.Forms.ComboBox ageComboBox;
-        private System.Windows.Forms.ComboBox btwnComboBox;
         private System.Windows.Forms.PictureBox hamburgerMenu;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button hamburgerLogBtn;
