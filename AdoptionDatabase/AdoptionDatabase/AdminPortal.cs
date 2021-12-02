@@ -213,17 +213,17 @@ namespace AdoptionDatabase
                 else if (updateRadioBtn.Checked)
                 {
 
-                    string queryString = "UPDATE APPOINTMENT SET ADOPTER_ID = " + notPetSource[1].Text + ", PET_ID = " + notPetSource[2].Text + ", VOLUNTEER_ID = " + notPetSource[3].Text + "', TIMESLOT_ID = " + notPetSource[3].Text +";";
+                    string queryString = "UPDATE APPOINTMENT SET ADOPTER_ID = " + notPetSource[1].Text + ", PET_ID = " + notPetSource[2].Text + ", VOLUNTEER_ID = " + notPetSource[3].Text + ", TIMESLOT_ID = " + notPetSource[4].Text + " WHERE APPOINTMENT_ID = " + activeID + ";";
 
                     Info.insertIntoDatabase(queryString);
 
-                    petDataContainer.DataSource = Info.getAdopterTable(null);
+                    petDataContainer.DataSource = Info.getAppointmentTable(null);
                 }
 
                 else
                 {
 
-                    Info.insertIntoDatabase("DELETE FROM ADOPTER WHERE ADOPTER_ID = " + activeID.ToString() + ";");
+                    Info.insertIntoDatabase("DELETE FROM APPOINTMENT WHERE APPOINTMENT_ID = " + activeID.ToString() + ";");
 
                     petDataContainer.DataSource = Info.getAppointmentTable(null);
                 }
