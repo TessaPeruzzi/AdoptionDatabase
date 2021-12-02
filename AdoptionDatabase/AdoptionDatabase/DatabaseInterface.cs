@@ -139,10 +139,21 @@ namespace AdoptionDatabase
             MySqlConnection con = new MySqlConnection(cs);
             con.Open();
             MySqlCommand cmd = new MySqlCommand(selectString + whereString, con);
+
+            Debug.WriteLine(selectString + whereString);
+
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             DataTable fillTable = new DataTable();
-            adapter.Fill(fillTable);
-            
+
+            try
+            {
+                adapter.Fill(fillTable);
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine("Your transaction could not be completed");
+            }
+
             con.Close();
 
             return fillTable;

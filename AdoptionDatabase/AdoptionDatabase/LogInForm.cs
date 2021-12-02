@@ -19,11 +19,33 @@ namespace AdoptionDatabase
 
         private void logInBtn(object sender, EventArgs e)
         {
-            //need if else statement first to check if credentials correct
-            this.Hide();
-            AdminPortal adminport = new AdminPortal();
-            adminport.ShowDialog();
-            this.Close();
+            if (passwordText.Text == "adminPass")
+            {
+                this.Hide();
+                AdminPortal adminport = new AdminPortal();
+               // adminport.deleteRadioBtn.AutoCheck = true;
+               // adminport.updateRadioBtn.AutoCheck = true;
+                adminport.ShowDialog();
+                this.Close();
+            }
+            else if (passwordText.Text == "volPass")
+            {
+                this.Hide();
+                AdminPortal adminport = new AdminPortal();
+               // adminport.deleteRadioBtn.AutoCheck = false;
+               // adminport.updateRadioBtn.AutoCheck = false;
+                adminport.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Password not valid", "Password Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

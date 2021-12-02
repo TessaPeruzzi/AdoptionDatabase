@@ -122,7 +122,8 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT PET_ID, PETSHOP_ID, AGENCY_ID, VET_ID, PET_NAME, PET_TYPE, PICTURE, GENDER, AGE, VOLUNTEER_ID, ADOPTION_PRICE FROM PET";
+            string selectString = "SELECT P.PET_ID, P.PETSHOP_ID, P.AGENCY_ID, P.VET_ID, P.PET_NAME, P.PET_TYPE, P.PICTURE, P.GENDER, AGE, P.ADOPTION_PRICE, A.ADOPTER_ID FROM PET AS P LEFT OUTER JOIN ADOPTION AS A ON P.PET_ID = A.PET_ID";
+;
             if (infoBox == null)                   
                 whereString = "";
             else
@@ -178,7 +179,7 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT AD.ADOPTER_ID, AD.FIRSTNAME, AD.LASTNAME, AD.PHONE, AD.ADDRESS, AD.CITY, AD.STATE, AD.ZIP, AP.PET_ID, T.START_TIME FROM(ADOPTER AS AD LEFT OUTER JOIN APPOINTMENT AS AP ON AD.ADOPTER_ID = AP.ADOPTER_ID) LEFT OUTER JOIN APPOINTMENT_SLOT AS APS ON((AP.TIMESLOT_ID = APS.TIMESLOT_ID) AND(AP.VOLUNTEER_ID = APS.VOLUNTEER_ID)) LEFT OUTER JOIN TIMESLOT AS T ON T.TIMESLOT_ID = APS.TIMESLOT_ID";
+            string selectString = "SELECT AD.ADOPTER_ID, AD.FIRSTNAME, AD.LASTNAME, AD.PHONE, AD.ADDRESS, AD.CITY, AD.STATE, AD.ZIP, AP.PET_ID, T.START_TIME, ADOPTION.PET_ID FROM(ADOPTER AS AD LEFT OUTER JOIN APPOINTMENT AS AP ON AD.ADOPTER_ID = AP.ADOPTER_ID) LEFT OUTER JOIN APPOINTMENT_SLOT AS APS ON((AP.TIMESLOT_ID = APS.TIMESLOT_ID) AND(AP.VOLUNTEER_ID = APS.VOLUNTEER_ID)) LEFT OUTER JOIN TIMESLOT AS T ON T.TIMESLOT_ID = APS.TIMESLOT_ID LEFT OUTER JOIN ADOPTION ON AD.ADOPTER_ID = ADOPTION.ADOPTER_ID";
             if (infoBox == null)
                 whereString = "";
             else

@@ -202,6 +202,7 @@
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
+            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.TitleBorder.ResumeLayout(false);
             this.DarkBlueTitle.ResumeLayout(false);
             this.DarkBlueTitle.PerformLayout();
