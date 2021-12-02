@@ -163,6 +163,9 @@ namespace AdoptionDatabase
 
                     Info.insertIntoDatabase(queryString);
 
+                    if (textBox8.Text == "")
+                        Info.insertIntoDatabase(queryString);
+
                     petDataContainer.DataSource = Info.getAdopterTable(null);
                 }
 
@@ -675,7 +678,19 @@ namespace AdoptionDatabase
 
         }
 
-       
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
