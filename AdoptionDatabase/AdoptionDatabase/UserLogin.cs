@@ -149,19 +149,94 @@ namespace AdoptionDatabase
 
         private void petBtnClick(object sender, EventArgs e)
         {
-           
-
-            
-            PetCard[] petCards = new PetCard[20];
             petFilter();
 
-            CardContainer.Controls.Clear();
             CardContainer.RowStyles.Clear();
 
-            for (int i = 0; i < petCards.Length; i++)
+
+            //Mark
+            while (CardContainer.Controls.Count > 0)
             {
-                petCards[i] = new PetCard();
-                CardContainer.Controls.Add(petCards[i]);
+                CardContainer.Controls[0].Dispose();
+            }
+
+
+
+            string[] typeOut = new string[12];
+            int activeTypeIndex = 0;
+
+
+
+            for (int i = 0; i < 12; i++)
+            {
+                if (checkboxes[i].checkBox1.Checked)
+                {
+                    typeOut[activeTypeIndex] = checkboxes[i].checkBox1.Text;
+                }
+                activeTypeIndex++;
+            }
+
+            string petGender;
+
+            if ((MaleCheckBox.Checked && CheckBoxFemale.Checked) || (!MaleCheckBox.Checked && !CheckBoxFemale.Checked))
+            {
+                petGender = null;
+            }
+            else if (MaleCheckBox.Checked)
+            {
+                petGender = "M";
+            }
+            else
+            {
+                petGender = "F";
+            }
+
+            string ageOperator = "";
+
+            if (ageSelectionBox.Text != "")
+            {
+                switch (ageSelectionBox.Text)
+                {
+                    case "Equal to":
+                        ageOperator = "=";
+                        break;
+                    case "Greater than":
+                        ageOperator = ">";
+                        break;
+                    default:
+                        ageOperator = "<";
+                        break;
+                }
+            }
+
+            ReturnedDataHolder reader = Info.queryPetsForUser(typeOut, petGender, ageOperator, ageComboBox.Text);
+
+
+
+
+            while (reader.next())
+            {
+                string id = reader.GetString(0);
+                string petshop = reader.GetString(1);
+                string agency = reader.GetString(2);
+                string vet = reader.GetString(3);
+                string name = reader.GetString(4);
+                string type = reader.GetString(5);
+                string picture = reader.GetString(6);
+                string gender = reader.GetString(7);
+                string age = reader.GetString(8);
+                string price = reader.GetString(9);
+
+
+
+
+                PetCard petTile = new PetCard();
+                petTile.NameLabel.Text = name;
+                petTile.InfoLabel.Text = "Age: " + age + "\nType: " + type + "\nAdoption Fee: $" + price + "\nSex: " + gender + "\nShop: " + petshop + "\nVet: " + vet;
+                petTile.AgencyLabel.Text = agency;
+                System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
+                petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
+                CardContainer.Controls.Add(petTile);
             }
         }
 
@@ -182,17 +257,26 @@ namespace AdoptionDatabase
 
         private void vetBtnClick(object sender, EventArgs e)
         {
-            VetCard[] vetCards = new VetCard[20];
+            DataTable vetTable = Info.getVetTable(null);
+            VetCard[] vetTile = new VetCard[vetTable.Rows.Count];
             vetFilter();
 
             CardContainer.Controls.Clear();
             CardContainer.RowStyles.Clear();
 
-            for (int i = 0; i < vetCards.Length; i++)
+            for (int i = 0; i < vetTile.Length; i++)
             {
-                vetCards[i] = new VetCard();
-                CardContainer.Controls.Add(vetCards[i]);
+                vetTile[i] = new VetCard();
+                vetTile[i].VetLabel.Text = vetTable.Rows[i][1].ToString();
+                vetTile[i].addressLabel.Text = vetTable.Rows[i][2].ToString();
+                vetTile[i].phoneLabel.Text = vetTable.Rows[i][3].ToString();
+                
+                System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
+                vetTile[i].VetPicture.Image = (Image)rm.GetObject(vetTable.Rows[i][4].ToString());
+
+                CardContainer.Controls.Add(vetTile[i]);
             }
+            
         }
 
         private void shopBtnClick(object sender, EventArgs e)

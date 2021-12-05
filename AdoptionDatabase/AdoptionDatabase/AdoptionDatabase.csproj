@@ -231,8 +231,10 @@
     <None Include="Resources\default pet pic.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ark-vet.png" />
     <Content Include="Resources\beth.jpg" />
     <None Include="Resources\beth1.jpg" />
+    <None Include="Resources\bloomfield-vet.png" />
     <Content Include="Resources\bubbles.jpg" />
     <None Include="Resources\bubbles1.jpg" />
     <Content Include="Resources\carrots.jpg" />
@@ -243,12 +245,15 @@
     <None Include="Resources\croakers1.jpg" />
     <Content Include="Resources\doughball.jpg" />
     <None Include="Resources\doughball1.jpg" />
+    <None Include="Resources\farmington-vet.jpg" />
+    <None Include="Resources\macomb-vet.jpg" />
     <Content Include="Resources\mrwhiskers.jpg" />
     <None Include="Resources\mrwhiskers1.jpg" />
     <Content Include="Resources\oreo.jpg" />
     <None Include="Resources\oreo1.jpg" />
     <Content Include="Resources\polly.jpg" />
     <None Include="Resources\polly1.jpg" />
+    <None Include="Resources\rochester-vet.png" />
     <Content Include="Resources\smores.jpg" />
     <None Include="Resources\smores1.jpg" />
     <Content Include="Resources\snowball.jpg" />

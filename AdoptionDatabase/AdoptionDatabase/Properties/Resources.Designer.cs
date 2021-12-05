@@ -83,9 +83,29 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ark_vet {
+            get {
+                object obj = ResourceManager.GetObject("ark-vet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap beth {
             get {
                 object obj = ResourceManager.GetObject("beth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bloomfield_vet {
+            get {
+                object obj = ResourceManager.GetObject("bloomfield-vet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +173,16 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap farmington_vet {
+            get {
+                object obj = ResourceManager.GetObject("farmington-vet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hamburger_icon_white {
             get {
                 object obj = ResourceManager.GetObject("Hamburger_icon_white", resourceCulture);
@@ -187,6 +217,16 @@ namespace AdoptionDatabase.Properties {
             get {
                 object obj = ResourceManager.GetObject("LuckiestGuy_Regular", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap macomb_vet {
+            get {
+                object obj = ResourceManager.GetObject("macomb-vet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -236,6 +276,16 @@ namespace AdoptionDatabase.Properties {
         internal static System.Drawing.Bitmap polly {
             get {
                 object obj = ResourceManager.GetObject("polly", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rochester_vet {
+            get {
+                object obj = ResourceManager.GetObject("rochester-vet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

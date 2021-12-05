@@ -388,7 +388,7 @@
             this.AgeLabel.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgeLabel.Location = new System.Drawing.Point(9, 358);
             this.AgeLabel.Name = "AgeLabel";
-            this.AgeLabel.Size = new System.Drawing.Size(40, 23);
+            this.AgeLabel.Size = new System.Drawing.Size(38, 22);
             this.AgeLabel.TabIndex = 7;
             this.AgeLabel.Text = "Age";
             // 
@@ -398,7 +398,7 @@
             this.CheckBoxFemale.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckBoxFemale.Location = new System.Drawing.Point(170, 335);
             this.CheckBoxFemale.Name = "CheckBoxFemale";
-            this.CheckBoxFemale.Size = new System.Drawing.Size(67, 21);
+            this.CheckBoxFemale.Size = new System.Drawing.Size(64, 20);
             this.CheckBoxFemale.TabIndex = 6;
             this.CheckBoxFemale.Text = "Female";
             this.CheckBoxFemale.UseVisualStyleBackColor = true;
@@ -409,7 +409,7 @@
             this.MaleCheckBox.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaleCheckBox.Location = new System.Drawing.Point(20, 335);
             this.MaleCheckBox.Name = "MaleCheckBox";
-            this.MaleCheckBox.Size = new System.Drawing.Size(55, 21);
+            this.MaleCheckBox.Size = new System.Drawing.Size(52, 20);
             this.MaleCheckBox.TabIndex = 5;
             this.MaleCheckBox.Text = "Male";
             this.MaleCheckBox.UseVisualStyleBackColor = true;
@@ -420,7 +420,7 @@
             this.SexCheckBox.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SexCheckBox.Location = new System.Drawing.Point(9, 306);
             this.SexCheckBox.Name = "SexCheckBox";
-            this.SexCheckBox.Size = new System.Drawing.Size(38, 23);
+            this.SexCheckBox.Size = new System.Drawing.Size(35, 22);
             this.SexCheckBox.TabIndex = 4;
             this.SexCheckBox.Text = "Sex";
             // 
@@ -430,7 +430,7 @@
             this.PetTypeTitle.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PetTypeTitle.Location = new System.Drawing.Point(9, 63);
             this.PetTypeTitle.Name = "PetTypeTitle";
-            this.PetTypeTitle.Size = new System.Drawing.Size(76, 23);
+            this.PetTypeTitle.Size = new System.Drawing.Size(71, 22);
             this.PetTypeTitle.TabIndex = 3;
             this.PetTypeTitle.Text = "Pet Type";
             // 
