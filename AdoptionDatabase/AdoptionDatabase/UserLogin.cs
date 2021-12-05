@@ -21,11 +21,15 @@ namespace AdoptionDatabase
     {
         PetTypeCheckBox[] checkboxes;
 
-      
+        private enum displayType {PETS, VETS, AGENCIES, PETSHOPS}
+
+        private displayType activeType;
 
         public MainPage()
         {
             InitializeComponent();
+
+            activeType = displayType.PETS;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,7 +57,14 @@ namespace AdoptionDatabase
 
         private void createPetCards()
         {
-            petFilter();
+
+            if (activeType == displayType.PETS)
+            {
+                petFilter();
+
+            }
+
+            
 
             CardContainer.RowStyles.Clear();
            
@@ -65,85 +76,88 @@ namespace AdoptionDatabase
             }
 
 
-
-            string[] typeOut = new string[12];
-            int activeTypeIndex = 0;
-
-            
-
-            for(int i = 0; i < 12; i++)
+            if (activeType == displayType.PETS)
             {
-                if(checkboxes[i].checkBox1.Checked)
+
+                string[] typeOut = new string[12];
+                int activeTypeIndex = 0;
+
+
+
+                for (int i = 0; i < 12; i++)
                 {
-                    typeOut[activeTypeIndex] = checkboxes[i].checkBox1.Text;
+                    if (checkboxes[i].checkBox1.Checked)
+                    {
+                        typeOut[activeTypeIndex] = checkboxes[i].checkBox1.Text;
+                    }
+                    activeTypeIndex++;
                 }
-                activeTypeIndex++;
-            }
 
-            string petGender;
+                string petGender;
 
-            if((MaleCheckBox.Checked && CheckBoxFemale.Checked)|| (!MaleCheckBox.Checked && !CheckBoxFemale.Checked))
-            {
-                petGender = null;
-            }
-            else if(MaleCheckBox.Checked)
-            {
-                petGender = "M";
-            }
-            else
-            {
-                petGender = "F";
-            }
-
-            string ageOperator = "";
-
-            if (ageSelectionBox.Text != "")
-            {
-                switch (ageSelectionBox.Text)
+                if ((MaleCheckBox.Checked && CheckBoxFemale.Checked) || (!MaleCheckBox.Checked && !CheckBoxFemale.Checked))
                 {
-                    case "Equal to":
-                        ageOperator = "=";
-                        break;
-                    case "Greater than":
-                        ageOperator = ">";
-                        break;
-                    default:
-                        ageOperator = "<";
-                        break;
+                    petGender = null;
                 }
+                else if (MaleCheckBox.Checked)
+                {
+                    petGender = "M";
+                }
+                else
+                {
+                    petGender = "F";
+                }
+
+                string ageOperator = "";
+
+                if (ageSelectionBox.Text != "")
+                {
+                    switch (ageSelectionBox.Text)
+                    {
+                        case "Equal to":
+                            ageOperator = "=";
+                            break;
+                        case "Greater than":
+                            ageOperator = ">";
+                            break;
+                        default:
+                            ageOperator = "<";
+                            break;
+                    }
+                }
+
+                ReturnedDataHolder reader = Info.queryPetsForUser(typeOut, petGender, ageOperator, ageComboBox.Text);
+
+
+
+
+                while (reader.next())
+                {
+                    string id = reader.GetString(0);
+                    string petshop = reader.GetString(1);
+                    string agency = reader.GetString(2);
+                    string vet = reader.GetString(3);
+                    string name = reader.GetString(4);
+                    string type = reader.GetString(5);
+                    string picture = reader.GetString(6);
+                    string gender = reader.GetString(7);
+                    string age = reader.GetString(8);
+                    string price = reader.GetString(9);
+
+
+
+
+                    PetCard petTile = new PetCard();
+                    petTile.NameLabel.Text = name;
+                    petTile.InfoLabel.Text = "Age: " + age + "\nType: " + type + "\nAdoption Fee: $" + price + "\nSex: " + gender + "\nShop: " + petshop + "\nVet: " + vet;
+                    petTile.AgencyLabel.Text = agency;
+                    System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
+                    petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
+                    CardContainer.Controls.Add(petTile);
+                }
+
             }
-
-            ReturnedDataHolder reader = Info.queryPetsForUser(typeOut, petGender, ageOperator, ageComboBox.Text);
-
             
-                 
-            
-            while (reader.next())
-                        {
-                            string id = reader.GetString(0);
-                            string petshop = reader.GetString(1);
-                            string agency = reader.GetString(2);
-                            string vet = reader.GetString(3);
-                            string name = reader.GetString(4);
-                            string type = reader.GetString(5);
-                            string picture = reader.GetString(6);
-                            string gender = reader.GetString(7);
-                            string age = reader.GetString(8);
-                            string price = reader.GetString(9);
-
-
-
-
-                            PetCard petTile = new PetCard();
-                            petTile.NameLabel.Text = name;
-                            petTile.InfoLabel.Text = "Age: " + age + "\nType: " + type + "\nAdoption Fee: $" + price + "\nSex: " + gender + "\nShop: " + petshop + "\nVet: " + vet;
-                            petTile.AgencyLabel.Text = agency;
-                            System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
-                            petTile.pictureBox1.Image = (Image)rm.GetObject(picture);
-                            CardContainer.Controls.Add(petTile);
-                        }
-            
-           
     
         }
 
@@ -151,7 +165,13 @@ namespace AdoptionDatabase
         {
             petFilter();
 
+            for (int i = 0; i < checkboxes.Length; i++)
+            {
+                checkboxes[i].checkBox1.Visible = false;
+            }
+
             CardContainer.RowStyles.Clear();
+
 
 
             //Mark
@@ -257,7 +277,36 @@ namespace AdoptionDatabase
 
         private void vetBtnClick(object sender, EventArgs e)
         {
-            DataTable vetTable = Info.getVetTable(null);
+            checkboxes[0].checkBox1.Text = "Dogs";
+            checkboxes[1].checkBox1.Text = "Cats";
+            checkboxes[2].checkBox1.Text = "Exotics";
+
+            for(int i = 3; i < checkboxes.Length; i++)
+            {
+                checkboxes[i].checkBox1.Visible = false;
+            }
+
+
+            activeType = displayType.VETS;
+
+            string[] whereString = new string[checkboxes.Length];
+
+            for(int i = 0; i < 3; i++)
+            {
+                whereString[i] = null;
+
+                if(checkboxes[i].checkBox1.Checked)
+                {
+                    whereString[i] = checkboxes[i].checkBox1.Text;
+
+                }
+
+            }
+
+            if (!Info.hasContents(whereString))
+                whereString = null;
+
+            DataTable vetTable = Info.getVetTable(whereString);
             VetCard[] vetTile = new VetCard[vetTable.Rows.Count];
             vetFilter();
 
@@ -387,7 +436,10 @@ namespace AdoptionDatabase
         }
         private void checkBoxChanged(object sender, EventArgs e)
         {
-            createPetCards();
+            if (activeType == displayType.PETS)
+                createPetCards();
+            else if (activeType == displayType.VETS)
+                vetBtnClick(null, null);
         }
 
         private void ageComboBox_SelectedIndexChanged(object sender, EventArgs e)

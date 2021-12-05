@@ -103,7 +103,7 @@ namespace AdoptionDatabase
             return pets;
         }
         
-        private static bool hasContents(string[] s)
+        public static bool hasContents(string[] s)
         {
 
             for(int i = 0; i < s.Length; i++)
@@ -151,13 +151,32 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT VET_ID, NAME, ADDRESS, PHONE_NUM, LOGO FROM VET";
+            string selectString = "SELECT V.VET_ID, V.NAME, V.ADDRESS, V.PHONE_NUM, V.LOGO FROM VET AS V JOIN SPECIALIZATIONS_has_VET AS SV ON V.VET_ID = SV.VET_VET_ID JOIN SPECIALIZATIONS AS S ON S.ID = SV.SPECIALIZATIONS_ID";
             if (infoBox == null)
                 whereString = "";
             else
             {
-                whereString = "";
+                bool followingInside = false;
+
+                whereString = " WHERE ";
+
+                for (int i = 0; i < infoBox.Length; i++)
+                {
+                    if (infoBox[i] != null)
+                    {
+                        if (followingInside)
+                            whereString += " OR";
+
+                        whereString = whereString + " (S.NAME = '" + infoBox[i] + "')";
+
+                        followingInside = true;
+                    }
+
+
+                }
             }
+
+            whereString += " GROUP BY VET_ID;";
 
             return activeInterface.requestTable(selectString, whereString);
         }
