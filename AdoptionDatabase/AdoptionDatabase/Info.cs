@@ -207,7 +207,7 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT A.APPOINTMENT_ID, A.ADOPTER_ID, A.PET_ID, A.VOLUNTEER_ID, T.TIMESLOT_ID, T.START_TIME, T.END_TIME FROM APPOINTMENT AS A JOIN APPOINTMENT_SLOT AS APS ON((A.VOLUNTEER_ID = APS.VOLUNTEER_ID) AND(A.TIMESLOT_ID = APS.TIMESLOT_ID)) JOIN TIMESLOT AS T ON(APS.TIMESLOT_ID = T.TIMESLOT_ID)";
+            string selectString = "SELECT A.APPOINTMENT_ID, AD.FIRSTNAME, P.PET_NAME, V.FIRSTNAME, T.TIMESLOT_ID, T.START_TIME, T.END_TIME FROM APPOINTMENT AS A JOIN APPOINTMENT_SLOT AS APS ON((A.VOLUNTEER_ID = APS.VOLUNTEER_ID) AND(A.TIMESLOT_ID = APS.TIMESLOT_ID)) JOIN TIMESLOT AS T ON(APS.TIMESLOT_ID = T.TIMESLOT_ID) JOIN VOLUNTEER AS V ON APS.VOLUNTEER_ID = V.VOLUNTEER_ID JOIN ADOPTER AS AD ON AD.ADOPTER_ID = A.ADOPTER_ID JOIN PET AS P ON P.PET_ID = A.PET_ID;";
             if (infoBox == null)
                 whereString = "";
             else
@@ -217,6 +217,30 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
+
+        public static int getIndex(string database, string data)
+        {
+            
+            DatabaseInterface activeInterface = new DatabaseInterface();
+
+            switch(database)
+            {
+                case "ADOPTER":
+                    return activeInterface.getIndex("ADOPTER", "ADOPTER_ID", data, "FIRSTNAME");
+                case "PET":
+                    return activeInterface.getIndex("PET", "PET_ID", data, "PET_NAME");
+                default:
+                    return activeInterface.getIndex("VOLUNTEER", "VOLUNTEER_ID", data, "FIRSTNAME");
+
+
+            }
+
+
+
+        }
+
+
+
 
         public static void insertIntoDatabase(string query)
         {

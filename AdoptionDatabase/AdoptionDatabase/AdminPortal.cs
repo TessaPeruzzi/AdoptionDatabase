@@ -228,17 +228,9 @@ namespace AdoptionDatabase
                             return;
                     }
 
-                    string queryString = "INSERT INTO APPOINTMENT (ADOPTER_ID, PET_ID, VOLUNTEER_ID, TIMESLOT_ID) VALUES (";
+                    string queryString = "INSERT INTO APPOINTMENT (ADOPTER_ID, PET_ID, VOLUNTEER_ID, TIMESLOT_ID) VALUES (" + Info.getIndex("ADOPTER", notPetSource[1].Text) + ", " + Info.getIndex("PET", notPetSource[2].Text) + ", " + Info.getIndex("VOLUNTEER", notPetSource[3].Text) + ", " + notPetSource[4].Text + ");";
 
-                    for (int i = 1; i < 5; i++)
-                    {
-                        if (i != 1)
-                            queryString += ", ";
-
-                        queryString += notPetSource[i].Text;
-                    }
-
-                    queryString += ");";
+                    
 
                     Debug.WriteLine(queryString);
 
@@ -252,14 +244,14 @@ namespace AdoptionDatabase
                 else if (updateRadioBtn.Checked)
                 {
 
-                    string queryString = "UPDATE APPOINTMENT SET ADOPTER_ID = " + notPetSource[1].Text + ", PET_ID = " + notPetSource[2].Text + ", VOLUNTEER_ID = " + notPetSource[3].Text + ", TIMESLOT_ID = " + notPetSource[4].Text + " WHERE APPOINTMENT_ID = " + activeID + ";";
+                    string queryString = "UPDATE APPOINTMENT SET ADOPTER_ID = " + Info.getIndex("ADOPTER", notPetSource[1].Text) + ", PET_ID = " + Info.getIndex("PET", notPetSource[2].Text) + ", VOLUNTEER_ID = " + Info.getIndex("VOLUNTEER", notPetSource[3].Text) + ", TIMESLOT_ID = " + notPetSource[4].Text + " WHERE APPOINTMENT_ID = " + activeID + ";";
 
                     Info.insertIntoDatabase(queryString);
 
                     petDataContainer.DataSource = Info.getAppointmentTable(null);
                 }
 
-                else
+                else if(deleteRadioBtn.Checked)
                 {
 
                     Info.insertIntoDatabase("DELETE FROM APPOINTMENT WHERE APPOINTMENT_ID = " + activeID.ToString() + ";");
@@ -683,9 +675,9 @@ namespace AdoptionDatabase
             fixColumns();
             petDataContainer.DataSource = Info.getAppointmentTable(null);
             petDataContainer.Columns[0].HeaderCell.Value = "APPOINTMENT_ID";
-            petDataContainer.Columns[1].HeaderCell.Value = "ADOPTER_ID";
-            petDataContainer.Columns[2].HeaderCell.Value = "PET_ID";
-            petDataContainer.Columns[3].HeaderCell.Value = "VOLUNTEER_ID";
+            petDataContainer.Columns[1].HeaderCell.Value = "ADOPTER NAME";
+            petDataContainer.Columns[2].HeaderCell.Value = "PETNAME";
+            petDataContainer.Columns[3].HeaderCell.Value = "VOLUNTEER NAME";
             petDataContainer.Columns[4].HeaderCell.Value = "TIMESLOT_ID";
             petDataContainer.Columns[5].HeaderCell.Value = "START_TIME";
             petDataContainer.Columns[6].HeaderCell.Value = "END_TIME";
@@ -749,6 +741,11 @@ namespace AdoptionDatabase
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
 
         }

@@ -74,6 +74,45 @@ namespace AdoptionDatabase
         }
 
 
+        public int getIndex(string table, string returnTarget, string data, string dataType)
+        {
+
+            connection = new MySqlConnection();
+            connection.ConnectionString = "server = 127.0.0.1;uid = root;pwd=Adoption1@;database=adoption_db";
+            connection.Open();
+
+            MySqlCommand commander = new MySqlCommand("SELECT " + returnTarget + " FROM " + table + " WHERE '" + data + "' = " + dataType +";", connection);
+
+            
+
+            Debug.WriteLine(commander.CommandText);
+
+            int output = 0;
+
+            try
+            {
+                MySqlDataReader reader = commander.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    output = int.Parse(reader[0].ToString());
+
+                }
+
+                reader.Close();
+
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine("The query failed");
+            }
+
+            connection.Close();
+
+            return output;
+
+        }
+
         public void modifyDatabase(string insertString)
         {
             connection = new MySqlConnection();

@@ -723,6 +723,7 @@
             this.updateRadioBtn.Text = "Update";
             this.updateRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.updateRadioBtn.UseVisualStyleBackColor = false;
+            this.updateRadioBtn.CheckedChanged += new System.EventHandler(this.updateRadioBtn_CheckedChanged);
             this.updateRadioBtn.Click += new System.EventHandler(this.updatePet);
             // 
             // addRadioBtn
