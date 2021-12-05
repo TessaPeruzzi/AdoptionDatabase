@@ -31,10 +31,29 @@ namespace AdoptionDatabase
 
         public string[] infoDump;
 
+        public bool isAdmin;
+
         public AdminPortal()
         {
             InitializeComponent();
         }
+
+        public AdminPortal(bool isAdmin)
+        {
+            InitializeComponent();
+            this.isAdmin = isAdmin;
+
+            if (!isAdmin)
+            {
+                label1.Text = "Volunteer Portal";
+                deleteRadioBtn.Enabled = false;
+            }
+
+
+
+        }
+
+
 
         private void displayPetData()
         {

@@ -22,7 +22,7 @@ namespace AdoptionDatabase
             if (passwordText.Text == "adminPass")
             {
                 this.Hide();
-                AdminPortal adminport = new AdminPortal();
+                AdminPortal adminport = new AdminPortal(true);
                // adminport.deleteRadioBtn.AutoCheck = true;
                // adminport.updateRadioBtn.AutoCheck = true;
                 adminport.ShowDialog();
@@ -31,7 +31,7 @@ namespace AdoptionDatabase
             else if (passwordText.Text == "volPass")
             {
                 this.Hide();
-                AdminPortal adminport = new AdminPortal();
+                AdminPortal adminport = new AdminPortal(false);
                // adminport.deleteRadioBtn.AutoCheck = false;
                // adminport.updateRadioBtn.AutoCheck = false;
                 adminport.ShowDialog();
