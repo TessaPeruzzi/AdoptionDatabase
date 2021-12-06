@@ -1,4 +1,4 @@
-# AdoptionDatabase
+# Animal Adoption Event Database
 
 This is a Database GUI Application created for Oakland University's CSI 3450 Database Design and Implementation course. 
 
