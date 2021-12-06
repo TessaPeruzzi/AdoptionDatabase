@@ -23,6 +23,9 @@ namespace AdoptionDatabase
         }
 
 
+
+        //This method performs the query indicated by the queryString, and returns the results in a Record-based linked list.
+        //It is called by the queryPetsForUser method in Info
         public ReturnedDataHolder queryDatabase(string queryString, int numcolumns)
         {
             connection = new MySqlConnection();
@@ -74,6 +77,9 @@ namespace AdoptionDatabase
         }
 
 
+
+        //This method finds the ID nubmer associated with a given piece of data in a given database.
+        //It is called by the method of the same name in the Info class.
         public int getIndex(string table, string returnTarget, string data, string dataType)
         {
 
@@ -113,6 +119,9 @@ namespace AdoptionDatabase
 
         }
 
+
+        //This method performs the SQL query held by the insertString argument.
+        //This method is called through the method of the same name in the Info class for all updates, insert, and delete statements.
         public void modifyDatabase(string insertString)
         {
             connection = new MySqlConnection();
@@ -147,29 +156,8 @@ namespace AdoptionDatabase
 
         }
 
-
-        public int getHighestIndex(string table)
-        {
-            int output = 0;
-
-            MySqlCommand commander = new MySqlCommand();
-            commander.Connection = connection;
-            commander.CommandType = System.Data.CommandType.Text;
-            commander.CommandText = "SELECT * FROM " + table;
-
-            MySqlDataReader dataOut = commander.ExecuteReader();
-
-            while (dataOut.Read())
-            {
-                if (int.Parse((dataOut[0].ToString())) > output)
-                    output = int.Parse((dataOut[0].ToString()));
-            }
-
-            dataOut.Close();
-
-            return output;
-        }
-
+        //This method gets a DataTable object from the database using the query formed by adding the selectString and the whereString.
+        //It is called by all of the methods in the Info class that return a DataTable object, such as the getXTable and searchX methods.
         public DataTable requestTable(string selectString, string whereString)
         {
 

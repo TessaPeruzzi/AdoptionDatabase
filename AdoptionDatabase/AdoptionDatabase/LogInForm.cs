@@ -17,6 +17,10 @@ namespace AdoptionDatabase
             InitializeComponent();
         }
 
+
+        //This determines whether the password that is input is the admin or volunteer password.
+        //Since we decided to have one volunteer and one admin password, it doesn't actually check the password against the database
+        //it just compares it to the password stored in-code in string form. This is terribly insecure, but security is not a high priority for this application.
         private void logInBtn(object sender, EventArgs e)
         {
             if (passwordText.Text == "adminPass")

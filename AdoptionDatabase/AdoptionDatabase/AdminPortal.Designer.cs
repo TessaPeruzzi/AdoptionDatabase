@@ -333,7 +333,7 @@
             this.petDataContainer.Size = new System.Drawing.Size(1413, 320);
             this.petDataContainer.TabIndex = 18;
             this.petDataContainer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.petDataContainer_CellContentClick);
-            this.petDataContainer.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.getPetRowInfo);
+            this.petDataContainer.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.getRowInfo);
             // 
             // panel3
             // 
@@ -480,7 +480,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "SUBMIT";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.submitPetBtnClick);
+            this.button1.Click += new System.EventHandler(this.submitBtnClick);
             // 
             // comboBox6
             // 

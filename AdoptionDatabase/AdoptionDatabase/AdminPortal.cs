@@ -27,10 +27,14 @@ namespace AdoptionDatabase
         String petImage = "";
         String petVolunteer = "";
 
+
+        //This array is used so that the methods in this class can reference all user input boxes easily by iterating over the appropriate
+        //section of the array. Without it, each SQL query would have to be manually constructed using references to all of the textboxes.
         private TextBox[] notPetSource;
 
         public string[] infoDump;
 
+        //Lets the form know whether it is in admin or not
         public bool isAdmin;
 
         public AdminPortal()
@@ -38,6 +42,8 @@ namespace AdoptionDatabase
             InitializeComponent();
         }
 
+
+        //This alternate constructor is called by the login form, and serves to let the admin portal know whether it is in volunteer or admin mode.
         public AdminPortal(bool isAdmin)
         {
             InitializeComponent();
@@ -54,7 +60,7 @@ namespace AdoptionDatabase
         }
 
 
-
+        //This method calls Info.getPetTable to update the display table with all current records in PET.
         private void displayPetData()
         {
 
@@ -63,6 +69,9 @@ namespace AdoptionDatabase
 
         }
 
+
+        //This method clears out the display table so that a new type of record can be entered.
+        //It is called by all of the xButtonClick methods
         private void fixColumns()
         {
 
@@ -79,7 +88,14 @@ namespace AdoptionDatabase
         }
 
     
-        private void submitPetBtnClick(object sender, EventArgs e)
+
+        //This method is where most of the action in the admin portal happens.
+        //This button executes all inserts, deletes, and updates that the admin portal can make.
+        //First, the active submenu is determined.
+        //Then, the action type is determined (insert, delete, update)
+        //The required strings for the Info class method are constructed from the information in the notPetSource array, or the active pet data if dealing with the pet class.
+        //Then, the appropriate method in the Info class is called.
+        private void submitBtnClick(object sender, EventArgs e)
         {
 
             try
@@ -262,6 +278,7 @@ namespace AdoptionDatabase
 
         }
 
+        //This method updates the display text boxes with all active pet data.
         private void updatePet(object sender, EventArgs e)
         {
   
@@ -277,6 +294,8 @@ namespace AdoptionDatabase
                 textBox9.Text = petVolunteer;
         }
 
+
+        //this method creates the array of textboxes used in assembling the SQL queries the admin portal makes.
         private void loadForm(object sender, EventArgs e)
         {
             notPetSource = new TextBox[9];
@@ -295,10 +314,16 @@ namespace AdoptionDatabase
 
             displayPetData();
         }
+
+
+        //Makes the logoiut button visible
         private void adminHamburgerBtnClick(object sender, EventArgs e)
         {
             panel4.Visible = true;
         }
+
+
+        //Switches back to the User portal
         private void logOutBtnClick(object sender, EventArgs e)
         {
             textBox8.Enabled = true;
@@ -311,7 +336,9 @@ namespace AdoptionDatabase
         }
 
 
-        private void getPetRowInfo(object sender, DataGridViewCellMouseEventArgs e)
+
+        //This updates all of the user input boxes with the relevant information when a row button in the display table is clicked.
+        private void getRowInfo(object sender, DataGridViewCellMouseEventArgs e)
         {
             Debug.WriteLine("Filling stuff");
 
@@ -377,7 +404,9 @@ namespace AdoptionDatabase
         }
 
         
-
+        //The xBtnClick methods serve as handlers for the buttons that move between the submenus.
+        //They change label texts and make user input boxes visible and invisible as appropriate to the new selected submenu.
+        //They then call the appropriate getXTable method in info to display the entire table.
         private void agencyBtnClick(object sender, EventArgs e)
         {
             textBox8.Enabled = true;
@@ -424,7 +453,6 @@ namespace AdoptionDatabase
 
             
         }
-
         private void petBtnClick(object sender, EventArgs e)
         {
             textBox8.Enabled = true;
@@ -482,7 +510,6 @@ namespace AdoptionDatabase
 
 
         }
-
         private void vetBtnClick(object sender, EventArgs e)
         {
             textBox8.Enabled = true;
@@ -525,7 +552,6 @@ namespace AdoptionDatabase
             textBox9.Visible = false;
             button1.Visible = false;
         }
-
         private void shopBtnClick(object sender, EventArgs e)
         {
             textBox8.Enabled = true;
@@ -571,7 +597,6 @@ namespace AdoptionDatabase
             textBox9.Visible = false;
             button1.Visible = false;
         }
-
         private void adopterBtnClick(object sender, EventArgs e)
         {
             fixColumns();
@@ -634,7 +659,6 @@ namespace AdoptionDatabase
 
 
         }
-
         private void volunteerBtnClick(object sender, EventArgs e)
         {
             textBox8.Enabled = true;
@@ -682,7 +706,6 @@ namespace AdoptionDatabase
 
 
         }
-
         private void apptBtnClick(object sender, EventArgs e)
         {
             textBox8.Enabled = true;
@@ -740,63 +763,67 @@ namespace AdoptionDatabase
 
         
 
+
+        //These six methods don't do anything but since visual studio autogenerated them it won't let me get rid of them.
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void petDataContainer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void updateRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
+
+
+
+
+
+        //This methdod determines which submenu is active. It then calls the appropriate searchX method in the Info class and displays the data
+        //on the display table.
         private void searchAdmin(object sender, EventArgs e)
         {
             if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "PET_ID")
             {
                 petDataContainer.DataSource = Info.searchPet(null, searchBox);
             }
-            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "AGENCY_ID")
+            else if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "AGENCY_ID")
             {
                 petDataContainer.DataSource = Info.searchAgency(null, searchBox);
             }
-            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "VET_ID")
+            else if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "VET_ID")
             {
                 petDataContainer.DataSource = Info.searchVet(null, searchBox);
             }
-            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "PETSHOP_ID")
+            else if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "PETSHOP_ID")
             {
                 petDataContainer.DataSource = Info.searchShop(null, searchBox);
             }
-            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "ADOPTER_ID")
+            else if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "ADOPTER_ID")
             {
                 petDataContainer.DataSource = Info.searchAdopter(null, searchBox);
             }
-            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "VOLUNTEER_ID")
+            else if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "VOLUNTEER_ID")
             {
                 petDataContainer.DataSource = Info.searchVolunteer(null, searchBox);
             }
-            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "APPOINTMENT_ID")
+            else if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "APPOINTMENT_ID")
             {
                 petDataContainer.DataSource = Info.searchAppointment(null, searchBox);
             }

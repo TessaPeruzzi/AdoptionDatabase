@@ -9,20 +9,14 @@ using System.Windows.Forms;
 
 namespace AdoptionDatabase
 {
+    //This class consists exclusively of static methods
+    //The methods either serve as intermediary methods to the DatabaseInterface class, or they are general helper methods like hasContents().
+
     class Info
     {
-
-        public enum TransactionType
-        {
-            QUERY_PET, QUERY_ADOPTER, QUERY_AGENCIES, QUERY_VETS, QUERY_SPECIALIZATIONS, QUERY_APPOINTMENTS, QUERY_SHOPS,
-            ADD_PET, ADD_ADOPTER, ADD_APPOINTMENTS, ADD_ADOPTION, UPDATE_PETS, UPDATE_ADOPTERS, UPDATE_APPOINTMENTS, DELETE_ADOPTERS, DELETE_PET, DELETE_APPOINTMENTS, DELETE_ADOPTION
-        };
-
-        public Info()
-        {
-
-        }
-
+      
+        //This method constructs a SQL query to get entries in the pet table that meet the given criteria.
+        //It returns all of the data in the form of a linked list of Record objects, using a ReturnedDataHolder object as the head.
         public static ReturnedDataHolder queryPetsForUser(string[] petTypes, string petGender, string ageOperator, string age)
         {
             ReturnedDataHolder pets = new ReturnedDataHolder();
@@ -31,7 +25,7 @@ namespace AdoptionDatabase
             bool followingOutside = false;
             bool followingInside = false;
 
-            if(hasContents(petTypes))
+            if (hasContents(petTypes))
             {
                 if (followingOutside == false)
                     query += " WHERE";
@@ -41,7 +35,7 @@ namespace AdoptionDatabase
                 for (int i = 0; i < petTypes.Length; i++)
                 {
                     if (petTypes[i] != null)
-                    { 
+                    {
                         if (followingInside)
                             query += " OR";
 
@@ -49,7 +43,7 @@ namespace AdoptionDatabase
 
                         followingInside = true;
                     }
-                   
+
 
                 }
                 followingInside = false;
@@ -58,7 +52,7 @@ namespace AdoptionDatabase
                 query += " )";
             }
 
-            if(petGender != null)
+            if (petGender != null)
             {
                 if (followingOutside == false)
                 {
@@ -75,7 +69,7 @@ namespace AdoptionDatabase
 
             }
 
-            if(ageOperator != "")
+            if (ageOperator != "")
             {
                 if (followingOutside == false)
                     query += " WHERE";
@@ -84,7 +78,7 @@ namespace AdoptionDatabase
                     query += " AND";
                 }
 
-                query += " (PET.AGE " + ageOperator +  " " + age + ")";
+                query += " (PET.AGE " + ageOperator + " " + age + ")";
 
                 followingOutside = true;
             }
@@ -98,18 +92,21 @@ namespace AdoptionDatabase
             pets = DataLink.queryDatabase(query, 10);
 
             pets.dumpToConsole();
-           
+
 
 
             return pets;
         }
-        
+
+
+
+        //This is a genral helper method that returns true if an array of strings has at least one non-null entry.
         public static bool hasContents(string[] s)
         {
 
-            for(int i = 0; i < s.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                if(s[i] != null)
+                if (s[i] != null)
                 {
                     return true;
                 }
@@ -119,6 +116,11 @@ namespace AdoptionDatabase
 
         }
 
+
+        //The searchX methods take a TextBox object, construct an appropriate SQL query to search the given table,
+        //and call the requestTable method in DatabaseInterface to get and return a DataTable object.
+
+    
         public static DataTable searchPet(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -134,7 +136,6 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
-
         public static DataTable searchAgency(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -150,7 +151,6 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
-
         public static DataTable searchVet(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -166,7 +166,6 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
-
         public static DataTable searchShop(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -182,7 +181,6 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
-
         public static DataTable searchAdopter(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -198,7 +196,6 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
-
         public static DataTable searchVolunteer(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -213,7 +210,6 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
-
         public static DataTable searchAppointment(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -228,9 +224,9 @@ namespace AdoptionDatabase
 
             return activeInterface.requestTable(selectString, whereString);
         }
+    
 
-
-
+        //The getTable methods return a DataTable representation of the given table by querying requestTable in DatabaseInterface
         public static DataTable getPetTable(string[] infoBox)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -350,6 +346,8 @@ namespace AdoptionDatabase
             return activeInterface.requestTable(selectString, whereString);
         }
 
+
+        //The getIndex method is used to find the ID number of the associated data in its given table. It calls the getIndex method in DatabaseInterface.
         public static int getIndex(string database, string data)
         {
             
@@ -373,7 +371,7 @@ namespace AdoptionDatabase
 
 
 
-
+        //This is an intermediary method that takes a SQL query and calls the modifyDatabase method in DatabaseInterface.
         public static void insertIntoDatabase(string query)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();

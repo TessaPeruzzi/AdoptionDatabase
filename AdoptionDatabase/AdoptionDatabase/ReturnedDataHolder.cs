@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace AdoptionDatabase
 {
+
+    //This class serves as a head node for a linked list of Records.
     class ReturnedDataHolder
     {
         private Record firstData;
