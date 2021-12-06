@@ -496,7 +496,10 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
+            textBox1.Visible = false;
             label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
             comboBox1.Visible = false;
             textBox3.Visible = false;
             comboBox2.Visible = false;
@@ -539,7 +542,10 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
+            textBox1.Visible = false;
             label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
             comboBox1.Visible = false;
             textBox3.Visible = false;
             comboBox2.Visible = false;
