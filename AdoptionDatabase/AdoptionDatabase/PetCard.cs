@@ -23,7 +23,6 @@ namespace AdoptionDatabase
             apptForm.ShowDialog();
 
         }
-
     }
 
 

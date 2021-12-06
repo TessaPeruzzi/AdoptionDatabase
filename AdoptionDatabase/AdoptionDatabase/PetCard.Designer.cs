@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AppointmentButton = new System.Windows.Forms.Button();
             this.AgencyPanel = new System.Windows.Forms.Panel();
             this.AgencyLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
@@ -38,65 +37,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // AppointmentButton
-            // 
-            this.AppointmentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(189)))));
-            this.AppointmentButton.Enabled = false;
-            this.AppointmentButton.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppointmentButton.Location = new System.Drawing.Point(16, 193);
-            this.AppointmentButton.Name = "AppointmentButton";
-            this.AppointmentButton.Size = new System.Drawing.Size(245, 42);
-            this.AppointmentButton.TabIndex = 1;
-            this.AppointmentButton.Text = "APPOINTMENTS";
-            this.AppointmentButton.UseVisualStyleBackColor = false;
-            this.AppointmentButton.Visible = false;
-            this.AppointmentButton.Click += new System.EventHandler(this.appointmentBtnClick);
-            // 
             // AgencyPanel
             // 
             this.AgencyPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.AgencyPanel.Controls.Add(this.AgencyLabel);
-            this.AgencyPanel.Location = new System.Drawing.Point(16, 241);
+            this.AgencyPanel.Location = new System.Drawing.Point(16, 216);
             this.AgencyPanel.Name = "AgencyPanel";
-            this.AgencyPanel.Size = new System.Drawing.Size(441, 41);
+            this.AgencyPanel.Size = new System.Drawing.Size(441, 61);
             this.AgencyPanel.TabIndex = 3;
             // 
             // AgencyLabel
             // 
+            this.AgencyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AgencyLabel.AutoSize = true;
-            this.AgencyLabel.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgencyLabel.Font = new System.Drawing.Font("Arial", 14.2F, System.Drawing.FontStyle.Bold);
             this.AgencyLabel.ForeColor = System.Drawing.Color.White;
-            this.AgencyLabel.Location = new System.Drawing.Point(3, 6);
+            this.AgencyLabel.Location = new System.Drawing.Point(3, 15);
             this.AgencyLabel.Name = "AgencyLabel";
-            this.AgencyLabel.Size = new System.Drawing.Size(253, 33);
+            this.AgencyLabel.Size = new System.Drawing.Size(263, 29);
             this.AgencyLabel.TabIndex = 0;
             this.AgencyLabel.Text = "AGENCY GOES HERE";
+            this.AgencyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(267, 15);
+            this.NameLabel.Font = new System.Drawing.Font("Arial Black", 16F, System.Drawing.FontStyle.Bold);
+            this.NameLabel.Location = new System.Drawing.Point(267, 17);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(113, 42);
+            this.NameLabel.Size = new System.Drawing.Size(102, 38);
             this.NameLabel.TabIndex = 4;
             this.NameLabel.Text = "Name";
             // 
             // InfoLabel
             // 
             this.InfoLabel.AutoSize = true;
-            this.InfoLabel.Location = new System.Drawing.Point(271, 57);
+            this.InfoLabel.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoLabel.Location = new System.Drawing.Point(271, 71);
             this.InfoLabel.Name = "InfoLabel";
-            this.InfoLabel.Size = new System.Drawing.Size(31, 17);
+            this.InfoLabel.Size = new System.Drawing.Size(27, 16);
             this.InfoLabel.TabIndex = 5;
             this.InfoLabel.Text = "Info";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 172);
+            this.pictureBox1.Size = new System.Drawing.Size(245, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -109,7 +99,6 @@
             this.Controls.Add(this.InfoLabel);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.AgencyPanel);
-            this.Controls.Add(this.AppointmentButton);
             this.Controls.Add(this.pictureBox1);
             this.Name = "PetCard";
             this.Size = new System.Drawing.Size(472, 290);
@@ -122,7 +111,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button AppointmentButton;
         private System.Windows.Forms.Panel AgencyPanel;
         public System.Windows.Forms.Label NameLabel;
         public System.Windows.Forms.PictureBox pictureBox1;
