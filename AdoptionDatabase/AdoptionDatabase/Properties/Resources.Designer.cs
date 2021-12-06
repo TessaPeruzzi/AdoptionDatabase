@@ -83,6 +83,16 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap amphibians {
+            get {
+                object obj = ResourceManager.GetObject("amphibians", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ark_vet {
             get {
                 object obj = ResourceManager.GetObject("ark-vet", resourceCulture);
@@ -103,6 +113,16 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap birds {
+            get {
+                object obj = ResourceManager.GetObject("birds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bloomfield_vet {
             get {
                 object obj = ResourceManager.GetObject("bloomfield-vet", resourceCulture);
@@ -116,6 +136,16 @@ namespace AdoptionDatabase.Properties {
         internal static System.Drawing.Bitmap bubbles {
             get {
                 object obj = ResourceManager.GetObject("bubbles", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap canine_friends {
+            get {
+                object obj = ResourceManager.GetObject("canine-friends", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +213,29 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fluffball_inc {
+            get {
+                object obj = ResourceManager.GetObject("fluffball-inc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hamburger_icon_white {
             get {
                 object obj = ResourceManager.GetObject("Hamburger_icon_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_for_cats {
+            get {
+                object obj = ResourceManager.GetObject("home-for-cats", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +323,36 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pet_haven {
+            get {
+                object obj = ResourceManager.GetObject("pet-haven", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pet_smart {
+            get {
+                object obj = ResourceManager.GetObject("pet-smart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap petco {
+            get {
+                object obj = ResourceManager.GetObject("petco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap polly {
             get {
                 object obj = ResourceManager.GetObject("polly", resourceCulture);
@@ -283,9 +363,39 @@ namespace AdoptionDatabase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap quick_tags {
+            get {
+                object obj = ResourceManager.GetObject("quick-tags", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rochester_vet {
             get {
                 object obj = ResourceManager.GetObject("rochester-vet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rocko {
+            get {
+                object obj = ResourceManager.GetObject("rocko", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap small_pets {
+            get {
+                object obj = ResourceManager.GetObject("small-pets", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +446,16 @@ namespace AdoptionDatabase.Properties {
         internal static System.Drawing.Bitmap twinkie {
             get {
                 object obj = ResourceManager.GetObject("twinkie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap underwater_friends {
+            get {
+                object obj = ResourceManager.GetObject("underwater-friends", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

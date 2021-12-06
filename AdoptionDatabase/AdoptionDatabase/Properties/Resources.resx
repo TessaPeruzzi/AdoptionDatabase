@@ -118,68 +118,50 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="snowball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snowball1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beth1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ark-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ark-vet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carrots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carrots1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hamburger_icon_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hamburger_icon_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="macomb-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\macomb-vet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outlook-g17d530a5b_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outlook-g17d530a5b_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="oreo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oreo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stewart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stewart1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="768px-Hamburger_icon_white.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\768px-Hamburger_icon_white.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rochester-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rochester-vet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="croakers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\croakers1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thumper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thumper1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="doughball" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doughball1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="smores" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smores1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LuckiestGuy_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LuckiestGuy-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="twinkie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\twinkie1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="polly" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\polly1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mrwhiskers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mrwhiskers1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snowball" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snowball1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carrots" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carrots1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="beth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beth1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bubbles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bubbles1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_3232 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_3232 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="07CAT-STRIPES-mediumSquareAt3X-v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\07CAT-STRIPES-mediumSquareAt3X-v2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hamburger_icon_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hamburger_icon_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vanilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vanilla1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="outlook-g17d530a5b_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\outlook-g17d530a5b_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paw" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bloomfield-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bloomfield-vet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="default pet pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\default pet pic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,22 +169,76 @@
   <data name="cottontail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cottontail1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mrwhiskers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mrwhiskers1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IMG_3232 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_3232 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ark-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ark-vet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LuckiestGuy_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LuckiestGuy-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="bloomfield-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bloomfield-vet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="smores" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smores1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thumper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thumper1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vanilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vanilla1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="07CAT-STRIPES-mediumSquareAt3X-v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\07CAT-STRIPES-mediumSquareAt3X-v2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doughball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doughball1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bubbles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bubbles1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="polly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\polly1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="768px-Hamburger_icon_white.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\768px-Hamburger_icon_white.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="farmington-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\farmington-vet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="macomb-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\macomb-vet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="amphibians" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\amphibians.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rochester-vet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rochester-vet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="birds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canine-friends" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\canine-friends.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fluffball-inc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fluffball-inc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home-for-cats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-for-cats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="small-pets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\small-pets.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="underwater-friends" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\underwater-friends.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="petco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\petco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quick-tags" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quick-tags.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pet-smart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pet-smart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pet-haven" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pet-haven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rocko" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocko.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

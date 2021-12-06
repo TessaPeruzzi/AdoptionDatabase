@@ -262,17 +262,26 @@ namespace AdoptionDatabase
 
         private void agencyBtnClick(object sender, EventArgs e)
         {
-            AgencyCard[] agencyCards = new AgencyCard[20];
-            agencyFilter();
-            
+            DataTable agencyTable = Info.getAgencyTable(null);
+            LocationCard[] agencyTile = new LocationCard[agencyTable.Rows.Count];
+            noFilter();
+
             CardContainer.Controls.Clear();
             CardContainer.RowStyles.Clear();
 
-            for (int i = 0; i < agencyCards.Length; i++)
+            for (int i = 0; i < agencyTile.Length; i++)
             {
-                agencyCards[i] = new AgencyCard();
-                CardContainer.Controls.Add(agencyCards[i]);
+                agencyTile[i] = new LocationCard();
+                agencyTile[i].VetLabel.Text = agencyTable.Rows[i][1].ToString();
+                agencyTile[i].addressLabel.Text = agencyTable.Rows[i][2].ToString();
+                agencyTile[i].phoneLabel.Text = agencyTable.Rows[i][3].ToString();
+
+                System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
+                agencyTile[i].VetPicture.Image = (Image)rm.GetObject(agencyTable.Rows[i][4].ToString());
+
+                CardContainer.Controls.Add(agencyTile[i]);
             }
+
         }
 
         private void vetBtnClick(object sender, EventArgs e)
@@ -307,7 +316,7 @@ namespace AdoptionDatabase
                 whereString = null;
 
             DataTable vetTable = Info.getVetTable(whereString);
-            VetCard[] vetTile = new VetCard[vetTable.Rows.Count];
+            LocationCard[] vetTile = new LocationCard[vetTable.Rows.Count];
             vetFilter();
 
             CardContainer.Controls.Clear();
@@ -315,7 +324,7 @@ namespace AdoptionDatabase
 
             for (int i = 0; i < vetTile.Length; i++)
             {
-                vetTile[i] = new VetCard();
+                vetTile[i] = new LocationCard();
                 vetTile[i].VetLabel.Text = vetTable.Rows[i][1].ToString();
                 vetTile[i].addressLabel.Text = vetTable.Rows[i][2].ToString();
                 vetTile[i].phoneLabel.Text = vetTable.Rows[i][3].ToString();
@@ -330,16 +339,24 @@ namespace AdoptionDatabase
 
         private void shopBtnClick(object sender, EventArgs e)
         {
-            ShopCard[] shopCards = new ShopCard[20];
+            DataTable shopTable = Info.getShopTable(null);
+            LocationCard[] shopTile = new LocationCard[shopTable.Rows.Count];
             noFilter();
 
             CardContainer.Controls.Clear();
             CardContainer.RowStyles.Clear();
 
-            for (int i = 0; i < shopCards.Length; i++)
+            for (int i = 0; i < shopTile.Length; i++)
             {
-                shopCards[i] = new ShopCard();
-                CardContainer.Controls.Add(shopCards[i]);
+                shopTile[i] = new LocationCard();
+                shopTile[i].VetLabel.Text = shopTable.Rows[i][1].ToString();
+                shopTile[i].addressLabel.Text = shopTable.Rows[i][2].ToString();
+                shopTile[i].phoneLabel.Text = shopTable.Rows[i][3].ToString();
+
+                System.Resources.ResourceManager rm = new System.Resources.ResourceManager("AdoptionDatabase.Properties.Resources", typeof(Resources).Assembly);
+                shopTile[i].VetPicture.Image = (Image)rm.GetObject(shopTable.Rows[i][4].ToString());
+
+                CardContainer.Controls.Add(shopTile[i]);
             }
         }
 

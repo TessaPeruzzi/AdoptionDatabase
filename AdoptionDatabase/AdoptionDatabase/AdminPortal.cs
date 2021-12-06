@@ -388,7 +388,8 @@ namespace AdoptionDatabase
             petDataContainer.Columns[0].HeaderCell.Value = "AGENCY_ID";
             petDataContainer.Columns[1].HeaderCell.Value = "NAME";
             petDataContainer.Columns[2].HeaderCell.Value = "ADDRESS";
-            petDataContainer.Columns[3].HeaderCell.Value = "PHONE_NUM";            
+            petDataContainer.Columns[3].HeaderCell.Value = "PHONE_NUM";
+            petDataContainer.Columns[4].HeaderCell.Value = "LOGO";
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
@@ -530,6 +531,7 @@ namespace AdoptionDatabase
             petDataContainer.Columns[1].HeaderCell.Value = "NAME";
             petDataContainer.Columns[2].HeaderCell.Value = "ADDRESS";
             petDataContainer.Columns[3].HeaderCell.Value = "PHONE";
+            petDataContainer.Columns[4].HeaderCell.Value = "LOGO";
             petDataContainer.DataSource = Info.getShopTable(null);
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;

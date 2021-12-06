@@ -148,11 +148,11 @@
     <Compile Include="ShopCard.Designer.cs">
       <DependentUpon>ShopCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="VetCard.cs">
+    <Compile Include="LocationCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="VetCard.Designer.cs">
-      <DependentUpon>VetCard.cs</DependentUpon>
+    <Compile Include="LocationCard.Designer.cs">
+      <DependentUpon>LocationCard.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminPortal.resx">
       <DependentUpon>AdminPortal.cs</DependentUpon>
@@ -188,8 +188,8 @@
     <EmbeddedResource Include="ShopCard.resx">
       <DependentUpon>ShopCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VetCard.resx">
-      <DependentUpon>VetCard.cs</DependentUpon>
+    <EmbeddedResource Include="LocationCard.resx">
+      <DependentUpon>LocationCard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -232,11 +232,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ark-vet.png" />
+    <None Include="Resources\amphibians.png" />
     <Content Include="Resources\beth.jpg" />
     <None Include="Resources\beth1.jpg" />
     <None Include="Resources\bloomfield-vet.png" />
+    <None Include="Resources\birds.png" />
     <Content Include="Resources\bubbles.jpg" />
     <None Include="Resources\bubbles1.jpg" />
+    <None Include="Resources\canine-friends.jpg" />
     <Content Include="Resources\carrots.jpg" />
     <None Include="Resources\carrots1.jpg" />
     <Content Include="Resources\cottontail.jpg" />
@@ -247,13 +250,21 @@
     <None Include="Resources\doughball1.jpg" />
     <None Include="Resources\farmington-vet.jpg" />
     <None Include="Resources\macomb-vet.jpg" />
+    <None Include="Resources\fluffball-inc.png" />
+    <None Include="Resources\home-for-cats.png" />
     <Content Include="Resources\mrwhiskers.jpg" />
     <None Include="Resources\mrwhiskers1.jpg" />
     <Content Include="Resources\oreo.jpg" />
     <None Include="Resources\oreo1.jpg" />
+    <None Include="Resources\petco.png" />
+    <None Include="Resources\pet-smart.jpg" />
+    <None Include="Resources\pet-haven.png" />
     <Content Include="Resources\polly.jpg" />
     <None Include="Resources\polly1.jpg" />
     <None Include="Resources\rochester-vet.png" />
+    <None Include="Resources\small-pets.jpg" />
+    <None Include="Resources\quick-tags.jpg" />
+    <None Include="Resources\rocko.png" />
     <Content Include="Resources\smores.jpg" />
     <None Include="Resources\smores1.jpg" />
     <Content Include="Resources\snowball.jpg" />
@@ -265,6 +276,7 @@
     <Content Include="Resources\twinkie.jpg" />
     <None Include="Resources\vanilla1.jpg" />
     <None Include="Resources\twinkie1.jpg" />
+    <None Include="Resources\underwater-friends.png" />
     <Content Include="Resources\vanilla.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

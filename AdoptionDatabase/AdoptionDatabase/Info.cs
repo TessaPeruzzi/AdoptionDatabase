@@ -137,7 +137,7 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT AGENCY_ID, NAME, ADDRESS, PHONE_NUM FROM AGENCY";
+            string selectString = "SELECT AGENCY_ID, NAME, ADDRESS, PHONE_NUM, LOGO FROM AGENCY";
             if (infoBox == null)
                 whereString = "";
             else
@@ -184,7 +184,7 @@ namespace AdoptionDatabase
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             string whereString;
-            string selectString = "SELECT PETSHOP_ID, NAME, ADDRESS, PHONE_NUM FROM PETSHOP";
+            string selectString = "SELECT PETSHOP_ID, NAME, ADDRESS, PHONE_NUM, LOGO FROM PETSHOP";
             if (infoBox == null)
                 whereString = "";
             else
