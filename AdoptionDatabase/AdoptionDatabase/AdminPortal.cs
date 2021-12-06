@@ -144,8 +144,7 @@ namespace AdoptionDatabase
                         con.Close();
                         displayPetData();
                     }
-
-
+                    
 
                 }
 
@@ -393,13 +392,15 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
-            label3.Text = "Location:";
-            label4.Text = "Phone:";
-            label5.Text = "Logo:";
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            textBox1.Visible = false;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
             comboBox1.Visible = false;
-            textBox3.Visible = true;
             comboBox2.Visible = false;
-            textBox4.Visible = true;
             comboBox3.Visible = false;
             textBox5.Visible = false;
             textBox2.Visible = false;
@@ -419,6 +420,7 @@ namespace AdoptionDatabase
             label5.Visible = false;
             label11.Visible = false;
             textBox9.Visible = false;
+            button1.Visible = false;
 
             
         }
@@ -445,9 +447,13 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = true;
             updateRadioBtn.Visible = true;
             deleteRadioBtn.Visible = true;
+            textBox1.Visible = true;
             label2.Text = "Name:";
+            label2.Visible = true;
             label3.Text = "Age:";
+            label3.Visible = true;
             label4.Text = "Sex:";
+            label4.Visible = true;
             label5.Text = "Type";
             comboBox1.Visible = true;
             textBox3.Visible = false;
@@ -472,9 +478,9 @@ namespace AdoptionDatabase
             label5.Visible = true;
             label11.Visible = true;
             textBox9.Visible = true;
-            
+            button1.Visible = true;
 
-            
+
         }
 
         private void vetBtnClick(object sender, EventArgs e)
@@ -490,16 +496,13 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
-            label2.Text = "Name:";
-            label3.Text = "Location:";
-            label4.Text = "Phone:";
-            label5.Text = "Logo:";
+            label2.Visible = false;
             comboBox1.Visible = false;
-            textBox3.Visible = true;
+            textBox3.Visible = false;
             comboBox2.Visible = false;
-            textBox4.Visible = true;
+            textBox4.Visible = false;
             comboBox3.Visible = false;
-            textBox5.Visible = true;
+            textBox5.Visible = false;
             textBox2.Visible = false;
             comboBox4.Visible = false;
             comboBox5.Visible = false;
@@ -514,10 +517,10 @@ namespace AdoptionDatabase
             textBox7.Visible = false;
             textBox8.Visible = false;
             textBox9.Visible = false;
-            label5.Visible = true;
+            label5.Visible = false;
             label11.Visible = false;
             textBox9.Visible = false;
-            
+            button1.Visible = false;
         }
 
         private void shopBtnClick(object sender, EventArgs e)
@@ -536,16 +539,13 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
-            label2.Text = "Name:";
-            label3.Text = "Location:";
-            label4.Text = "Phone:";
-            label5.Text = "Logo:";
+            label2.Visible = false;
             comboBox1.Visible = false;
-            textBox3.Visible = true;
+            textBox3.Visible = false;
             comboBox2.Visible = false;
-            textBox4.Visible = true;
+            textBox4.Visible = false;
             comboBox3.Visible = false;
-            textBox5.Visible = true;
+            textBox5.Visible = false;
             textBox2.Visible = false;
             comboBox4.Visible = false;
             comboBox5.Visible = false;
@@ -560,10 +560,10 @@ namespace AdoptionDatabase
             textBox7.Visible = false;
             textBox8.Visible = false;
             textBox9.Visible = false;
-            label5.Visible = true;
+            label5.Visible = false;
             label11.Visible = false;
             textBox9.Visible = false;
-            
+            button1.Visible = false;
         }
 
         private void adopterBtnClick(object sender, EventArgs e)
@@ -585,10 +585,15 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = true;
             updateRadioBtn.Visible = true;
             deleteRadioBtn.Visible = true;
+            textBox1.Visible = true;
             label2.Text = "F_Name:";
+            label2.Visible = true;
             label3.Text = "L_Name:";
+            label3.Visible = true;
             label4.Text = "Phone:";
+            label4.Visible = true;
             label5.Text = "Address:";
+            label5.Visible = true;
             comboBox1.Visible = false;
             textBox3.Visible = true;
             comboBox2.Visible = false;
@@ -617,10 +622,11 @@ namespace AdoptionDatabase
             label5.Visible = true;
             label11.Visible = false;
             textBox9.Visible = false;
+            button1.Visible = true;
 
-           
 
-           
+
+
         }
 
         private void volunteerBtnClick(object sender, EventArgs e)
@@ -635,14 +641,15 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = false;
             updateRadioBtn.Visible = false;
             deleteRadioBtn.Visible = false;
-            label2.Text = "F_Name:";
-            label3.Text = "L_Name:";
-            label4.Text = "Is_Admin:";
-            label5.Text = "Logo:";
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
             comboBox1.Visible = false;
-            textBox3.Visible = true;
+            textBox1.Visible = false;
+            textBox3.Visible = false;
             comboBox2.Visible = false;
-            textBox4.Visible = true;
+            textBox4.Visible = false;
             comboBox3.Visible = false;
             textBox5.Visible = false;
             textBox2.Visible = false;
@@ -662,12 +669,12 @@ namespace AdoptionDatabase
             label5.Visible = false;
             label11.Visible = false;
             textBox9.Visible = false;
+            button1.Visible = false;
 
-            
 
-            
 
-            
+
+
         }
 
         private void apptBtnClick(object sender, EventArgs e)
@@ -686,10 +693,15 @@ namespace AdoptionDatabase
             addRadioBtn.Visible = true;
             updateRadioBtn.Visible = true;
             deleteRadioBtn.Visible = true;
+            textBox1.Visible = true;
             label2.Text = "Appt ID:";
+            label2.Visible = true;
             label3.Text = "Adopter:";
-            label4.Text = "Pet ID";
+            label3.Visible = true;
+            label4.Text = "Pet ID:";
+            label4.Visible = true;
             label5.Text = "Vol ID:";
+            label5.Visible = true;
             comboBox1.Visible = false;
             textBox3.Visible = true;
             comboBox2.Visible = false;
@@ -702,11 +714,11 @@ namespace AdoptionDatabase
             comboBox6.Visible = false;
             comboBox7.Visible = false;
             label6.Visible = true;
-            label6.Text = "Timeslot ID";
+            label6.Text = "Timeslot ID:";
             label7.Visible = true;
             label7.Text = "Start Time:";
             label8.Visible = true;
-            label8.Text = "End Time";
+            label8.Text = "End Time:";
             label9.Visible = false;
             label10.Visible = false;
             textBox6.Visible = true;
@@ -716,8 +728,8 @@ namespace AdoptionDatabase
             label5.Visible = true;
             label11.Visible = false;
             textBox9.Visible = false;
+            button1.Visible = true;
 
-            
         }
 
         
@@ -749,6 +761,39 @@ namespace AdoptionDatabase
 
         private void updateRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void searchAdmin(object sender, EventArgs e)
+        {
+            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "PET_ID")
+            {
+                petDataContainer.DataSource = Info.searchPet(null, searchBox);
+            }
+            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "AGENCY_ID")
+            {
+                petDataContainer.DataSource = Info.searchAgency(null, searchBox);
+            }
+            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "VET_ID")
+            {
+                petDataContainer.DataSource = Info.searchVet(null, searchBox);
+            }
+            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "PETSHOP_ID")
+            {
+                petDataContainer.DataSource = Info.searchShop(null, searchBox);
+            }
+            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "ADOPTER_ID")
+            {
+                petDataContainer.DataSource = Info.searchAdopter(null, searchBox);
+            }
+            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "VOLUNTEER_ID")
+            {
+                petDataContainer.DataSource = Info.searchVolunteer(null, searchBox);
+            }
+            if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "APPOINTMENT_ID")
+            {
+                petDataContainer.DataSource = Info.searchAppointment(null, searchBox);
+            }
 
         }
     }

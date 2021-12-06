@@ -153,6 +153,7 @@
             this.passwordText.Name = "passwordText";
             this.passwordText.Size = new System.Drawing.Size(284, 22);
             this.passwordText.TabIndex = 4;
+            this.passwordText.UseSystemPasswordChar = true;
             // 
             // passwordLabel
             // 

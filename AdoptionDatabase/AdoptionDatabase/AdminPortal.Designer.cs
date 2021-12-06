@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleBorder = new System.Windows.Forms.Panel();
             this.DarkBlueTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,6 +80,7 @@
             this.updateRadioBtn = new System.Windows.Forms.RadioButton();
             this.addRadioBtn = new System.Windows.Forms.RadioButton();
             this.deleteRadioBtn = new System.Windows.Forms.RadioButton();
+            this.searchBox = new System.Windows.Forms.TextBox();
             this.TitleBorder.SuspendLayout();
             this.DarkBlueTitle.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -326,8 +327,8 @@
             this.petDataContainer.Name = "petDataContainer";
             this.petDataContainer.ReadOnly = true;
             this.petDataContainer.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.petDataContainer.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.petDataContainer.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.petDataContainer.RowTemplate.Height = 35;
             this.petDataContainer.Size = new System.Drawing.Size(1413, 320);
             this.petDataContainer.TabIndex = 18;
@@ -346,6 +347,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(238)))));
+            this.panel5.Controls.Add(this.searchBox);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.textBox9);
             this.panel5.Controls.Add(this.textBox8);
@@ -691,7 +693,7 @@
             // 
             this.radioBtnGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.radioBtnGroup.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.radioBtnGroup.ColumnCount = 4;
+            this.radioBtnGroup.ColumnCount = 3;
             this.radioBtnGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.radioBtnGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.radioBtnGroup.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -716,9 +718,9 @@
             this.updateRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.updateRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateRadioBtn.ForeColor = System.Drawing.Color.White;
-            this.updateRadioBtn.Location = new System.Drawing.Point(111, 4);
+            this.updateRadioBtn.Location = new System.Drawing.Point(147, 4);
             this.updateRadioBtn.Name = "updateRadioBtn";
-            this.updateRadioBtn.Size = new System.Drawing.Size(100, 23);
+            this.updateRadioBtn.Size = new System.Drawing.Size(136, 23);
             this.updateRadioBtn.TabIndex = 3;
             this.updateRadioBtn.Text = "Update";
             this.updateRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -737,7 +739,7 @@
             this.addRadioBtn.ForeColor = System.Drawing.Color.White;
             this.addRadioBtn.Location = new System.Drawing.Point(4, 4);
             this.addRadioBtn.Name = "addRadioBtn";
-            this.addRadioBtn.Size = new System.Drawing.Size(100, 23);
+            this.addRadioBtn.Size = new System.Drawing.Size(136, 23);
             this.addRadioBtn.TabIndex = 0;
             this.addRadioBtn.Text = "Add";
             this.addRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -753,13 +755,22 @@
             this.deleteRadioBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(7)))), ((int)(((byte)(83)))));
             this.deleteRadioBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteRadioBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteRadioBtn.Location = new System.Drawing.Point(218, 4);
+            this.deleteRadioBtn.Location = new System.Drawing.Point(290, 4);
             this.deleteRadioBtn.Name = "deleteRadioBtn";
-            this.deleteRadioBtn.Size = new System.Drawing.Size(100, 23);
+            this.deleteRadioBtn.Size = new System.Drawing.Size(138, 23);
             this.deleteRadioBtn.TabIndex = 2;
             this.deleteRadioBtn.Text = "Delete";
             this.deleteRadioBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.deleteRadioBtn.UseVisualStyleBackColor = false;
+            // 
+            // searchBox
+            // 
+            this.searchBox.Location = new System.Drawing.Point(458, 8);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(317, 22);
+            this.searchBox.TabIndex = 29;
+            this.searchBox.Text = "SEARCH HERE";
+            this.searchBox.TextChanged += new System.EventHandler(this.searchAdmin);
             // 
             // AdminPortal
             // 
@@ -845,5 +856,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox searchBox;
     }
 }
