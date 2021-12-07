@@ -14,3 +14,6 @@ Below is our presentation explaining the purpose of the application, as well as 
 ![Screenshot (236)](https://user-images.githubusercontent.com/54461147/144926923-154741f9-b56b-4a60-b27f-c9a9c41aa9ae.png)
 ![Screenshot (237)](https://user-images.githubusercontent.com/54461147/144926926-864a419e-8717-45dd-9fc8-11d7b0f823bd.png)
 ![Screenshot (238)](https://user-images.githubusercontent.com/54461147/144926927-3a1c0b66-222a-4766-8c7c-4e8cff2a4789.png)
+
+Below is the report that acts as documentation for this application.
+[Final Database Report.pdf](https://github.com/TessaPeruzzi/AdoptionDatabase/files/7665536/Final.Database.Report.pdf)
