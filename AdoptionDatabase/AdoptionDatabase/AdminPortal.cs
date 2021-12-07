@@ -727,9 +727,9 @@ namespace AdoptionDatabase
             label2.Visible = true;
             label3.Text = "Adopter:";
             label3.Visible = true;
-            label4.Text = "Pet ID:";
+            label4.Text = "Petname:";
             label4.Visible = true;
-            label5.Text = "Vol ID:";
+            label5.Text = "Volunteer:";
             label5.Visible = true;
             comboBox1.Visible = false;
             textBox3.Visible = true;
