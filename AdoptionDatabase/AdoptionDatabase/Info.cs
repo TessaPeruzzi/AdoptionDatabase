@@ -120,7 +120,6 @@ namespace AdoptionDatabase
         //The searchX methods take a TextBox object, construct an appropriate SQL query to search the given table,
         //and call the requestTable method in DatabaseInterface to get and return a DataTable object.
 
-    
         public static DataTable searchPet(string[] infoBox, TextBox text)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
@@ -372,7 +371,7 @@ namespace AdoptionDatabase
 
 
         //This is an intermediary method that takes a SQL query and calls the modifyDatabase method in DatabaseInterface.
-        public static void insertIntoDatabase(string query)
+        public static void modifyDatabase(string query)
         {
             DatabaseInterface activeInterface = new DatabaseInterface();
             activeInterface.modifyDatabase(query);

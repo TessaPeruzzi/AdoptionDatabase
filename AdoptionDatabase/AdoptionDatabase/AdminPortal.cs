@@ -35,7 +35,7 @@ namespace AdoptionDatabase
         public string[] infoDump;
 
         //Lets the form know whether it is in admin or not
-        public bool isAdmin;
+        private bool isAdmin;
 
         public AdminPortal()
         {
@@ -98,66 +98,39 @@ namespace AdoptionDatabase
         private void submitBtnClick(object sender, EventArgs e)
         {
 
-            try
-            {
+           
 
 
                 if (petDataContainer.Columns[0].HeaderCell.Value.ToString() == "PET_ID") //Submit Button Actions for PET tab
                 {
                     if (addRadioBtn.Checked == true && textBox1.Text != "" && textBox2.Text != "" && comboBox2.SelectedItem != null && comboBox3.SelectedItem != null && comboBox4.SelectedItem != null && comboBox1.SelectedItem != null)
                     {
-                        string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
-                        MySqlConnection con = new MySqlConnection(cs);
-                        con.Open();
-                        MySqlCommand cmd = new MySqlCommand("INSERT INTO PET (PETSHOP_ID,AGENCY_ID,VET_ID,PET_NAME,PET_TYPE,PICTURE,GENDER,AGE,VOLUNTEER_ID,ADOPTION_PRICE) VALUES(@shop,@agency,@vet,@name,@type,@picture,@sex,@age,@volunteer,@price)", con);
-                        cmd.Parameters.AddWithValue("@name", textBox1.Text);
-                        cmd.Parameters.AddWithValue("@age", comboBox1.SelectedItem);
-                        cmd.Parameters.AddWithValue("@type", comboBox3.SelectedItem);
-                        cmd.Parameters.AddWithValue("@sex", comboBox2.SelectedItem);
-                        cmd.Parameters.AddWithValue("@picture", comboBox7.SelectedItem);
-                        cmd.Parameters.AddWithValue("@price", textBox2.Text);
-                        cmd.Parameters.AddWithValue("@agency", comboBox4.SelectedItem);
-                        cmd.Parameters.AddWithValue("@shop", comboBox5.SelectedItem);
-                        cmd.Parameters.AddWithValue("@vet", comboBox6.SelectedItem);
-                        cmd.Parameters.AddWithValue("@volunteer", textBox9.Text);
+                        
+                    string insertString = "INSERT INTO PET (PETSHOP_ID,AGENCY_ID,VET_ID,PET_NAME,PET_TYPE,PICTURE,GENDER,AGE,VOLUNTEER_ID,ADOPTION_PRICE) VALUES(" + comboBox5.SelectedItem + "," + comboBox4.SelectedItem + "," + comboBox6.SelectedItem + ",'" + textBox1.Text + "','" + comboBox3.SelectedItem + "','" + comboBox7.SelectedItem + "','" + comboBox2.SelectedItem + "'," + comboBox1.SelectedItem + "," + textBox9.Text + "," + textBox2.Text + ");";
 
-                        cmd.ExecuteNonQuery();
-                        con.Close();
+                    Info.modifyDatabase(insertString);    
 
-                        displayPetData();
+                    displayPetData();
                     }
 
                     if (deleteRadioBtn.Checked == true && activeID != 0)
                     {
-                        string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
-                        MySqlConnection con = new MySqlConnection(cs);
-                        con.Open();
-                        MySqlCommand cmd = new MySqlCommand("DELETE FROM PET WHERE (PET_ID = @petKey)", con);
-                        cmd.Parameters.AddWithValue("@petKey", activeID);
-                        cmd.ExecuteNonQuery();
-                        con.Close();
+
+                        string deleteString = "DELETE FROM PET WHERE (PET_ID = " + activeID + ");";
+
+                        Info.modifyDatabase(deleteString);
+
                         displayPetData();
                     }
 
                     if (updateRadioBtn.Checked == true)
                     {
-                        string cs = @"Server=localhost; Port=3306; Database=adoption_db; Uid=root; Pwd=Adoption1@;";
-                        MySqlConnection con = new MySqlConnection(cs);
-                        con.Open();
-                        MySqlCommand cmd = new MySqlCommand("UPDATE PET SET PET_NAME=@name,AGE=@age,PET_TYPE=@type,ADOPTION_PRICE=@price,GENDER=@sex,PICTURE=@picture,AGENCY_ID=@agency,PETSHOP_ID=@shop,VET_ID=@vet WHERE PET_ID = @id", con);
-                        cmd.Parameters.AddWithValue("@id", activeID);
-                        cmd.Parameters.AddWithValue("@name", textBox1.Text);
-                        cmd.Parameters.AddWithValue("@age", comboBox1.Text);
-                        cmd.Parameters.AddWithValue("@type", comboBox3.Text);
-                        cmd.Parameters.AddWithValue("@sex", comboBox2.Text);
-                        cmd.Parameters.AddWithValue("@picture", comboBox7.Text);
-                        cmd.Parameters.AddWithValue("@price", textBox2.Text);
-                        cmd.Parameters.AddWithValue("@agency", comboBox4.Text);
-                        cmd.Parameters.AddWithValue("@shop", comboBox5.Text);
-                        cmd.Parameters.AddWithValue("@vet", comboBox6.Text);
-                        cmd.Parameters.AddWithValue("@volunteer", textBox9.Text);
-                        cmd.ExecuteNonQuery();
-                        con.Close();
+                     
+
+                        string updateString = "UPDATE PET SET PET_NAME='" +textBox1.Text+ "',AGE="+ comboBox1.Text + ",PET_TYPE='"+ comboBox3.Text + "',ADOPTION_PRICE="+textBox2.Text+",GENDER='"+ comboBox2.Text + "',PICTURE='"+ comboBox7.Text + "',AGENCY_ID='"+ comboBox4.Text + "',PETSHOP_ID='"+ comboBox5.Text + "',VET_ID='" + comboBox6.Text + "' WHERE PET_ID = " + activeID;
+
+                        Info.modifyDatabase(updateString);
+
                         displayPetData();
                     }
                     
@@ -166,11 +139,7 @@ namespace AdoptionDatabase
 
 
 
-            }
-            catch(Exception error)
-            {
-                Debug.WriteLine("The task could not be completed");
-            }
+            
 
         if(petDataContainer.Columns[0].HeaderCell.Value.ToString() == "ADOPTER_ID")
         {
@@ -196,7 +165,7 @@ namespace AdoptionDatabase
 
                     Debug.WriteLine(queryString);
 
-                    Info.insertIntoDatabase(queryString);
+                    Info.modifyDatabase(queryString);
 
 
                     petDataContainer.DataSource = Info.getAdopterTable(null);
@@ -208,12 +177,12 @@ namespace AdoptionDatabase
 
                     string queryString = "UPDATE ADOPTER SET FIRSTNAME = '" + notPetSource[0].Text + "', LASTNAME = '" + notPetSource[1].Text + "', PHONE = '" + notPetSource[2].Text + "', ADDRESS = '" + notPetSource[3].Text + "', CITY = '" + notPetSource[4].Text + "', STATE = '" + notPetSource[5].Text + "', ZIP = '" + notPetSource[6].Text + "' WHERE ADOPTER_ID = " + activeID.ToString() + ";";
 
-                    Info.insertIntoDatabase(queryString);
+                    Info.modifyDatabase(queryString);
 
                     if (textBox8.Text == "")
-                        Info.insertIntoDatabase("DELETE FROM ADOPTION WHERE ADOPTER_ID = " + activeID + ";");
+                        Info.modifyDatabase("DELETE FROM ADOPTION WHERE ADOPTER_ID = " + activeID + ";");
                     else
-                        Info.insertIntoDatabase("INSERT INTO ADOPTION VALUES (" + textBox8.Text + ", " + activeID + ", NULL);");
+                        Info.modifyDatabase("INSERT INTO ADOPTION VALUES (" + textBox8.Text + ", " + activeID + ", NULL);");
 
                     
 
@@ -223,7 +192,7 @@ namespace AdoptionDatabase
                 else
                 {
 
-                    Info.insertIntoDatabase("DELETE FROM ADOPTER WHERE ADOPTER_ID = " + activeID.ToString() + ";");
+                    Info.modifyDatabase("DELETE FROM ADOPTER WHERE ADOPTER_ID = " + activeID.ToString() + ";");
 
                     petDataContainer.DataSource = Info.getAdopterTable(null);
                 }
@@ -249,7 +218,7 @@ namespace AdoptionDatabase
 
                     Debug.WriteLine(queryString);
 
-                    Info.insertIntoDatabase(queryString);
+                    Info.modifyDatabase(queryString);
 
 
                     petDataContainer.DataSource = Info.getAppointmentTable(null);
@@ -261,7 +230,7 @@ namespace AdoptionDatabase
 
                     string queryString = "UPDATE APPOINTMENT SET ADOPTER_ID = " + Info.getIndex("ADOPTER", notPetSource[1].Text) + ", PET_ID = " + Info.getIndex("PET", notPetSource[2].Text) + ", VOLUNTEER_ID = " + Info.getIndex("VOLUNTEER", notPetSource[3].Text) + ", TIMESLOT_ID = " + notPetSource[4].Text + " WHERE APPOINTMENT_ID = " + activeID + ";";
 
-                    Info.insertIntoDatabase(queryString);
+                    Info.modifyDatabase(queryString);
 
                     petDataContainer.DataSource = Info.getAppointmentTable(null);
                 }
@@ -269,7 +238,7 @@ namespace AdoptionDatabase
                 else if(deleteRadioBtn.Checked)
                 {
 
-                    Info.insertIntoDatabase("DELETE FROM APPOINTMENT WHERE APPOINTMENT_ID = " + activeID.ToString() + ";");
+                    Info.modifyDatabase("DELETE FROM APPOINTMENT WHERE APPOINTMENT_ID = " + activeID.ToString() + ";");
 
                     petDataContainer.DataSource = Info.getAppointmentTable(null);
                 }
@@ -795,7 +764,7 @@ namespace AdoptionDatabase
 
 
 
-        //This methdod determines which submenu is active. It then calls the appropriate searchX method in the Info class and displays the data
+        //This method determines which submenu is active. It then calls the appropriate searchX method in the Info class and displays the data
         //on the display table.
         private void searchAdmin(object sender, EventArgs e)
         {

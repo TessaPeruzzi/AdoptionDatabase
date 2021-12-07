@@ -19,6 +19,8 @@ namespace AdoptionDatabase
 {
     public partial class MainPage : Form
     {
+
+        //This array holds references to all the select checkboxes for easy access.
         PetTypeCheckBox[] checkboxes;
 
         private enum displayType {PETS, VETS, AGENCIES, PETSHOPS}
@@ -56,7 +58,10 @@ namespace AdoptionDatabase
         }
 
 
-        //
+        //This method constructs the arguments required to call queryPetsForUser, calls it, and displays the information returned in the linked list
+        //to the screen in a series of petcard display objects.
+        //The SQL queries made for this display are of the form
+        //"SELECT PET.PET_ID, PETSHOP.NAME, AGENCY.NAME, VET.NAME, PET.PET_NAME, PET.PET_TYPE, PET.PICTURE, PET.GENDER, PET.AGE, PET.ADOPTION_PRICE FROM (PET JOIN PETSHOP ON(PET.PETSHOP_ID = PETSHOP.PETSHOP_ID) JOIN VET ON VET.VET_ID = PET.VET_ID JOIN AGENCY ON AGENCY.AGENCY_ID = PET.AGENCY_ID)"
         private void createPetCards()
         {
 
@@ -71,7 +76,7 @@ namespace AdoptionDatabase
             CardContainer.RowStyles.Clear();
            
 
-            //Mark
+            
             while(CardContainer.Controls.Count > 0)
             {
                 CardContainer.Controls[0].Dispose();
